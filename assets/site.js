@@ -28,7 +28,15 @@
   const renderHome = async () => {
     const index = await getJson(`${root}data/reports.json`);
     const report = latestAiReport(index);
-    if (!report) throw new Error("No AI report");
+    if (!report) {
+      document.querySelector("#today-title").textContent = "今日暂无已验证日报";
+      document.querySelector("#article-count").textContent = "0 条";
+      document.querySelector("#reading-minutes").textContent = "—";
+      document.querySelector("#today-highlight").textContent = "等待可追溯来源";
+      document.querySelector("#today-notice").textContent = "只会发布来自允许公开域名且已验证的资讯。";
+      document.querySelector("#today-link").href = `${root}ai/`;
+      return;
+    }
     document.querySelector("#today-title").textContent = `AI Daily · ${report.report_date}`;
     document.querySelector("#today-date").textContent = formatDate(report.report_date);
     document.querySelector("#article-count").textContent = `${report.article_count} 条`;
@@ -42,7 +50,10 @@
   const renderReportList = async (target) => {
     const index = await getJson(`${root}data/reports.json`);
     const reports = (index.reports || []).filter((report) => report.category === "ai");
-    if (!reports.length) throw new Error("No reports");
+    if (!reports.length) {
+      setFailure(target, "暂无已验证日报。新的日报发布后会在这里按日期保存。");
+      return;
+    }
     target.replaceChildren(...reports.map(summaryCard));
   };
   const labelledList = (title, values) => {
@@ -77,7 +88,12 @@
       const index = await getJson(`${root}data/reports.json`);
       date = latestAiReport(index)?.report_date;
     }
-    if (!/^\d{4}-\d{2}-\d{2}$/.test(date || "")) throw new Error("Invalid report date");
+    if (!date) {
+      document.querySelector("#report-title").textContent = "暂无已验证日报";
+      document.querySelector("#daily-report").replaceChildren(element("p", "新的日报发布后会显示在这里。", "notice"));
+      return;
+    }
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) throw new Error("Invalid report date");
     const report = await getJson(`${root}data/daily/ai/${date}.json`);
     document.title = `AI Daily · ${report.report_date}`;
     document.querySelector("#report-title").textContent = `AI Daily · ${report.report_date}`;

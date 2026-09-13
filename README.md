@@ -1,14 +1,20 @@
 # AI Daily 飞书资讯中心 H5
 
-这是已接入飞书工作台的 AI Daily H5。它继续使用原有 GitHub Pages 地址，并由飞书网页应用作为 PC、手机与平板的统一入口。
+AI Daily 是飞书工作台中的统一资讯入口。它以静态文件方式部署到独立公共域名或私有域名，页面本身不依赖任何代码托管站点域名。
 
-## Phase 5 功能
+## 内容规则
 
-- 首页展示最近一份已发布的 AI Daily：日期、资讯数量、预计阅读时间和今日重点。
-- AI 频道和历史归档从 `data/reports.json` 读取日期列表。
-- 日报详情使用 `daily/ai/?date=YYYY-MM-DD` 打开，并从 `data/daily/ai/YYYY-MM-DD.json` 读取内容。
-- 每条资讯分别显示中文标题、原文标题、来源、发布时间、Original Key Points、中文翻译、AI 总结、English Summary、相关性和 Useful Expressions。
-- “查看原文”直接打开已验证的 `original_url`，不会跳转到本站替代地址。
+- 只显示来自允许公开域名并且已验证的资讯。
+- 不显示与受限来源相关的日报、链接、标题、摘要或历史记录。
+- 每条正式资讯都保留真实的外部原文入口。
+- 没有满足规则的日报时，页面会明确显示“暂无已验证日报”，不会补造内容。
+
+## 页面路由
+
+- `/`：今日 AI Daily 概览
+- `/ai/`：AI 日报列表
+- `/archive/`：按日期历史归档
+- `/daily/ai/?date=YYYY-MM-DD`：单份日报详情
 
 ## 本地验证
 
@@ -17,15 +23,4 @@ py -3 -m unittest discover -s tests -v
 py -3 -m http.server 8000
 ```
 
-打开：
-
-- `http://localhost:8000/`
-- `http://localhost:8000/ai/`
-- `http://localhost:8000/archive/`
-- `http://localhost:8000/daily/ai/?date=2026-09-14`
-
-部署地址保持为 [AI Daily](https://marie-bro.github.io/ai-daily-public-site/)。每次有新的已验证日报时，在数据流水线项目执行 `py -3 run_publish.py`，提交两个项目的改动即可更新飞书内的页面。
-
-## 阶段边界
-
-本项目不保存密钥、不调用 DeepSeek、不抓取新闻、不发送飞书通知。Phase 6 的机器人每日通知尚未开始。
+部署到新的公共或私有域名后，将该域名根地址填入飞书网页应用主页地址。页面不保存密钥、不调用模型、不抓取资讯，也不发送机器人通知。

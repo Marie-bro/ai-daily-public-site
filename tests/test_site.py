@@ -22,12 +22,12 @@ class PublicSiteTests(unittest.TestCase):
         for route in ('href="./"', 'href="ai/"', 'href="archive/"'):
             self.assertIn(route, home)
 
-    def test_site_contains_a_date_addressable_daily_route_and_static_report_data(self):
+    def test_site_contains_a_date_addressable_daily_route_and_public_domain_only_data(self):
         daily = ROOT / "daily" / "ai" / "index.html"
         self.assertIn('data-page="daily"', daily.read_text(encoding="utf-8"))
-        report = ROOT / "data" / "daily" / "ai" / "2026-09-14.json"
-        self.assertTrue(report.is_file())
-        self.assertIn('"original_url"', report.read_text(encoding="utf-8"))
+        index = (ROOT / "data" / "reports.json").read_text(encoding="utf-8")
+        self.assertNotIn("github.com", index.lower())
+        self.assertNotIn("openai.com", index.lower())
 
     def test_pages_do_not_use_root_absolute_links(self):
         for page in PAGES:
