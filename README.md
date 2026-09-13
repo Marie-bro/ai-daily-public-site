@@ -2,6 +2,8 @@
 
 这是与现有飞书机器人分离的独立 Phase 2 项目。它只提供公开、无需登录、适配手机/平板/电脑的资讯网站基础框架；当前没有新闻采集、AI 摘要、飞书推送或 DeepSeek 调用。
 
+Phase 2 已部署至 [公开网站](https://marie-bro.github.io/ai-daily-public-site/)。下一阶段必须等用户验收后才会开始。
+
 ## 路由
 
 - `/` 首页
@@ -25,4 +27,4 @@ py -3 -m http.server 8000
 
 ## 阶段规则
 
-本项目一次只完成一个 Phase。当前只做 Phase 2；验收前不开始 Phase 3。
+本项目一次只完成一个 Phase。Phase 2 已完成并等待验收；验收前不开始 Phase 3。
