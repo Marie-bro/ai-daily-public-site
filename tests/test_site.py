@@ -2,7 +2,7 @@ import unittest
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1] / "site"
+ROOT = Path(__file__).resolve().parents[1]
 PAGES = (ROOT / "index.html", ROOT / "ai" / "index.html", ROOT / "archive" / "index.html")
 
 

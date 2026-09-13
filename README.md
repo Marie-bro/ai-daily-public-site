@@ -14,7 +14,7 @@
 
 ```powershell
 py -3 -m unittest discover -s tests -v
-py -3 -m http.server 8000 --directory site
+py -3 -m http.server 8000
 ```
 
 打开 `http://localhost:8000`、`/ai/`、`/archive/`。按 `Ctrl+C` 停止本地预览。
