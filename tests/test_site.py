@@ -3,7 +3,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PAGES = (ROOT / "index.html", ROOT / "ai" / "index.html", ROOT / "archive" / "index.html")
+PAGES = (ROOT / "index.html", ROOT / "ai" / "index.html", ROOT / "archive" / "index.html", ROOT / "daily" / "ai" / "index.html")
 
 
 class PublicSiteTests(unittest.TestCase):
@@ -21,6 +21,13 @@ class PublicSiteTests(unittest.TestCase):
         home = PAGES[0].read_text(encoding="utf-8")
         for route in ('href="./"', 'href="ai/"', 'href="archive/"'):
             self.assertIn(route, home)
+
+    def test_site_contains_a_date_addressable_daily_route_and_static_report_data(self):
+        daily = ROOT / "daily" / "ai" / "index.html"
+        self.assertIn('data-page="daily"', daily.read_text(encoding="utf-8"))
+        report = ROOT / "data" / "daily" / "ai" / "2026-09-14.json"
+        self.assertTrue(report.is_file())
+        self.assertIn('"original_url"', report.read_text(encoding="utf-8"))
 
     def test_pages_do_not_use_root_absolute_links(self):
         for page in PAGES:

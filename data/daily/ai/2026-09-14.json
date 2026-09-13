@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "category": "ai",
+  "report_date": "2026-09-14",
+  "published_at": "2026-09-14T01:19:08.280960+08:00",
+  "article_count": 3,
+  "estimated_reading_minutes": 5,
+  "highlights": [
+    "发布 0.155.0-alpha.3.10 · openai/codex",
+    "发布 v3.13.0 · openai/openai-python",
+    "发布 v1.5.0 · anthropics/anthropic-sdk-python"
+  ],
+  "items": [
+    {
+      "title_cn": "发布 0.155.0-alpha.3.10 · openai/codex",
+      "title_original": "Release 0.155.0-alpha.3.10 · openai/codex",
+      "source": "OpenAI Codex Releases",
+      "published_at": "2026-09-11T15:56:17+00:00",
+      "original_url": "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.3.10",
+      "key_points_original": [
+        "openai/codex published the pre-release version 0.155.0-alpha.3.10, tagged rust-v0.155.0-alpha.3.10.",
+        "The release was published by github-actions on 11 Sep at 15:52.",
+        "There have been 73 commits to main since this release.",
+        "The release page lists 175 assets and notes that 10 people reacted."
+      ],
+      "translation": [
+        "openai/codex 发布了预发布版本 0.155.0-alpha.3.10，标签为 rust-v0.155.0-alpha.3.10。",
+        "该版本由 github-actions 于 9 月 11 日 15:52 发布。",
+        "自该版本发布以来，main 分支已有 73 次提交。",
+        "发布页面列出 175 个资源，并显示有 10 人作出反应。"
+      ],
+      "summary_cn": "openai/codex 发布了预发布版本 0.155.0-alpha.3.10（标签 rust-v0.155.0-alpha.3.10），由 github-actions 于 9 月 11 日 15:52 发布，自该版本以来 main 分支有 73 次提交，页面列出 175 个资源。",
+      "summary_en": "openai/codex published the pre-release version 0.155.0-alpha.3.10 (tag rust-v0.155.0-alpha.3.10), released by github-actions on 11 Sep at 15:52, with 73 commits to main since the release and 175 assets listed.",
+      "relevance": "OpenAI Codex 仓库的版本发布动态，适合关注 Codex 工具链更新的开发者。",
+      "useful_expressions": [
+        "Pre-release",
+        "73 commits to main since this release"
+      ]
+    },
+    {
+      "title_cn": "发布 v3.13.0 · openai/openai-python",
+      "title_original": "Release v3.13.0 · openai/openai-python",
+      "source": "OpenAI Python Releases",
+      "published_at": "2026-09-10T19:37:39+00:00",
+      "original_url": "https://github.com/openai/openai-python/releases/tag/v3.13.0",
+      "key_points_original": [
+        "openai/openai-python released v3.13.0, marked as the latest version.",
+        "The release was published by openai-sdks on 10 Sep at 19:37.",
+        "The commit was created on GitHub.com and signed with GitHub's verified signature (GPG key ID: B5690EEEBB952194).",
+        "Version 3.13.0 (2026-09-10) includes the feature: api: add Agents API (1c4284a)."
+      ],
+      "translation": [
+        "openai/openai-python 发布了 v3.13.0，标记为最新版本。",
+        "该版本由 openai-sdks 于 9 月 10 日 19:37 发布。",
+        "该提交在 GitHub.com 上创建，并使用 GitHub 的已验证签名（GPG 密钥 ID：B5690EEEBB952194）。",
+        "3.13.0 版本（2026-09-10）包含功能：api: add Agents API（1c4284a）。"
+      ],
+      "summary_cn": "openai/openai-python 发布最新版本 v3.13.0，由 openai-sdks 于 9 月 10 日 19:37 发布，提交带有 GitHub 已验证签名；该版本（2026-09-10）新增 Agents API。",
+      "summary_en": "openai/openai-python released v3.13.0 as the latest version, published by openai-sdks on 10 Sep at 19:37, with the commit signed by GitHub's verified signature; version 3.13.0 (2026-09-10) adds the Agents API.",
+      "relevance": "OpenAI 官方 Python SDK 的版本更新，对使用该 SDK 的开发者有直接影响。",
+      "useful_expressions": [
+        "Latest",
+        "add Agents API"
+      ]
+    },
+    {
+      "title_cn": "发布 v1.5.0 · anthropics/anthropic-sdk-python",
+      "title_original": "Release v1.5.0 · anthropics/anthropic-sdk-python",
+      "source": "Anthropic Python Releases",
+      "published_at": "2026-09-10T17:45:22+00:00",
+      "original_url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.5.0",
+      "key_points_original": [
+        "anthropics/anthropic-sdk-python released v1.5.0, marked as the latest version, published by stainless-app on 10 Sep at 17:45.",
+        "Features include api: add auto mode tool permissions for Managed Agents, api: add content_too_large web_fetch tool error code, and api: add the user-profiles-2026-09-04 beta value and external_user_details to user profiles.",
+        "Features also include api: support mounting public GitHub repositories without an authorization_token in Managed Agents sessions, client: add Message.to_param() and BetaMessage.to_param(), credentials: add CredentialsError and IdentityTokenFileError, and tools: accept tool objects directly in messages.create, parse, stream and count_tokens.",
+        "Bug fixes include merging extra_body before client hooks run, refusing credentials files accessible by group or others, keeping partial tool input JSON off content blocks, and leaving parsed_output out of dumped text blocks."
+      ],
+      "translation": [
+        "anthropics/anthropic-sdk-python 发布了 v1.5.0，标记为最新版本，由 stainless-app 于 9 月 10 日 17:45 发布。",
+        "新功能包括：api: add auto mode tool permissions for Managed Agents、api: add content_too_large web_fetch tool error code，以及 api: add the user-profiles-2026-09-04 beta value and external_user_details to user profiles。",
+        "新功能还包括：api: support mounting public GitHub repositories without an authorization_token in Managed Agents sessions、client: add Message.to_param() and BetaMessage.to_param()、credentials: add CredentialsError and IdentityTokenFileError，以及 tools: accept tool objects directly in messages.create, parse, stream and count_tokens。",
+        "缺陷修复包括：merge extra_body before client hooks run、refuse credentials files accessible by group or others、keep partial tool input JSON off content blocks，以及 leave parsed_output out of dumped text blocks。"
+      ],
+      "summary_cn": "anthropics/anthropic-sdk-python 发布最新版本 v1.5.0，由 stainless-app 于 9 月 10 日 17:45 发布。该版本新增 Managed Agents 自动模式工具权限、content_too_large web_fetch 工具错误码、user-profiles-2026-09-04 beta 值与 external_user_details、无需 authorization_token 挂载公共 GitHub 仓库、Message.to_param() 与 BetaMessage.to_param()、CredentialsError 与 IdentityTokenFileError，以及 tools 直接接受工具对象等；并修复 extra_body 合并时机、凭据文件权限、流式工具输入 JSON 与 parsed_output 转储等问题。",
+      "summary_en": "anthropics/anthropic-sdk-python released v1.5.0 as the latest version, published by stainless-app on 10 Sep at 17:45. It adds auto mode tool permissions for Managed Agents, a content_too_large web_fetch tool error code, the user-profiles-2026-09-04 beta value and external_user_details, mounting public GitHub repositories without an authorization_token, Message.to_param() and BetaMessage.to_param(), CredentialsError and IdentityTokenFileError, and direct tool objects in messages.create, parse, stream and count_tokens; bug fixes cover extra_body merging, credentials file permissions, streaming tool input JSON, and parsed_output in dumped text blocks.",
+      "relevance": "Anthropic 官方 Python SDK 的版本更新，对使用 Managed Agents 与相关 API 的开发者有直接影响。",
+      "useful_expressions": [
+        "auto mode tool permissions",
+        "Bug Fixes"
+      ]
+    }
+  ]
+}

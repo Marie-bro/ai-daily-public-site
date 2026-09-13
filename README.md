@@ -1,30 +1,31 @@
-# AI Daily 公开网站
+# AI Daily 飞书资讯中心 H5
 
-这是与现有飞书机器人分离的独立 Phase 2 项目。它只提供公开、无需登录、适配手机/平板/电脑的资讯网站基础框架；当前没有新闻采集、AI 摘要、飞书推送或 DeepSeek 调用。
+这是已接入飞书工作台的 AI Daily H5。它继续使用原有 GitHub Pages 地址，并由飞书网页应用作为 PC、手机与平板的统一入口。
 
-Phase 2 已部署至 [公开网站](https://marie-bro.github.io/ai-daily-public-site/)。下一阶段必须等用户验收后才会开始。
+## Phase 5 功能
 
-## 路由
+- 首页展示最近一份已发布的 AI Daily：日期、资讯数量、预计阅读时间和今日重点。
+- AI 频道和历史归档从 `data/reports.json` 读取日期列表。
+- 日报详情使用 `daily/ai/?date=YYYY-MM-DD` 打开，并从 `data/daily/ai/YYYY-MM-DD.json` 读取内容。
+- 每条资讯分别显示中文标题、原文标题、来源、发布时间、Original Key Points、中文翻译、AI 总结、English Summary、相关性和 Useful Expressions。
+- “查看原文”直接打开已验证的 `original_url`，不会跳转到本站替代地址。
 
-- `/` 首页
-- `/ai/` AI 频道
-- `/archive/` 历史归档
-
-网站现在会明确显示“第一期日报尚未发布”，不会以示例内容伪装成真实新闻。
-
-## 本地检查
+## 本地验证
 
 ```powershell
 py -3 -m unittest discover -s tests -v
 py -3 -m http.server 8000
 ```
 
-打开 `http://localhost:8000`、`/ai/`、`/archive/`。按 `Ctrl+C` 停止本地预览。
+打开：
 
-## 部署
+- `http://localhost:8000/`
+- `http://localhost:8000/ai/`
+- `http://localhost:8000/archive/`
+- `http://localhost:8000/daily/ai/?date=2026-09-14`
 
-部署步骤见 [GitHub Pages](deploy/github-pages.md)。部署目标是你账号下的新项目 `ai-daily-public-site`，与现有飞书项目完全分离。
+部署地址保持为 [AI Daily](https://marie-bro.github.io/ai-daily-public-site/)。每次有新的已验证日报时，在数据流水线项目执行 `py -3 run_publish.py`，提交两个项目的改动即可更新飞书内的页面。
 
-## 阶段规则
+## 阶段边界
 
-本项目一次只完成一个 Phase。Phase 2 已完成并等待验收；验收前不开始 Phase 3。
+本项目不保存密钥、不调用 DeepSeek、不抓取新闻、不发送飞书通知。Phase 6 的机器人每日通知尚未开始。

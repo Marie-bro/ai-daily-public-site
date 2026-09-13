@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "reports": [
+    {
+      "category": "ai",
+      "report_date": "2026-09-14",
+      "published_at": "2026-09-14T01:19:08.280960+08:00",
+      "article_count": 3,
+      "estimated_reading_minutes": 5,
+      "highlights": [
+        "发布 0.155.0-alpha.3.10 · openai/codex",
+        "发布 v3.13.0 · openai/openai-python",
+        "发布 v1.5.0 · anthropics/anthropic-sdk-python"
+      ]
+    }
+  ]
+}
