@@ -14,13 +14,17 @@ class PublicSiteTests(unittest.TestCase):
     def test_shared_style_and_mobile_viewport(self):
         for page in PAGES:
             content = page.read_text(encoding="utf-8")
-            self.assertIn('href="/assets/styles.css"', content)
+            self.assertNotIn('href="/assets/styles.css"', content)
             self.assertIn('width=device-width, initial-scale=1', content)
 
     def test_home_navigation_covers_required_routes(self):
         home = PAGES[0].read_text(encoding="utf-8")
-        for route in ('href="/"', 'href="/ai/"', 'href="/archive/"'):
+        for route in ('href="./"', 'href="ai/"', 'href="archive/"'):
             self.assertIn(route, home)
+
+    def test_pages_do_not_use_root_absolute_links(self):
+        for page in PAGES:
+            self.assertNotRegex(page.read_text(encoding="utf-8"), r'href="/(?!daily/)')
 
     def test_site_does_not_contain_secrets_or_fake_source_links(self):
         content = "\n".join(page.read_text(encoding="utf-8") for page in PAGES)
