@@ -1,4 +1,17 @@
 {
   "schema_version": 1,
-  "reports": []
+  "reports": [
+    {
+      "category": "ai",
+      "report_date": "2026-09-20",
+      "published_at": "2026-09-20T01:01:05.282542+08:00",
+      "article_count": 4,
+      "estimated_reading_minutes": 5,
+      "highlights": [
+        "与谷歌共同创造时尚的未来",
+        "新专家加入谷歌AI与经济团队",
+        "理解前沿实验室内部AI发展速度的测量指标"
+      ]
+    }
+  ]
 }

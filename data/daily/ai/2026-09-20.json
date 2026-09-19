@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "category": "ai",
+  "report_date": "2026-09-20",
+  "published_at": "2026-09-20T01:01:05.282542+08:00",
+  "article_count": 4,
+  "estimated_reading_minutes": 5,
+  "highlights": [
+    "与谷歌共同创造时尚的未来",
+    "新专家加入谷歌AI与经济团队",
+    "理解前沿实验室内部AI发展速度的测量指标"
+  ],
+  "items": [
+    {
+      "title_cn": "与谷歌共同创造时尚的未来",
+      "title_original": "Co-creating the future of fashion with Google",
+      "source": "Google AI",
+      "published_at": "2026-09-18T00:00:00+00:00",
+      "original_url": "https://blog.google/innovation-and-ai/technology/ai/google-flow-fashion-week/",
+      "key_points_original": [
+        "Google's Envisioning Studio partnered with designers Jane Wade and Sergio Hudson to streamline fashion production using Google Flow.",
+        "The Styling Suite tool let Jane virtually curate runway looks, balancing hair, makeup, accessories, shoes, and garments on digital models before producing physical samples.",
+        "Runway Visualization helped Sergio simulate his runway, adjusting venue setup, lighting, and props within his budget.",
+        "You can now build your own custom design tools in Google Flow using simple language, no coding required."
+      ],
+      "translation": [
+        "谷歌的Envisioning Studio与设计师Jane Wade和Sergio Hudson合作，使用Google Flow简化时尚生产流程。",
+        "Styling Suite工具让Jane在制作实体样品之前，在数字模型上虚拟策划秀场造型，平衡发型、妆容、配饰、鞋履和服装。",
+        "Runway Visualization帮助Sergio模拟他的秀场，在预算范围内调整场地布置、灯光和道具。",
+        "现在，你可以使用简单的语言在Google Flow中构建自己的自定义设计工具，无需编码。"
+      ],
+      "summary_cn": "谷歌Envisioning Studio与设计师Jane Wade和Sergio Hudson合作，利用Google Flow打造了两款定制工具：Styling Suite帮助Jane在制作实体样品前虚拟策划完整造型；Runway Visualization帮助Sergio在预算内模拟秀场布置、灯光和道具。这些工具在纽约时装周上得到应用，且用户现在无需编码即可在Google Flow中构建自定义设计工具。",
+      "summary_en": "Google's Envisioning Studio partnered with designers Jane Wade and Sergio Hudson to build two custom tools in Google Flow: Styling Suite, which let Jane virtually curate complete runway looks before producing physical samples, and Runway Visualization, which let Sergio simulate his runway setup, lighting, and props within budget. The tools were used for New York Fashion Week, and users can now build custom design tools in Google Flow without coding.",
+      "relevance": "This item shows how generative AI is being applied to real-world creative production workflows, moving beyond pilot projects to actual runway use, and highlights no-code tool-building for domain-specific tasks.",
+      "useful_expressions": [
+        "streamline the creative workflow process",
+        "co-developing tools that work within their existing processes"
+      ],
+      "original_language": "en",
+      "translation_language": "zh"
+    },
+    {
+      "title_cn": "新专家加入谷歌AI与经济团队",
+      "title_original": "New experts join Google’s AI & Economy team",
+      "source": "Google AI",
+      "published_at": "2026-09-18T00:00:00+00:00",
+      "original_url": "https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/",
+      "key_points_original": [
+        "Google is expanding its AI & Economy Research Program by adding world-class economists and academic advisors to better track how artificial intelligence impacts jobs and productivity.",
+        "New directors Anu Madgavkar and Daniel Rock will lead this effort, focusing on global AI adoption, labor market shifts, and enterprise growth.",
+        "Nobel Laureate Philippe Aghion joins as an Academic Advisor, and Professor Ajay Agrawal joins as a Visiting Fellow.",
+        "You can explore their latest data and research publications at ai.google/economy to see how these insights shape future policy and workforce training."
+      ],
+      "translation": [
+        "谷歌正在扩展其AI与经济研究项目，引入世界级经济学家和学术顾问，以更好地追踪人工智能对就业和生产率的影响。",
+        "新任董事Anu Madgavkar和Daniel Rock将领导这项工作，重点关注全球AI采用、劳动力市场变化和企业增长。",
+        "诺贝尔奖得主Philippe Aghion作为学术顾问加入，Ajay Agrawal教授作为访问研究员加入。",
+        "你可以在ai.google/economy上探索他们最新的数据和研究出版物，了解这些见解如何影响未来政策和劳动力培训。"
+      ],
+      "summary_cn": "谷歌扩展其AI与经济研究项目，新增世界级经济学家和学术顾问，以研究AI对就业、生产率和全球增长的影响。新任董事Anu Madgavkar和Daniel Rock将领导该工作，诺贝尔奖得主Philippe Aghion和教授Ajay Agrawal等加入。该项目还发布了AI & Economy ATLAS v1.0，相关数据和出版物可在ai.google/economy获取。",
+      "summary_en": "Google is expanding its AI & Economy Research Program by adding world-class economists and academic advisors to study AI's impact on jobs, productivity, and global growth. New directors Anu Madgavkar and Daniel Rock will lead the effort, joined by Nobel Laureate Philippe Aghion and Professor Ajay Agrawal. The program also launched AI & Economy ATLAS v1.0, with data and publications available at ai.google/economy.",
+      "relevance": "This item signals growing institutional investment in measuring AI's economic effects, which matters for understanding labor market shifts, productivity trends, and evidence-based policy.",
+      "useful_expressions": [
+        "expanding our AI & Economy Research Program",
+        "make sense of this complex transition"
+      ],
+      "original_language": "en",
+      "translation_language": "zh"
+    },
+    {
+      "title_cn": "理解前沿实验室内部AI发展速度的测量指标",
+      "title_original": "Measurements for understanding the pace of AI development inside frontier labs",
+      "source": "Anthropic Newsroom",
+      "published_at": "2026-09-17T00:00:00+00:00",
+      "original_url": "https://www.anthropic.com/institute/measuring-pace-of-ai-development",
+      "key_points_original": [
+        "Anthropic lays out measurement tools to illuminate three aspects of AI development: the extent to which AI is building the next version of itself, the ability to oversee and intervene in AI agents' actions, and the resources powering more capable models.",
+        "Anthropic built a prototype Anthropic R&D Automation Index, cataloguing every kind of AI R&D work at the company and rating how automated each task currently is.",
+        "The index uses Epoch AI's Automation Level scale, from AL0 (no AI involvement) to AL5 (AI operates fully autonomously, with no human in the loop).",
+        "Anthropic plans to embed independent third-party evaluators from multiple organizations, giving them access to internal processes, systems, and data comparable to internal risk assessment teams."
+      ],
+      "translation": [
+        "Anthropic提出了测量工具，以阐明AI发展的三个方面：AI构建自身下一个版本的程度、监督和干预AI代理行为的能力，以及驱动更强大模型的资源。",
+        "Anthropic构建了一个原型Anthropic R&D Automation Index，编目公司内每一种AI研发工作，并评估每项任务当前的自动化程度。",
+        "该指数使用Epoch AI的Automation Level量表，从AL0（无AI参与）到AL5（AI完全自主运行，无人在环）。",
+        "Anthropic计划嵌入来自多个组织的独立第三方评估者，给予他们与内部风险评估团队相当的内部流程、系统和数据访问权限。"
+      ],
+      "summary_cn": "Anthropic发布文章，提出测量前沿实验室内部AI发展速度的工具，聚焦三个关键方面：AI构建自身下一代的程度、对AI代理行为的监督与干预能力，以及驱动更强大模型的资源。Anthropic构建了原型Anthropic R&D Automation Index，使用Epoch AI的Automation Level量表（AL0至AL5）评估AI研发任务的自动化程度，并计划引入独立第三方评估者。",
+      "summary_en": "Anthropic published a post laying out measurement tools to understand the pace of AI development inside frontier labs, focusing on three aspects: the extent to which AI builds its next version, the ability to oversee and intervene in AI agents' actions, and the resources powering more capable models. Anthropic built a prototype Anthropic R&D Automation Index using Epoch AI's Automation Level scale (AL0 to AL5) to rate automation of AI R&D tasks, and plans to embed independent third-party evaluators.",
+      "relevance": "This item matters because it proposes concrete transparency metrics for AI self-improvement and oversight, which are central to debates about pacing frontier development and external verification.",
+      "useful_expressions": [
+        "recursive self improvement",
+        "no human in the loop"
+      ],
+      "original_language": "en",
+      "translation_language": "zh"
+    },
+    {
+      "title_cn": "让全球数据更易于探索",
+      "title_original": "Making global data easier to explore",
+      "source": "Google AI",
+      "published_at": "2026-09-17T00:00:00+00:00",
+      "original_url": "https://blog.google/innovation-and-ai/technology/ai/google-un-data-commons-platform/",
+      "key_points_original": [
+        "The UN system is launching the UN System Data Commons, an open-source platform built on Data Commons by Google that unites global statistics into one interconnected resource known as an AI-ready knowledge graph.",
+        "The platform automatically integrates metrics, timelines, and geographic boundaries into a single interconnected environment, saving analysts from formatting spreadsheets.",
+        "It uses AI to enable natural-language search, letting users ask questions in plain language and receive relevant data and interactive visualizations.",
+        "Built on open standards like the Model Context Protocol (MCP), Data Commons enables AI agents to autonomously fetch authoritative figures, connect dots across domains, and package results into charts, graphs, infographics, or draft reports."
+      ],
+      "translation": [
+        "联合国系统正在推出UN System Data Commons，这是一个基于谷歌Data Commons构建的开源平台，将全球统计数据整合为一个互联资源，称为AI就绪知识图谱。",
+        "该平台自动将指标、时间线和地理边界整合到一个互联环境中，使分析师无需再格式化电子表格。",
+        "它利用AI实现自然语言搜索，让用户用通俗语言提问，并即时获得相关数据和交互式可视化。",
+        "基于Model Context Protocol（MCP）等开放标准构建，Data Commons使AI代理能够自主获取权威数据、跨领域连接信息，并将结果打包成图表、图形、信息图或报告草稿。"
+      ],
+      "summary_cn": "联合国系统推出UN System Data Commons，这是一个基于谷歌Data Commons构建的开源平台，将全球统计数据整合为AI就绪知识图谱。平台自动整合指标、时间线和地理边界，支持自然语言搜索，并基于Model Context Protocol（MCP）等开放标准，使AI代理能自主获取权威数据并生成图表或报告草稿。所有数据集均经联合国系统统计人员验证。",
+      "summary_en": "The UN system launched the UN System Data Commons, an open-source platform built on Google's Data Commons that unites global statistics into an AI-ready knowledge graph. It automatically integrates metrics, timelines, and geographic boundaries, supports natural-language search, and is built on open standards like the Model Context Protocol (MCP), enabling AI agents to autonomously fetch authoritative figures and produce charts or draft reports. All datasets are validated with UN system statisticians.",
+      "relevance": "This item shows how AI-ready data infrastructure and agentic assistants can make authoritative global statistics more accessible, which matters for research, policy, and evidence-based decision-making.",
+      "useful_expressions": [
+        "AI-ready knowledge graph",
+        "agentic research assistants"
+      ],
+      "original_language": "en",
+      "translation_language": "zh"
+    }
+  ]
+}
