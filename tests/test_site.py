@@ -7,6 +7,17 @@ PAGES = (ROOT / "index.html", ROOT / "ai" / "index.html", ROOT / "archive" / "in
 
 
 class PublicSiteTests(unittest.TestCase):
+    def test_phase5_5_tech_daily_copy_and_dual_schema_renderer(self):
+        home = (ROOT / "index.html").read_text(encoding="utf-8-sig")
+        script = (ROOT / "assets" / "site.js").read_text(encoding="utf-8-sig")
+        self.assertIn("Tech Daily", home)
+        self.assertIn("科技频道", home)
+        self.assertIn("今日暂无符合条件的科技资讯", script)
+        self.assertIn("发生了什么", script)
+        self.assertIn("为什么值得关注", script)
+        self.assertIn("schemaVersion >= 2", script)
+        self.assertIn("key_points_original", script)  # legacy report compatibility
+
     def test_required_routes_exist(self):
         for page in PAGES:
             self.assertTrue(page.is_file(), page)
