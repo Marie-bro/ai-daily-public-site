@@ -1,4 +1,5 @@
 import unittest
+import json
 from pathlib import Path
 
 
@@ -7,6 +8,21 @@ PAGES = (ROOT / "index.html", ROOT / "ai" / "index.html", ROOT / "archive" / "in
 
 
 class PublicSiteTests(unittest.TestCase):
+    def test_bilingual_static_copy_and_current_daily_data(self):
+        for page in PAGES:
+            content = page.read_text(encoding="utf-8")
+            self.assertIn("Main navigation / 主导航", content)
+            self.assertIn("Home / 首页", content)
+            self.assertIn("Archive / 历史归档", content)
+
+        report = json.loads((ROOT / "data" / "daily" / "ai" / "2026-09-20.json").read_text(encoding="utf-8"))
+        self.assertEqual(report["schema_version"], 3)
+        for item in report["items"]:
+            for field in ("title_en", "title_cn", "what_happened_en", "what_happened", "why_it_matters_en", "why_it_matters"):
+                self.assertTrue(item[field], field)
+            for field in ("source", "published_at", "original_url"):
+                self.assertTrue(item[field], field)
+
     def test_phase5_5_tech_daily_copy_and_dual_schema_renderer(self):
         home = (ROOT / "index.html").read_text(encoding="utf-8-sig")
         script = (ROOT / "assets" / "site.js").read_text(encoding="utf-8-sig")

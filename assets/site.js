@@ -13,7 +13,11 @@
     internet: "Internet / 互联网", other_tech: "Other Tech / 其他科技"
   };
   const reportHref = (date) => `${root}daily/ai/?date=${encodeURIComponent(date)}`;
-  const formatDate = (date) => new Intl.DateTimeFormat("zh-CN", { timeZone: "Asia/Shanghai", year: "numeric", month: "long", day: "numeric", weekday: "short" }).format(new Date(`${date}T12:00:00+08:00`));
+  const formatDate = (date) => {
+    const value = new Date(`${date}T12:00:00+08:00`);
+    const options = { timeZone: "Asia/Shanghai", year: "numeric", month: "long", day: "numeric", weekday: "short" };
+    return `${new Intl.DateTimeFormat("en-US", options).format(value)} / ${new Intl.DateTimeFormat("zh-CN", options).format(value)}`;
+  };
   const getJson = async (path) => {
     const response = await fetch(path, { cache: "no-cache" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -33,9 +37,9 @@
     const link = element("a", undefined, "report-link");
     link.href = reportHref(report.report_date);
     const title = element("h2", `${report.schema_version >= 2 || report.category === "tech" ? "Tech Daily" : "AI Daily"} · ${report.report_date}`);
-    const facts = element("p", `${report.article_count} 条资讯 · 预计阅读 ${report.estimated_reading_minutes} 分钟`, "report-facts");
+    const facts = element("p", `${report.article_count} items / ${report.article_count} 条资讯 · ${report.estimated_reading_minutes} min read / 预计阅读 ${report.estimated_reading_minutes} 分钟`, "report-facts");
     const highlights = element("p", (report.highlights || []).join(" · "), "report-highlights");
-    link.append(title, facts, highlights, element("span", "阅读日报 →", "text-link"));
+    link.append(title, facts, highlights, element("span", "Read daily / 阅读日报 →", "text-link"));
     return link;
   };
   const renderHome = async () => {
@@ -45,23 +49,23 @@
     if (!report) {
       document.querySelector("#today-title").textContent = "No qualified technology news today / 今日暂无符合条件的科技资讯";
       document.querySelector("#today-date").textContent = formatDate(todayInShanghai());
-      document.querySelector("#article-count").textContent = "0 条";
-      document.querySelector("#reading-minutes").textContent = "—";
+      document.querySelector("#article-count").textContent = "0 items / 0 条资讯";
+      document.querySelector("#reading-minutes").textContent = "— / —";
       document.querySelector("#today-highlight").textContent = "None / 暂无";
-      document.querySelector("#today-notice").textContent = latest ? `Latest issue: ${latest.report_date}. 历史归档仍可回看。` : "No empty report is generated when no item qualifies. 没有合格资讯时不会生成空日报。";
+      document.querySelector("#today-notice").textContent = latest ? `Latest issue: ${latest.report_date}. / 最近一期：${latest.report_date}，历史归档仍可回看。` : "No empty report is generated when no item qualifies. / 没有合格资讯时不会生成空日报。";
       document.querySelector("#today-link").href = latest ? reportHref(latest.report_date) : `${root}ai/`;
       document.querySelector("#today-link").firstChild.textContent = latest ? "Read latest / 阅读最近一期 " : "Browse Tech / 浏览科技频道 ";
       return;
     }
     document.querySelector("#today-title").textContent = `Tech Daily · ${report.report_date}`;
     document.querySelector("#today-date").textContent = formatDate(report.report_date);
-    document.querySelector("#article-count").textContent = `${report.article_count} 条`;
-    document.querySelector("#reading-minutes").textContent = `${report.estimated_reading_minutes} 分钟`;
-    document.querySelector("#today-highlight").textContent = (report.highlights || ["已发布"])[0];
+    document.querySelector("#article-count").textContent = `${report.article_count} items / ${report.article_count} 条资讯`;
+    document.querySelector("#reading-minutes").textContent = `${report.estimated_reading_minutes} min / 预计阅读 ${report.estimated_reading_minutes} 分钟`;
+    document.querySelector("#today-highlight").textContent = (report.highlights || ["Published / 已发布"])[0];
     document.querySelector("#today-notice").textContent = "Collected broadly and selected strictly; every item retains a traceable original source. 广泛采集、严格筛选；每条资讯均保留可追溯原文。";
     document.querySelector("#today-link").href = reportHref(report.report_date);
-    document.querySelector("#archive-preview-title").textContent = `最近日报：${report.report_date}`;
-    document.querySelector("#archive-preview-copy").textContent = `${report.article_count} 条已验证科技资讯，预计阅读 ${report.estimated_reading_minutes} 分钟。`;
+    document.querySelector("#archive-preview-title").textContent = `Latest daily: ${report.report_date} / 最近日报：${report.report_date}`;
+    document.querySelector("#archive-preview-copy").textContent = `${report.article_count} verified technology items, ${report.estimated_reading_minutes} min read. / ${report.article_count} 条已验证科技资讯，预计阅读 ${report.estimated_reading_minutes} 分钟。`;
   };
   const renderReportList = async (target) => {
     const reports = techReports(await getJson(`${root}data/reports.json`));
@@ -76,7 +80,7 @@
   };
   const sourceHeader = (item, titleEn, titleZh) => {
     const header = element("header", undefined, "article-header");
-    if (item.category) header.append(element("span", categoryLabels[item.category] || "科技", "category-badge"));
+    if (item.category) header.append(element("span", categoryLabels[item.category] || "Other Tech / 其他科技", "category-badge"));
     header.append(element("h3", "Title"), element("h2", titleEn), element("h3", "标题"), element("p", titleZh, "article-title-cn"));
     const meta = element("p", `Source / 来源：${item.source} · Published at / 发布时间：${new Date(item.published_at).toLocaleString("zh-CN", { timeZone: "Asia/Shanghai", hour12: false })}`, "article-meta");
     const originalUrl = element("p", undefined, "original-url");
@@ -117,7 +121,7 @@
     const name = report.schema_version >= 2 || report.category === "tech" ? "Tech Daily" : "AI Daily";
     document.title = `${name} · ${report.report_date}`;
     document.querySelector("#report-title").textContent = `${name} · ${report.report_date}`;
-    document.querySelector("#report-meta").textContent = `${report.article_count} 条资讯 · 预计阅读 ${report.estimated_reading_minutes} 分钟 · ${formatDate(report.report_date)}`;
+    document.querySelector("#report-meta").textContent = `${report.article_count} items / ${report.article_count} 条资讯 · ${report.estimated_reading_minutes} min read / 预计阅读 ${report.estimated_reading_minutes} 分钟 · ${formatDate(report.report_date)}`;
     document.querySelector("#daily-report").replaceChildren(...report.items.map((item) => renderArticle(item, report.schema_version || 1)));
   };
   const run = async () => {
