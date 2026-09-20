@@ -30,6 +30,7 @@ class PublicSiteTests(unittest.TestCase):
         self.assertIn("overflow-wrap:anywhere", styles)
         self.assertIn(".content-en { color:var(--ink); }", styles)
         self.assertIn(".content-zh { color:var(--muted); font-size:.92em", styles)
+        self.assertIn(".article-title-cn.content-zh { font-size:clamp(18px,3vw,24px); }", styles)
         self.assertIn(".article-section .content-zh { margin:12px 0 25px; }", styles)
 
     def test_current_daily_keeps_bilingual_content_and_original_source_metadata(self):
