@@ -29,12 +29,16 @@
     return `${value("year")}-${value("month")}-${value("day")}`;
   };
   const setFailure = (target, text) => { target.replaceChildren(element("p", text, "notice")); };
+  const displayHighlight = (highlight) => {
+    const parts = String(highlight || "").split(" / ");
+    return parts.length > 1 ? parts.at(-1) : parts[0];
+  };
   const summaryCard = (report) => {
     const link = element("a", undefined, "report-link");
     link.href = reportHref(report.report_date);
     const title = element("h2", `${report.schema_version >= 2 || report.category === "tech" ? "Tech Daily" : "AI Daily"} · ${report.report_date}`);
     const facts = element("p", `${report.article_count} 条资讯 · 预计阅读 ${report.estimated_reading_minutes} 分钟`, "report-facts");
-    const highlights = element("p", (report.highlights || []).join(" · "), "report-highlights");
+    const highlights = element("p", (report.highlights || []).map(displayHighlight).join(" · "), "report-highlights");
     link.append(title, facts, highlights, element("span", "阅读日报 →", "text-link"));
     return link;
   };
@@ -57,7 +61,7 @@
     document.querySelector("#today-date").textContent = formatDate(report.report_date);
     document.querySelector("#article-count").textContent = `${report.article_count} 条`;
     document.querySelector("#reading-minutes").textContent = `${report.estimated_reading_minutes} 分钟`;
-    document.querySelector("#today-highlight").textContent = (report.highlights || ["已发布"])[0];
+    document.querySelector("#today-highlight").textContent = displayHighlight((report.highlights || ["已发布"])[0]);
     document.querySelector("#today-notice").textContent = "广泛采集、严格筛选；每条资讯均保留可追溯原文。";
     document.querySelector("#today-link").href = reportHref(report.report_date);
     document.querySelector("#archive-preview-title").textContent = `最近日报：${report.report_date}`;

@@ -22,6 +22,7 @@ class PublicSiteTests(unittest.TestCase):
         self.assertNotIn("key_points_original", script)
         self.assertNotIn("Read Original", script)
         self.assertNotIn("Source /", script)
+        self.assertIn("const displayHighlight", script)
         self.assertLess(script.index("titleEn"), script.index("titleZh"))
         self.assertLess(script.index("happenedEn"), script.index("happenedZh"))
         self.assertLess(script.index("whyEn"), script.index("whyZh"))
