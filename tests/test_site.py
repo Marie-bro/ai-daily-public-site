@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PAGES = (ROOT / "index.html", ROOT / "ai" / "index.html", ROOT / "archive" / "index.html", ROOT / "daily" / "ai" / "index.html")
+PAGES = (ROOT / "index.html", ROOT / "ai" / "index.html", ROOT / "archive" / "index.html", ROOT / "daily" / "ai" / "index.html", ROOT / "favorites" / "index.html")
 
 
 class PublicSiteTests(unittest.TestCase):
@@ -73,6 +73,17 @@ class PublicSiteTests(unittest.TestCase):
     def test_pages_do_not_use_root_absolute_links(self):
         for page in PAGES:
             self.assertNotRegex(page.read_text(encoding="utf-8"), r'href="/(?!daily/)')
+
+    def test_favorites_remain_local_for_visitors_and_use_only_protected_queue_routes(self):
+        script = (ROOT / "assets" / "site.js").read_text(encoding="utf-8-sig")
+        self.assertIn("localStorage", script)
+        self.assertIn("Save for Later", script)
+        self.assertIn("api/favorites/queue", script)
+        self.assertIn("requestAuthCode", script)
+        self.assertNotIn("OBSIDIAN_VAULT_PATH", script)
+        self.assertNotIn("MARIESPACE_WORKER_PULL_TOKEN", script)
+        self.assertNotIn("FEISHU_APP_SECRET", script)
+        self.assertTrue((ROOT / "favorites" / "index.html").is_file())
 
     def test_site_does_not_contain_secrets_or_fake_source_links(self):
         content = "\n".join(page.read_text(encoding="utf-8") for page in PAGES)

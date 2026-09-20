@@ -1,0 +1,11 @@
+﻿{
+  "name": "mariespace-tech-daily-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests-js/*.test.js"
+  },
+  "dependencies": {
+    "@edgeone/pages-blob": "0.0.16"
+  }
+}

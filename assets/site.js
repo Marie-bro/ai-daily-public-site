@@ -29,6 +29,83 @@
     return `${value("year")}-${value("month")}-${value("day")}`;
   };
   const setFailure = (target, text) => { target.replaceChildren(element("p", text, "notice")); };
+  const favoriteStorageKey = "mariespace-tech-daily-favorites-v1";
+  const feishuSdkUrl = "https://lf1-cdn-tos.bytegoofy.com/obj/feishu-static/lark/h5-js-sdk-1.5.23.js";
+  let feishuSdkPromise;
+  const favoriteArticle = (item) => ({
+    title_en: item.title_en || item.title_original,
+    title_zh: item.title_zh || item.title_cn,
+    what_happened_en: item.what_happened_en || item.summary_en,
+    what_happened_zh: item.what_happened_zh || item.what_happened || item.summary_cn,
+    why_it_matters_en: item.why_it_matters_en || item.relevance,
+    why_it_matters_zh: item.why_it_matters_zh || item.why_it_matters,
+    source: item.source, published_at: item.published_at, original_url: item.original_url,
+  });
+  const localKey = (article) => article.original_url.replace(/#.*/, "");
+  const localFavorites = () => {
+    try { const entries = JSON.parse(localStorage.getItem(favoriteStorageKey) || "[]"); return Array.isArray(entries) ? entries : []; } catch { return []; }
+  };
+  const saveLocalFavorite = (article) => {
+    const entries = localFavorites();
+    if (entries.some((entry) => entry.original_url === localKey(article))) return "already_saved";
+    entries.unshift({ ...article, original_url: localKey(article), saved_at: new Date().toISOString() });
+    localStorage.setItem(favoriteStorageKey, JSON.stringify(entries));
+    return "saved_locally";
+  };
+  const ensureFeishuSdk = () => {
+    if (window.h5sdk && window.tt?.requestAuthCode) return Promise.resolve();
+    if (feishuSdkPromise) return feishuSdkPromise;
+    feishuSdkPromise = new Promise((resolve, reject) => {
+      const script = document.createElement("script");
+      script.src = feishuSdkUrl; script.async = true; script.onload = resolve;
+      script.onerror = () => reject(new Error("feishu_sdk_unavailable")); document.head.append(script);
+    });
+    return feishuSdkPromise;
+  };
+  const requestFeishuCode = async () => {
+    await ensureFeishuSdk();
+    const config = await getJson(`${root}api/favorites/config`);
+    if (!config.app_id || !window.h5sdk || !window.tt?.requestAuthCode) throw new Error("feishu_identity_unavailable");
+    return new Promise((resolve, reject) => {
+      const timeout = window.setTimeout(() => reject(new Error("feishu_identity_timeout")), 8000);
+      window.h5sdk.ready(() => window.tt.requestAuthCode({ appId: config.app_id,
+        success: (result) => { window.clearTimeout(timeout); result?.code ? resolve(result.code) : reject(new Error("feishu_identity_missing")); },
+        fail: () => { window.clearTimeout(timeout); reject(new Error("feishu_identity_denied")); },
+      }));
+    });
+  };
+  const saveFavorite = async (item) => {
+    const article = favoriteArticle(item);
+    try {
+      const code = await requestFeishuCode();
+      const response = await fetch(`${root}api/favorites/queue`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ code, article }) });
+      const payload = await response.json().catch(() => ({}));
+      if (response.ok && payload.ok) return payload.status;
+      if (response.status !== 401 && response.status !== 403) throw new Error("queue_unavailable");
+    } catch { /* Browsers outside Feishu and non-Owner users remain local by design. */ }
+    return saveLocalFavorite(article);
+  };
+  const favoriteMessage = (status) => ({
+    pending: "Saved\n\u5df2\u52a0\u5165\u6536\u85cf\u961f\u5217",
+    already_queued: "Already saved\n\u5df2\u7ecf\u6536\u85cf",
+    already_saved: "Already saved\n\u5df2\u7ecf\u6536\u85cf",
+    saved_locally: "Saved locally\n\u5df2\u4fdd\u5b58\u5230\u6b64\u6d4f\u89c8\u5668",
+  }[status] || "Saved locally\n\u5df2\u4fdd\u5b58\u5230\u6b64\u6d4f\u89c8\u5668");
+  const favoriteControls = (item) => {
+    const controls = element("div", undefined, "favorite-controls");
+    const button = element("button", "Save for Later\n\u6536\u85cf", "favorite-button");
+    button.type = "button";
+    const status = element("p", "", "favorite-status");
+    button.addEventListener("click", async () => {
+      button.disabled = true; status.textContent = "Saving\n\u6b63\u5728\u6536\u85cf";
+      status.textContent = favoriteMessage(await saveFavorite(item)); button.disabled = false;
+    });
+    controls.append(button, status); return controls;
+  };
+  const articleId = async (item) => {
+    const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(localKey(favoriteArticle(item))));
+    return Array.from(new Uint8Array(digest), (byte) => byte.toString(16).padStart(2, "0")).join("");
+  };
   const displayHighlight = (highlight) => {
     const parts = String(highlight || "").split(" / ");
     return parts.length > 1 ? parts.at(-1) : parts[0];
@@ -107,6 +184,7 @@
     const whyZh = item.why_it_matters;
     if (happenedEn || happenedZh) article.append(contentSection("What happened?", happenedEn, happenedZh));
     if (whyEn || whyZh) article.append(contentSection("Why it matters?", whyEn, whyZh));
+    article.append(favoriteControls(item));
     return article;
   };
   const renderDaily = async () => {
@@ -126,6 +204,21 @@
     document.querySelector("#report-title").textContent = `${name} · ${report.report_date}`;
     document.querySelector("#report-meta").textContent = `${report.article_count} 条资讯 · 预计阅读 ${report.estimated_reading_minutes} 分钟 · ${formatDate(report.report_date)}`;
     document.querySelector("#daily-report").replaceChildren(...report.items.map((item) => renderArticle(item, report.schema_version || 1)));
+    const requestedFavorite = params.get("favorite");
+    if (/^[a-f0-9]{64}$/.test(requestedFavorite || "")) {
+      const matches = await Promise.all(report.items.map(async (item) => ({ item, id: await articleId(item) })));
+      const selected = matches.find((entry) => entry.id === requestedFavorite)?.item;
+      if (selected) {
+        document.querySelector(".report-header").append(element("p", favoriteMessage(await saveFavorite(selected)), "favorite-status"));
+        history.replaceState({}, "", reportHref(date));
+      }
+    }
+  };
+  const renderFavorites = () => {
+    const target = document.querySelector("#favorite-list");
+    const entries = localFavorites();
+    if (!entries.length) return setFailure(target, "\u6b64\u6d4f\u89c8\u5668\u8fd8\u6ca1\u6709\u672c\u5730\u6536\u85cf\u3002\nNo local favorites are saved in this browser yet.");
+    target.replaceChildren(...entries.map((item) => renderArticle(item, 3)));
   };
   const run = async () => {
     try {
@@ -133,8 +226,9 @@
       if (page === "channel") await renderReportList(document.querySelector("#channel-reports"));
       if (page === "archive") await renderReportList(document.querySelector("#archive-reports"));
       if (page === "daily") await renderDaily();
+      if (page === "favorites") renderFavorites();
     } catch {
-      const target = document.querySelector("#daily-report, #channel-reports, #archive-reports, #today-notice");
+      const target = document.querySelector("#daily-report, #channel-reports, #archive-reports, #favorite-list, #today-notice");
       if (target) setFailure(target, "日报暂时无法载入，请稍后重试。");
     }
   };
