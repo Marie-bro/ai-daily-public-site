@@ -1,14 +1,14 @@
 {
-  "schema_version": 1,
-  "category": "ai",
+  "schema_version": 3,
+  "category": "tech",
   "report_date": "2026-09-20",
   "published_at": "2026-09-20T01:01:05.282542+08:00",
   "article_count": 4,
   "estimated_reading_minutes": 5,
   "highlights": [
-    "与谷歌共同创造时尚的未来",
-    "新专家加入谷歌AI与经济团队",
-    "理解前沿实验室内部AI发展速度的测量指标"
+    "Co-creating the future of fashion with Google / 与谷歌共同创造时尚的未来",
+    "New experts join Google’s AI & Economy team / 新专家加入谷歌AI与经济团队",
+    "Measurements for understanding the pace of AI development inside frontier labs / 理解前沿实验室内部AI发展速度的测量指标"
   ],
   "items": [
     {
@@ -37,7 +37,12 @@
         "co-developing tools that work within their existing processes"
       ],
       "original_language": "en",
-      "translation_language": "zh"
+      "translation_language": "zh",
+      "title_en": "Co-creating the future of fashion with Google",
+      "what_happened_en": "Google's Envisioning Studio partnered with designers Jane Wade and Sergio Hudson to build two custom tools in Google Flow: Styling Suite, which let Jane virtually curate complete runway looks before producing physical samples, and Runway Visualization, which let Sergio simulate his runway setup, lighting, and props within budget. The tools were used for New York Fashion Week, and users can now build custom design tools in Google Flow without coding.",
+      "what_happened": "谷歌Envisioning Studio与设计师Jane Wade和Sergio Hudson合作，利用Google Flow打造了两款定制工具：Styling Suite帮助Jane在制作实体样品前虚拟策划完整造型；Runway Visualization帮助Sergio在预算内模拟秀场布置、灯光和道具。这些工具在纽约时装周上得到应用，且用户现在无需编码即可在Google Flow中构建自定义设计工具。",
+      "why_it_matters_en": "This item shows how generative AI is being applied to real-world creative production workflows, moving beyond pilot projects to actual runway use, and highlights no-code tool-building for domain-specific tasks.",
+      "why_it_matters": "该条目展示了生成式AI如何应用于现实世界的创意生产工作流，从试点项目走向实际秀场应用，并凸显了面向特定领域任务的无代码工具构建。"
     },
     {
       "title_cn": "新专家加入谷歌AI与经济团队",
@@ -65,7 +70,12 @@
         "make sense of this complex transition"
       ],
       "original_language": "en",
-      "translation_language": "zh"
+      "translation_language": "zh",
+      "title_en": "New experts join Google’s AI & Economy team",
+      "what_happened_en": "Google is expanding its AI & Economy Research Program by adding world-class economists and academic advisors to study AI's impact on jobs, productivity, and global growth. New directors Anu Madgavkar and Daniel Rock will lead the effort, joined by Nobel Laureate Philippe Aghion and Professor Ajay Agrawal. The program also launched AI & Economy ATLAS v1.0, with data and publications available at ai.google/economy.",
+      "what_happened": "谷歌扩展其AI与经济研究项目，新增世界级经济学家和学术顾问，以研究AI对就业、生产率和全球增长的影响。新任董事Anu Madgavkar和Daniel Rock将领导该工作，诺贝尔奖得主Philippe Aghion和教授Ajay Agrawal等加入。该项目还发布了AI & Economy ATLAS v1.0，相关数据和出版物可在ai.google/economy获取。",
+      "why_it_matters_en": "This item signals growing institutional investment in measuring AI's economic effects, which matters for understanding labor market shifts, productivity trends, and evidence-based policy.",
+      "why_it_matters": "该条目表明机构对衡量AI经济影响的投入不断增加，这对理解劳动力市场变化、生产率趋势和循证政策具有重要意义。"
     },
     {
       "title_cn": "理解前沿实验室内部AI发展速度的测量指标",
@@ -93,7 +103,12 @@
         "no human in the loop"
       ],
       "original_language": "en",
-      "translation_language": "zh"
+      "translation_language": "zh",
+      "title_en": "Measurements for understanding the pace of AI development inside frontier labs",
+      "what_happened_en": "Anthropic published a post laying out measurement tools to understand the pace of AI development inside frontier labs, focusing on three aspects: the extent to which AI builds its next version, the ability to oversee and intervene in AI agents' actions, and the resources powering more capable models. Anthropic built a prototype Anthropic R&D Automation Index using Epoch AI's Automation Level scale (AL0 to AL5) to rate automation of AI R&D tasks, and plans to embed independent third-party evaluators.",
+      "what_happened": "Anthropic发布文章，提出测量前沿实验室内部AI发展速度的工具，聚焦三个关键方面：AI构建自身下一代的程度、对AI代理行为的监督与干预能力，以及驱动更强大模型的资源。Anthropic构建了原型Anthropic R&D Automation Index，使用Epoch AI的Automation Level量表（AL0至AL5）评估AI研发任务的自动化程度，并计划引入独立第三方评估者。",
+      "why_it_matters_en": "This item matters because it proposes concrete transparency metrics for AI self-improvement and oversight, which are central to debates about pacing frontier development and external verification.",
+      "why_it_matters": "该条目之所以重要，是因为它提出了针对AI自我改进和监督的具体透明度指标，而这些正是关于前沿发展节奏和外部验证讨论的核心。"
     },
     {
       "title_cn": "让全球数据更易于探索",
@@ -121,7 +136,12 @@
         "agentic research assistants"
       ],
       "original_language": "en",
-      "translation_language": "zh"
+      "translation_language": "zh",
+      "title_en": "Making global data easier to explore",
+      "what_happened_en": "The UN system launched the UN System Data Commons, an open-source platform built on Google's Data Commons that unites global statistics into an AI-ready knowledge graph. It automatically integrates metrics, timelines, and geographic boundaries, supports natural-language search, and is built on open standards like the Model Context Protocol (MCP), enabling AI agents to autonomously fetch authoritative figures and produce charts or draft reports. All datasets are validated with UN system statisticians.",
+      "what_happened": "联合国系统推出UN System Data Commons，这是一个基于谷歌Data Commons构建的开源平台，将全球统计数据整合为AI就绪知识图谱。平台自动整合指标、时间线和地理边界，支持自然语言搜索，并基于Model Context Protocol（MCP）等开放标准，使AI代理能自主获取权威数据并生成图表或报告草稿。所有数据集均经联合国系统统计人员验证。",
+      "why_it_matters_en": "This item shows how AI-ready data infrastructure and agentic assistants can make authoritative global statistics more accessible, which matters for research, policy, and evidence-based decision-making.",
+      "why_it_matters": "该条目展示了AI就绪的数据基础设施和代理式助手如何让权威全球统计数据更易获取，这对研究、政策和循证决策具有重要意义。"
     }
   ]
 }

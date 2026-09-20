@@ -2,16 +2,17 @@
   "schema_version": 1,
   "reports": [
     {
-      "category": "ai",
+      "category": "tech",
       "report_date": "2026-09-20",
       "published_at": "2026-09-20T01:01:05.282542+08:00",
       "article_count": 4,
       "estimated_reading_minutes": 5,
       "highlights": [
-        "与谷歌共同创造时尚的未来",
-        "新专家加入谷歌AI与经济团队",
-        "理解前沿实验室内部AI发展速度的测量指标"
-      ]
+        "Co-creating the future of fashion with Google / 与谷歌共同创造时尚的未来",
+        "New experts join Google’s AI & Economy team / 新专家加入谷歌AI与经济团队",
+        "Measurements for understanding the pace of AI development inside frontier labs / 理解前沿实验室内部AI发展速度的测量指标"
+      ],
+      "schema_version": 3
     }
   ]
 }
