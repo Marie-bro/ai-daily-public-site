@@ -17,6 +17,9 @@ class PublicSiteTests(unittest.TestCase):
         self.assertIn("为什么值得关注", script)
         self.assertIn("schemaVersion >= 2", script)
         self.assertIn("key_points_original", script)  # legacy report compatibility
+        styles = (ROOT / "assets" / "styles.css").read_text(encoding="utf-8")
+        self.assertIn(".report-header h1", styles)
+        self.assertIn("overflow-wrap:anywhere", styles)
 
     def test_required_routes_exist(self):
         for page in PAGES:
