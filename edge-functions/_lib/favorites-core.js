@@ -163,6 +163,26 @@ async function queueStatus(request, deps) {
   return json({ ok: true, queue: counts });
 }
 
+// Temporary Phase 6.5 diagnostic.  It uses the same Blob representation as a
+// real owner task but is callable only by the existing pull Worker credential.
+async function diagnosticQueue(request, deps) {
+  if (!workerAuthorized(request, deps.config)) return error(403, "worker_forbidden");
+  const payload = await parseJson(request);
+  const article = await normalizeArticle(payload.article);
+  const key = keyFor(article.article_id);
+  const existing = asJob(await deps.store.get(key, { type: "json", consistency: "strong" }));
+  if (existing) return json({ ok: true, task_id: existing.id, article_id: existing.article_id, requested_by: existing.requested_by, status: existing.status });
+  const job = { id: `favorite_${article.article_id}`, ...article, requested_at: deps.now().toISOString(), requested_by: "owner", status: "pending", attempts: 0, diagnostic: true };
+  try {
+    await deps.store.setJSON(key, job, { onlyIfNew: true });
+  } catch {
+    const concurrent = asJob(await deps.store.get(key, { type: "json", consistency: "strong" }));
+    if (concurrent) return json({ ok: true, task_id: concurrent.id, article_id: concurrent.article_id, requested_by: concurrent.requested_by, status: concurrent.status });
+    throw new Error("queue_store_write_failed");
+  }
+  return json({ ok: true, task_id: job.id, article_id: job.article_id, requested_by: job.requested_by, status: job.status }, 201);
+}
+
 export async function handleFavorites(context, deps) {
   const request = context.request;
   const url = new URL(request.url);
@@ -174,6 +194,7 @@ export async function handleFavorites(context, deps) {
     if (action === "claim") return await claim(request, deps);
     if (action === "complete") return await complete(request, deps);
     if (action === "status") return await queueStatus(request, deps);
+    if (action === "diagnostic-queue") return await diagnosticQueue(request, deps);
     return error(404, "not_found");
   } catch (reason) {
     const code = reason instanceof Error && /^([a-z_]+)$/.test(reason.message) ? reason.message : "request_failed";
