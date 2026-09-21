@@ -93,16 +93,3 @@ test("worker status reveals queue counts only and requires its separate token", 
   assert.equal(result.status, 200);
   assert.deepEqual(result.body.queue, { pending: 1, processing: 0, completed: 0, failed: 0, total: 1 });
 });
-
-test("temporary diagnostic queue uses the production job shape and remains worker-token protected", async () => {
-  const store = new Store();
-  const denied = await response(await handleFavorites(context("diagnostic-queue", { article }), deps(store)));
-  assert.equal(denied.status, 403);
-  const created = await response(await handleFavorites(context("diagnostic-queue", { article }, { authorization: "Bearer worker-secret" }), deps(store)));
-  assert.equal(created.status, 201);
-  assert.equal(created.body.requested_by, "owner");
-  assert.equal(created.body.status, "pending");
-  const job = [...store.values.values()][0];
-  assert.equal(job.diagnostic, true);
-  assert.equal(job.status, "pending");
-});
