@@ -83,3 +83,13 @@ test("worker pulls, completes, and is rejected without its separate token", asyn
   assert.equal(job.status, "completed");
   assert.equal(job.lease_id, undefined);
 });
+
+test("worker status reveals queue counts only and requires its separate token", async () => {
+  const store = new Store();
+  await handleFavorites(context("queue", { code: "owner", article }), deps(store));
+  const denied = await response(await handleFavorites(context("status"), deps(store)));
+  assert.equal(denied.status, 403);
+  const result = await response(await handleFavorites(context("status", null, { authorization: "Bearer worker-secret" }), deps(store)));
+  assert.equal(result.status, 200);
+  assert.deepEqual(result.body.queue, { pending: 1, processing: 0, completed: 0, failed: 0, total: 1 });
+});

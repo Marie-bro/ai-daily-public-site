@@ -103,7 +103,11 @@ async function queue(request, deps) {
   try {
     await deps.store.setJSON(key, job, { onlyIfNew: true });
   } catch {
-    return json({ ok: true, status: "already_queued", article_id: article.article_id });
+    // A write error is not proof of a concurrent duplicate.  Re-read before
+    // telling the Feishu client that its favorite is safely queued.
+    const concurrent = asJob(await deps.store.get(key, { type: "json", consistency: "strong" }));
+    if (concurrent) return json({ ok: true, status: concurrent.status === "completed" ? "already_saved" : "already_queued", article_id: article.article_id });
+    throw new Error("queue_store_write_failed");
   }
   return json({ ok: true, status: "pending", article_id: article.article_id }, 201);
 }
@@ -146,6 +150,19 @@ async function complete(request, deps) {
   return json({ ok: true, status });
 }
 
+async function queueStatus(request, deps) {
+  if (!workerAuthorized(request, deps.config)) return error(403, "worker_forbidden");
+  const { blobs } = await deps.store.list({ prefix: "queue/", consistency: "strong" });
+  const counts = { pending: 0, processing: 0, completed: 0, failed: 0, total: 0 };
+  for (const blob of blobs) {
+    const job = asJob(await deps.store.get(blob.key, { type: "json", consistency: "strong" }));
+    if (!job) continue;
+    counts.total += 1;
+    if (Object.hasOwn(counts, job.status)) counts[job.status] += 1;
+  }
+  return json({ ok: true, queue: counts });
+}
+
 export async function handleFavorites(context, deps) {
   const request = context.request;
   const url = new URL(request.url);
@@ -156,6 +173,7 @@ export async function handleFavorites(context, deps) {
     if (action === "queue") return await queue(request, deps);
     if (action === "claim") return await claim(request, deps);
     if (action === "complete") return await complete(request, deps);
+    if (action === "status") return await queueStatus(request, deps);
     return error(404, "not_found");
   } catch (reason) {
     const code = reason instanceof Error && /^([a-z_]+)$/.test(reason.message) ? reason.message : "request_failed";
