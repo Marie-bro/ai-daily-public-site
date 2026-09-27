@@ -22,7 +22,7 @@ const probe = window.setInterval(() => {
   if (!cards.length && !document.querySelector('.daily-article')) return;
   window.clearInterval(probe);
   const top = document.querySelectorAll('.dashboard-section:first-of-type .story-card').length;
-  const all = document.querySelectorAll('.dashboard-section:nth-of-type(2) .story-card').length;
+  const all = document.querySelectorAll('.dashboard-section:not(:first-of-type) .story-card').length;
   document.body.dataset.cardCount = String(cards.length);
   document.body.dataset.topCount = String(top);
   document.body.dataset.allCount = String(all);
@@ -59,9 +59,11 @@ def report(count):
             "what_happened_en": f"What happened {index + 1}", "why_it_matters": f"为什么值得关注 {index + 1}",
             "why_it_matters_en": f"Why it matters {index + 1}", "importance_score": 95 - index,
             "ranking_score": 90 - index, "source_tier": index % 3 + 1, "section": section,
+            "source_role": "primary" if index % 3 else "media",
+            "channel": ("technology", "policy_economy", "society_trends", "future_opportunities")[index % 4],
             "content_type": "deep_read" if section == "deep_read" else "news", "catch_up": index % 6 == 0,
         })
-    return {"schema_version": 3, "category": "tech", "report_date": DATE,
+    return {"schema_version": 3, "category": "radar", "report_date": DATE,
             "article_count": count, "estimated_reading_minutes": 8, "items": items}
 
 
@@ -74,7 +76,7 @@ class FixtureHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         path = urlsplit(self.path).path
         if path == "/data/reports.json":
-            payload = {"reports": [{"category": "tech", "report_date": DATE, "article_count": self.story_count,
+            payload = {"reports": [{"category": "radar", "report_date": DATE, "article_count": self.story_count,
                                      "estimated_reading_minutes": 8}]}
             return self.send_json(payload)
         if path == f"/data/daily/ai/{DATE}.json":
@@ -138,7 +140,7 @@ class DashboardBrowserTests(unittest.TestCase):
                     self.assertEqual(self.attribute(html, "overflow"), "false")
                     self.assertEqual(self.attribute(html, "english-card"), "false")
                     filters = self.attribute(html, "filters").split(",")
-                    for expected in ("all", "ai", "robotics", "chips", "science", "explore", "deep_read"):
+                    for expected in ("all", "technology", "policy_economy", "society_trends", "future_opportunities", "ai", "robotics", "chips", "science", "explore", "deep_read"):
                         self.assertIn(expected, filters)
                     self.assertGreater(int(self.attribute(html, "explore-visible")), 0)
                     self.assertLess(int(self.attribute(html, "explore-visible")), count)

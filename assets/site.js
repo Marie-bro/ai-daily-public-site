@@ -10,7 +10,17 @@
   const categoryLabels = {
     ai: "AI", chips: "芯片", consumer_tech: "消费科技", software: "软件",
     robotics: "机器人", mobility: "智能出行", space: "航天", science: "科学",
-    internet: "互联网", other_tech: "其他科技"
+    internet: "互联网", other_tech: "其他科技", policy: "政策", economy: "经济",
+    industry: "产业", education: "教育", employment: "就业", society: "社会趋势",
+    infrastructure: "基础设施", opportunities: "未来机会"
+  };
+  const channelLabels = {
+    technology: ["TECHNOLOGY & INDUSTRY", "科技与产业"],
+    policy_economy: ["POLICY & ECONOMY", "政策与经济"],
+    society_trends: ["SOCIETY & TRENDS", "社会与趋势"],
+    future_opportunities: ["FUTURE OPPORTUNITIES", "未来机会"],
+    explore: ["EXPLORE", "探索"],
+    deep_read: ["DEEP READ", "深度阅读"],
   };
   const reportHref = (date, article) => `${root}daily/ai/?date=${encodeURIComponent(date)}${article ? `&article=${encodeURIComponent(article)}` : ""}`;
   const articleKey = (item, index) => item.article_id || `story-${index + 1}`;
@@ -21,10 +31,10 @@
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return response.json();
   };
-  const techReports = (index) => Array.isArray(index.reports)
-    ? index.reports.filter((report) => ["tech", "ai"].includes(report.category) && report.article_count > 0 && /^\d{4}-\d{2}-\d{2}$/.test(report.report_date)).sort((a, b) => b.report_date.localeCompare(a.report_date))
+  const radarReports = (index) => Array.isArray(index.reports)
+    ? index.reports.filter((report) => ["radar", "tech", "ai"].includes(report.category) && report.article_count > 0 && /^\d{4}-\d{2}-\d{2}$/.test(report.report_date)).sort((a, b) => b.report_date.localeCompare(a.report_date))
     : [];
-  const latestReport = (index) => techReports(index)[0];
+  const latestReport = (index) => radarReports(index)[0];
   const todayInShanghai = () => {
     const parts = new Intl.DateTimeFormat("en-US", { timeZone: "Asia/Shanghai", year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(new Date());
     const value = (type) => parts.find((part) => part.type === type).value;
@@ -115,7 +125,7 @@
   const summaryCard = (report) => {
     const link = element("a", undefined, "report-link");
     link.href = reportHref(report.report_date);
-    const title = element("h2", `${report.schema_version >= 2 || report.category === "tech" ? "Tech Daily" : "AI Daily"} · ${report.report_date}`);
+    const title = element("h2", `${report.category === "radar" || report.schema_version >= 3 ? "MarieSpace Radar" : report.schema_version >= 2 || report.category === "tech" ? "Tech Daily" : "AI Daily"} · ${report.report_date}`);
     const facts = element("p", `${report.article_count} 条资讯 · 预计阅读 ${report.estimated_reading_minutes} 分钟`, "report-facts");
     const highlights = element("p", (report.highlights || []).map(displayHighlight).join(" · "), "report-highlights");
     link.append(title, facts, highlights, element("span", "阅读日报 →", "text-link"));
@@ -124,14 +134,14 @@
   const renderHome = async () => {
     const index = await getJson(`${root}data/reports.json`);
     const latest = latestReport(index);
-    const summary = techReports(index).find((entry) => entry.report_date === todayInShanghai()) || latest;
+    const summary = radarReports(index).find((entry) => entry.report_date === todayInShanghai()) || latest;
     if (!summary) return setFailure(document.querySelector("#daily-report"), "暂无已验证日报。新的日报发布后会显示在这里。");
     const report = await getJson(`${root}data/daily/ai/${summary.report_date}.json`);
     setReportHeader(report);
     renderDashboard(document.querySelector("#daily-report"), report);
   };
   const renderReportList = async (target) => {
-    const reports = techReports(await getJson(`${root}data/reports.json`));
+    const reports = radarReports(await getJson(`${root}data/reports.json`));
     if (!reports.length) return setFailure(target, "暂无已验证日报。新的日报发布后会在这里按日期保存。");
     target.replaceChildren(...reports.map(summaryCard));
   };
@@ -147,7 +157,7 @@
     || (Number(left.item.source_tier || 9) - Number(right.item.source_tier || 9))
     || (Number(right.item.ranking_score || 0) - Number(left.item.ranking_score || 0))
     || String(right.item.published_at || "").localeCompare(String(left.item.published_at || ""));
-  const storyFilters = (item) => [item.category, item.section === "explore" ? "explore" : "", item.section === "deep_read" || item.content_type === "deep_read" ? "deep_read" : ""].filter(Boolean);
+  const storyFilters = (item) => [item.category, item.channel, item.section === "explore" ? "explore" : "", item.section === "deep_read" || item.content_type === "deep_read" ? "deep_read" : ""].filter(Boolean);
   const storyTags = (item, topPick) => {
     const tags = [];
     if (topPick) tags.push("Top Pick");
@@ -163,6 +173,7 @@
     const meta = element("p", `${entry.item.source} · ${formatPublished(entry.item.published_at)}`, "story-meta");
     const badges = element("div", undefined, "story-badges");
     badges.append(element("span", categoryLabels[entry.item.category] || entry.item.category || "科技", "category-badge"));
+    if (channelLabels[entry.item.channel]) badges.append(element("span", channelLabels[entry.item.channel][1], "story-tag"));
     storyTags(entry.item, topPick).forEach((tag) => badges.append(element("span", tag, "story-tag")));
     link.append(badges, heading, meta);
     return link;
@@ -184,20 +195,28 @@
     const more = ranked.filter((entry) => !topKeys.has(entry.key));
     const filters = element("div", undefined, "story-filters");
     filters.setAttribute("aria-label", "资讯分类筛选");
-    const values = [...new Set(entries.map((entry) => entry.item.category).filter(Boolean))].sort();
+    const values = [...new Set(entries.map((entry) => entry.item.channel).filter(Boolean)), ...new Set(entries.map((entry) => entry.item.category).filter(Boolean))].sort();
     if (entries.some((entry) => entry.item.section === "explore")) values.push("explore");
     if (entries.some((entry) => entry.item.section === "deep_read" || entry.item.content_type === "deep_read")) values.push("deep_read");
-    const labels = { explore: "探索", deep_read: "Deep Read" };
-    const controls = [["all", "全部"], ...values.map((value) => [value, labels[value] || categoryLabels[value] || value])];
+    const uniqueValues = [...new Set(values)];
+    const labels = { explore: "探索", deep_read: "深度阅读", ...Object.fromEntries(Object.entries(channelLabels).map(([key, value]) => [key, value[1]])) };
+    const controls = [["all", "全部"], ...uniqueValues.map((value) => [value, labels[value] || categoryLabels[value] || value])];
     controls.forEach(([value, label], index) => {
       const button = element("button", label, `filter-button${index === 0 ? " is-active" : ""}`);
       button.type = "button"; button.dataset.filter = value; button.setAttribute("aria-pressed", index === 0 ? "true" : "false");
       filters.append(button);
     });
     const topSection = dashboardSection("TOP PICKS", "今日重点", top, report, topKeys);
-    const moreSection = dashboardSection("ALL STORIES", "全部资讯", more, report, topKeys);
-    if (!more.length) moreSection.hidden = true;
-    target.replaceChildren(filters, topSection, moreSection);
+    const grouped = new Map();
+    more.forEach((entry) => {
+      const key = entry.item.content_type === "deep_read" || entry.item.channel === "deep_read" ? "deep_read" : entry.item.section === "explore" ? "explore" : entry.item.channel || "technology";
+      if (!grouped.has(key)) grouped.set(key, []);
+      grouped.get(key).push(entry);
+    });
+    const sections = ["technology", "policy_economy", "society_trends", "future_opportunities", "explore", "deep_read"]
+      .filter((key) => grouped.has(key))
+      .map((key) => dashboardSection(channelLabels[key][0], channelLabels[key][1], grouped.get(key), report, topKeys));
+    target.replaceChildren(filters, topSection, ...sections);
     filters.addEventListener("click", (event) => {
       const button = event.target.closest("button[data-filter]");
       if (!button) return;
@@ -207,7 +226,7 @@
     });
   };
   const setReportHeader = (report) => {
-    const name = report.schema_version >= 2 || report.category === "tech" ? "Tech Daily" : "AI Daily";
+    const name = report.category === "radar" || report.schema_version >= 3 ? "MarieSpace Radar" : report.schema_version >= 2 || report.category === "tech" ? "Tech Daily" : "AI Daily";
     document.title = `${name} · ${report.report_date}`;
     document.querySelector("#report-title").textContent = `${name} · ${report.report_date}`;
     document.querySelector("#report-meta").textContent = `${report.article_count} 条资讯 · 预计阅读 ${report.estimated_reading_minutes} 分钟 · ${formatDate(report.report_date)}`;
@@ -262,7 +281,7 @@
     if (requestedArticle) {
       const selected = report.items.find((item, index) => articleKey(item, index) === requestedArticle);
       if (!selected) throw new Error("Unknown article");
-      document.title = `${selected.title_zh || selected.title_cn || selected.title_original} · Tech Daily`;
+      document.title = `${selected.title_zh || selected.title_cn || selected.title_original} · MarieSpace Radar`;
       const back = element("a", "← 返回当日日报", "back-link");
       back.href = reportHref(date);
       document.querySelector("#daily-report").replaceChildren(back, renderArticle(selected, report.schema_version || 1));

@@ -12,8 +12,8 @@ class PublicSiteTests(unittest.TestCase):
     def test_bilingual_content_renderer_and_secondary_chinese_style(self):
         home = (ROOT / "index.html").read_text(encoding="utf-8-sig")
         script = (ROOT / "assets" / "site.js").read_text(encoding="utf-8-sig")
-        self.assertIn("Tech Daily", home)
-        self.assertIn("\u79d1\u6280\u9891\u9053", home)
+        self.assertIn("MarieSpace Radar", home)
+        self.assertIn("\u6bcf\u65e5\u96f7\u8fbe", home)
         self.assertNotIn("Home /", home)
         self.assertIn('contentSection("What happened?"', script)
         self.assertIn('contentSection("Why it matters?"', script)
@@ -75,7 +75,8 @@ class PublicSiteTests(unittest.TestCase):
         script = (ROOT / "assets" / "site.js").read_text(encoding="utf-8-sig")
         self.assertIn('id="daily-report"', home)
         self.assertIn('dashboardSection("TOP PICKS", "今日重点"', script)
-        self.assertIn('dashboardSection("ALL STORIES", "全部资讯"', script)
+        self.assertIn('policy_economy: ["POLICY & ECONOMY", "政策与经济"]', script)
+        self.assertIn('future_opportunities: ["FUTURE OPPORTUNITIES", "未来机会"]', script)
         self.assertIn('title_zh || entry.item.title_cn', script)
         self.assertIn('params.get("article")', script)
         self.assertIn('favoriteControls(item)', script)
@@ -84,6 +85,7 @@ class PublicSiteTests(unittest.TestCase):
         self.assertNotIn("why_it_matters", card_renderer)
         self.assertNotIn("title_en", card_renderer)
         self.assertIn("item.category", script)
+        self.assertIn("item.channel", script)
         self.assertIn('item.section === "explore"', script)
         self.assertIn('item.content_type === "deep_read"', script)
 

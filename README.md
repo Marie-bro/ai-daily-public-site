@@ -1,6 +1,6 @@
-# AI Daily 飞书资讯中心 H5
+# MarieSpace Radar 飞书资讯中心 H5
 
-AI Daily 是飞书工作台中的统一资讯入口。正式地址为 `https://news.mariespace.cn/`，通过腾讯云 EdgeOne Makers 部署；页面本身不依赖任何代码托管站点域名。
+MarieSpace Radar 是飞书工作台中的每日高价值信息入口。正式地址为 `https://news.mariespace.cn/`，通过腾讯云 EdgeOne Makers 部署；页面本身不依赖任何代码托管站点域名。
 
 ## 内容规则
 
@@ -11,10 +11,11 @@ AI Daily 是飞书工作台中的统一资讯入口。正式地址为 `https://n
 
 ## 页面路由
 
-- `/`：今日 AI Daily 概览
-- `/ai/`：AI 日报列表
+- `/`：今日 Radar 看板（Top Picks 与有内容的频道）
+- `/ai/`：每日 Radar 列表
 - `/archive/`：按日期历史归档
-- `/daily/ai/?date=YYYY-MM-DD`：单份日报详情
+- `/daily/ai/?date=YYYY-MM-DD`：指定日期看板
+- `/daily/ai/?date=YYYY-MM-DD&article=ARTICLE_ID`：中英双语资讯详情
 
 ## 本地验证
 
