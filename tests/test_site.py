@@ -70,6 +70,23 @@ class PublicSiteTests(unittest.TestCase):
         self.assertNotIn("github.com", index.lower())
         self.assertNotIn("openai.com", index.lower())
 
+    def test_dashboard_is_scan_first_and_detail_keeps_bilingual_content(self):
+        home = (ROOT / "index.html").read_text(encoding="utf-8")
+        script = (ROOT / "assets" / "site.js").read_text(encoding="utf-8-sig")
+        self.assertIn('id="daily-report"', home)
+        self.assertIn('dashboardSection("TOP PICKS", "今日重点"', script)
+        self.assertIn('dashboardSection("ALL STORIES", "全部资讯"', script)
+        self.assertIn('title_zh || entry.item.title_cn', script)
+        self.assertIn('params.get("article")', script)
+        self.assertIn('favoriteControls(item)', script)
+        card_renderer = script[script.index("const storyCard"):script.index("const dashboardSection")]
+        self.assertNotIn("what_happened", card_renderer)
+        self.assertNotIn("why_it_matters", card_renderer)
+        self.assertNotIn("title_en", card_renderer)
+        self.assertIn("item.category", script)
+        self.assertIn('item.section === "explore"', script)
+        self.assertIn('item.content_type === "deep_read"', script)
+
     def test_pages_do_not_use_root_absolute_links(self):
         for page in PAGES:
             self.assertNotRegex(page.read_text(encoding="utf-8"), r'href="/(?!daily/)')

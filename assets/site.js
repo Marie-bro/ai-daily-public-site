@@ -12,8 +12,10 @@
     robotics: "机器人", mobility: "智能出行", space: "航天", science: "科学",
     internet: "互联网", other_tech: "其他科技"
   };
-  const reportHref = (date) => `${root}daily/ai/?date=${encodeURIComponent(date)}`;
+  const reportHref = (date, article) => `${root}daily/ai/?date=${encodeURIComponent(date)}${article ? `&article=${encodeURIComponent(article)}` : ""}`;
+  const articleKey = (item, index) => item.article_id || `story-${index + 1}`;
   const formatDate = (date) => new Intl.DateTimeFormat("zh-CN", { timeZone: "Asia/Shanghai", year: "numeric", month: "long", day: "numeric", weekday: "short" }).format(new Date(`${date}T12:00:00+08:00`));
+  const formatPublished = (value) => new Intl.DateTimeFormat("zh-CN", { timeZone: "Asia/Shanghai", month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit", hour12: false }).format(new Date(value));
   const getJson = async (path) => {
     const response = await fetch(path, { cache: "no-cache" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -122,27 +124,11 @@
   const renderHome = async () => {
     const index = await getJson(`${root}data/reports.json`);
     const latest = latestReport(index);
-    const report = techReports(index).find((entry) => entry.report_date === todayInShanghai());
-    if (!report) {
-      document.querySelector("#today-title").textContent = "今日暂无符合条件的科技资讯";
-      document.querySelector("#today-date").textContent = formatDate(todayInShanghai());
-      document.querySelector("#article-count").textContent = "0 条";
-      document.querySelector("#reading-minutes").textContent = "—";
-      document.querySelector("#today-highlight").textContent = "暂无";
-      document.querySelector("#today-notice").textContent = latest ? `最新一期为 ${latest.report_date}，仍可从历史归档回看。` : "没有合格资讯时不会生成空日报。";
-      document.querySelector("#today-link").href = latest ? reportHref(latest.report_date) : `${root}ai/`;
-      document.querySelector("#today-link").firstChild.textContent = latest ? "阅读最近一期 " : "浏览科技频道 ";
-      return;
-    }
-    document.querySelector("#today-title").textContent = `Tech Daily · ${report.report_date}`;
-    document.querySelector("#today-date").textContent = formatDate(report.report_date);
-    document.querySelector("#article-count").textContent = `${report.article_count} 条`;
-    document.querySelector("#reading-minutes").textContent = `${report.estimated_reading_minutes} 分钟`;
-    document.querySelector("#today-highlight").textContent = displayHighlight((report.highlights || ["已发布"])[0]);
-    document.querySelector("#today-notice").textContent = "广泛采集、严格筛选；每条资讯均保留可追溯原文。";
-    document.querySelector("#today-link").href = reportHref(report.report_date);
-    document.querySelector("#archive-preview-title").textContent = `最近日报：${report.report_date}`;
-    document.querySelector("#archive-preview-copy").textContent = `${report.article_count} 条已验证科技资讯，预计阅读 ${report.estimated_reading_minutes} 分钟。`;
+    const summary = techReports(index).find((entry) => entry.report_date === todayInShanghai()) || latest;
+    if (!summary) return setFailure(document.querySelector("#daily-report"), "暂无已验证日报。新的日报发布后会显示在这里。");
+    const report = await getJson(`${root}data/daily/ai/${summary.report_date}.json`);
+    setReportHeader(report);
+    renderDashboard(document.querySelector("#daily-report"), report);
   };
   const renderReportList = async (target) => {
     const reports = techReports(await getJson(`${root}data/reports.json`));
@@ -155,6 +141,76 @@
     if (english) section.append(element("p", english, "content-en"));
     if (chinese) section.append(element("p", chinese, "content-zh"));
     return section;
+  };
+  const sectionLabels = { major_tech: "Major Tech · 重要科技", for_you: "For You · 与你相关", explore: "Explore · 探索", deep_read: "Deep Read · 深度阅读" };
+  const storyRank = (left, right) => (Number(right.item.importance_score || 0) - Number(left.item.importance_score || 0))
+    || (Number(left.item.source_tier || 9) - Number(right.item.source_tier || 9))
+    || (Number(right.item.ranking_score || 0) - Number(left.item.ranking_score || 0))
+    || String(right.item.published_at || "").localeCompare(String(left.item.published_at || ""));
+  const storyFilters = (item) => [item.category, item.section === "explore" ? "explore" : "", item.section === "deep_read" || item.content_type === "deep_read" ? "deep_read" : ""].filter(Boolean);
+  const storyTags = (item, topPick) => {
+    const tags = [];
+    if (topPick) tags.push("Top Pick");
+    if (sectionLabels[item.section]) tags.push(sectionLabels[item.section]);
+    if (item.catch_up) tags.push("Worth Catching Up · 值得补看");
+    return [...new Set(tags)];
+  };
+  const storyCard = (entry, report, topPick) => {
+    const link = element("a", undefined, "story-card");
+    link.href = reportHref(report.report_date, entry.key);
+    link.dataset.filters = storyFilters(entry.item).join(" ");
+    const heading = element("h3", entry.item.title_zh || entry.item.title_cn || entry.item.title_original, "story-title");
+    const meta = element("p", `${entry.item.source} · ${formatPublished(entry.item.published_at)}`, "story-meta");
+    const badges = element("div", undefined, "story-badges");
+    badges.append(element("span", categoryLabels[entry.item.category] || entry.item.category || "科技", "category-badge"));
+    storyTags(entry.item, topPick).forEach((tag) => badges.append(element("span", tag, "story-tag")));
+    link.append(badges, heading, meta);
+    return link;
+  };
+  const dashboardSection = (titleEn, titleZh, entries, report, topKeys) => {
+    const section = element("section", undefined, "dashboard-section");
+    const header = element("header", undefined, "dashboard-section-header");
+    header.append(element("p", titleEn, "eyebrow"), element("h2", titleZh));
+    const grid = element("div", undefined, "story-grid");
+    entries.forEach((entry) => grid.append(storyCard(entry, report, topKeys.has(entry.key))));
+    section.append(header, grid);
+    return section;
+  };
+  const renderDashboard = (target, report) => {
+    const entries = report.items.map((item, index) => ({ item, key: articleKey(item, index) }));
+    const ranked = [...entries].sort(storyRank);
+    const top = ranked.slice(0, Math.min(5, ranked.length));
+    const topKeys = new Set(top.map((entry) => entry.key));
+    const more = ranked.filter((entry) => !topKeys.has(entry.key));
+    const filters = element("div", undefined, "story-filters");
+    filters.setAttribute("aria-label", "资讯分类筛选");
+    const values = [...new Set(entries.map((entry) => entry.item.category).filter(Boolean))].sort();
+    if (entries.some((entry) => entry.item.section === "explore")) values.push("explore");
+    if (entries.some((entry) => entry.item.section === "deep_read" || entry.item.content_type === "deep_read")) values.push("deep_read");
+    const labels = { explore: "探索", deep_read: "Deep Read" };
+    const controls = [["all", "全部"], ...values.map((value) => [value, labels[value] || categoryLabels[value] || value])];
+    controls.forEach(([value, label], index) => {
+      const button = element("button", label, `filter-button${index === 0 ? " is-active" : ""}`);
+      button.type = "button"; button.dataset.filter = value; button.setAttribute("aria-pressed", index === 0 ? "true" : "false");
+      filters.append(button);
+    });
+    const topSection = dashboardSection("TOP PICKS", "今日重点", top, report, topKeys);
+    const moreSection = dashboardSection("ALL STORIES", "全部资讯", more, report, topKeys);
+    if (!more.length) moreSection.hidden = true;
+    target.replaceChildren(filters, topSection, moreSection);
+    filters.addEventListener("click", (event) => {
+      const button = event.target.closest("button[data-filter]");
+      if (!button) return;
+      filters.querySelectorAll("button").forEach((item) => { const active = item === button; item.classList.toggle("is-active", active); item.setAttribute("aria-pressed", active ? "true" : "false"); });
+      target.querySelectorAll(".story-card").forEach((card) => { card.hidden = button.dataset.filter !== "all" && !card.dataset.filters.split(" ").includes(button.dataset.filter); });
+      target.querySelectorAll(".dashboard-section").forEach((section) => { section.hidden = !section.querySelector(".story-card:not([hidden])"); });
+    });
+  };
+  const setReportHeader = (report) => {
+    const name = report.schema_version >= 2 || report.category === "tech" ? "Tech Daily" : "AI Daily";
+    document.title = `${name} · ${report.report_date}`;
+    document.querySelector("#report-title").textContent = `${name} · ${report.report_date}`;
+    document.querySelector("#report-meta").textContent = `${report.article_count} 条资讯 · 预计阅读 ${report.estimated_reading_minutes} 分钟 · ${formatDate(report.report_date)}`;
   };
   const sourceHeader = (item, titleEn, titleZh) => {
     const header = element("header", undefined, "article-header");
@@ -175,8 +231,10 @@
   };
   const renderArticle = (item, schemaVersion) => {
     const article = element("article", undefined, "daily-article");
+    if (sectionLabels[item.section]) article.append(element("p", sectionLabels[item.section], "eyebrow"));
+    if (item.catch_up) article.append(element("p", "Worth Catching Up · 值得补看", "article-meta"));
     const titleEn = item.title_en || item.title_original;
-    const titleZh = item.title_cn;
+    const titleZh = item.title_zh || item.title_cn;
     article.append(sourceHeader(item, titleEn, titleZh));
     const happenedEn = item.what_happened_en || item.summary_en;
     const happenedZh = item.what_happened || item.summary_cn;
@@ -199,11 +257,18 @@
     if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) throw new Error("Invalid report date");
     const report = await getJson(`${root}data/daily/ai/${date}.json`);
     if (report.report_date !== date || !Array.isArray(report.items) || !report.items.length) throw new Error("Invalid report data");
-    const name = report.schema_version >= 2 || report.category === "tech" ? "Tech Daily" : "AI Daily";
-    document.title = `${name} · ${report.report_date}`;
-    document.querySelector("#report-title").textContent = `${name} · ${report.report_date}`;
-    document.querySelector("#report-meta").textContent = `${report.article_count} 条资讯 · 预计阅读 ${report.estimated_reading_minutes} 分钟 · ${formatDate(report.report_date)}`;
-    document.querySelector("#daily-report").replaceChildren(...report.items.map((item) => renderArticle(item, report.schema_version || 1)));
+    setReportHeader(report);
+    const requestedArticle = params.get("article");
+    if (requestedArticle) {
+      const selected = report.items.find((item, index) => articleKey(item, index) === requestedArticle);
+      if (!selected) throw new Error("Unknown article");
+      document.title = `${selected.title_zh || selected.title_cn || selected.title_original} · Tech Daily`;
+      const back = element("a", "← 返回当日日报", "back-link");
+      back.href = reportHref(date);
+      document.querySelector("#daily-report").replaceChildren(back, renderArticle(selected, report.schema_version || 1));
+    } else {
+      renderDashboard(document.querySelector("#daily-report"), report);
+    }
     const requestedFavorite = params.get("favorite");
     if (/^[a-f0-9]{64}$/.test(requestedFavorite || "")) {
       const matches = await Promise.all(report.items.map(async (item) => ({ item, id: await articleId(item) })));
