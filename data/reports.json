@@ -3,6 +3,19 @@
   "reports": [
     {
       "category": "tech",
+      "schema_version": 3,
+      "report_date": "2026-09-27",
+      "published_at": "2026-09-27T11:54:42.348662+08:00",
+      "article_count": 5,
+      "estimated_reading_minutes": 5,
+      "highlights": [
+        "中国首个面向全球与深空的太空计算基础设施“太空之弦”计算星座发布，G1 卫星预计明年发射",
+        "新技术可能加速 RNA 疗法的开发",
+        "Cloudflare 如何修复 Containers 中的跨租户数据暴露漏洞"
+      ]
+    },
+    {
+      "category": "tech",
       "report_date": "2026-09-20",
       "published_at": "2026-09-20T01:01:05.282542+08:00",
       "article_count": 4,
