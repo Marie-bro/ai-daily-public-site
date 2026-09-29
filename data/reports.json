@@ -2,6 +2,19 @@
   "schema_version": 1,
   "reports": [
     {
+      "category": "radar",
+      "schema_version": 3,
+      "report_date": "2026-09-29",
+      "published_at": "2026-09-29T14:19:48.319727+08:00",
+      "article_count": 11,
+      "estimated_reading_minutes": 5,
+      "highlights": [
+        "通往代理浏览器之路：Kitesurf更新",
+        "由肌肉细胞驱动，纸一样薄的机器人游过水迷宫",
+        "新配方帮助RNA疫苗耐受高温"
+      ]
+    },
+    {
       "category": "tech",
       "schema_version": 3,
       "report_date": "2026-09-27",
