@@ -4,6 +4,19 @@
     {
       "category": "radar",
       "schema_version": 3,
+      "report_date": "2026-09-30",
+      "published_at": "2026-09-30T15:43:24.208413+08:00",
+      "article_count": 10,
+      "estimated_reading_minutes": 5,
+      "highlights": [
+        "使用AI规划后量子迁移路线",
+        "请更新：苹果 iOS / iPadOS 26.7.1 修复高危漏洞，恶意文件可触发代码执行",
+        "为整个互联网构建证书颁发机构"
+      ]
+    },
+    {
+      "category": "radar",
+      "schema_version": 3,
       "report_date": "2026-09-29",
       "published_at": "2026-09-29T14:19:48.319727+08:00",
       "article_count": 11,
