@@ -4,6 +4,20 @@
     {
       "category": "radar",
       "schema_version": 3,
+      "report_date": "2026-10-04",
+      "published_at": "2026-10-04T08:17:15.519800+08:00",
+      "article_count": 8,
+      "estimated_reading_minutes": 5,
+      "highlights": [
+        "NVIDIA DGX Spark 64GB 为开发者提供更多构建和扩展本地 AI 的方式",
+        "我们在2026年9月发布的最新AI新闻",
+        "宣布 Cloudflare OHTTP 网关——扩大对 Cloudflare 隐私保护基础设施的访问"
+      ],
+      "daily_mode": "graceful_degraded"
+    },
+    {
+      "category": "radar",
+      "schema_version": 3,
       "report_date": "2026-09-30",
       "published_at": "2026-09-30T15:43:24.208413+08:00",
       "article_count": 10,
