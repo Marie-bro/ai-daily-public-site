@@ -4,6 +4,20 @@
     {
       "category": "radar",
       "schema_version": 3,
+      "report_date": "2026-10-06",
+      "published_at": "2026-10-06T14:15:10.062090+08:00",
+      "article_count": 3,
+      "estimated_reading_minutes": 5,
+      "highlights": [
+        "Cloudflare 2026 生日周发布汇总",
+        "从扫描到治疗方案，AI 帮助弥合乳腺癌最致命的差距",
+        "天文学家捕捉到 300 光年外一颗恒星缓慢吞噬褐矮星"
+      ],
+      "daily_mode": "minimal_daily"
+    },
+    {
+      "category": "radar",
+      "schema_version": 3,
       "report_date": "2026-10-04",
       "published_at": "2026-10-04T08:17:15.519800+08:00",
       "article_count": 8,

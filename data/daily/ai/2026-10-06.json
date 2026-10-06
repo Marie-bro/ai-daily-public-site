@@ -1,0 +1,364 @@
+{
+  "schema_version": 3,
+  "category": "radar",
+  "report_date": "2026-10-06",
+  "published_at": "2026-10-06T14:15:10.062090+08:00",
+  "article_count": 3,
+  "daily_mode": "minimal_daily",
+  "estimated_reading_minutes": 5,
+  "highlights": [
+    "Cloudflare 2026 生日周发布汇总",
+    "从扫描到治疗方案，AI 帮助弥合乳腺癌最致命的差距",
+    "天文学家捕捉到 300 光年外一颗恒星缓慢吞噬褐矮星"
+  ],
+  "items": [
+    {
+      "title_cn": "Cloudflare 2026 生日周发布汇总",
+      "title_en": "Everything we launched during Birthday Week 2026",
+      "title_original": "Everything we launched during Birthday Week 2026",
+      "source": "Cloudflare Blog",
+      "published_at": "2026-10-05T13:00:00+00:00",
+      "original_url": "https://blog.cloudflare.com/birthday-week-2026-wrap-up/",
+      "category": "internet",
+      "original_language": "en",
+      "what_happened": "Cloudflare 在 2026 生日周庆祝成立 16 周年，并发布开源、应用安全、后量子过渡、代理互联网新经济模式以及开发者平台的数据分析、存储、AI 和代理开发工具。公司表示自动化流量首次超过人类活动。",
+      "what_happened_en": "Cloudflare marked its 16th birthday with Birthday Week 2026, announcing work across open source, application security, the post-quantum transition, new economic models for the agentic Internet, and Developer Platform tools for data analysis, storage, AI, and agent development. The company said automated traffic surpassed human activity for the first time.",
+      "why_it_matters": "自动化流量和代理驱动推荐的转变正在改变互联网的扩展方式以及新企业成功的机会。",
+      "why_it_matters_en": "The shift toward automated traffic and agent-driven recommendations changes how the Internet scales and how new businesses can succeed.",
+      "importance_score": 72,
+      "supply_level": 1,
+      "section": "explore",
+      "ranking_score": 73.2,
+      "content_type": "news",
+      "catch_up": false,
+      "fingerprint": "82f6ffa145fc83a2e60dcd124641a1d57d384d0a400fe3c581258fdb9cee7072",
+      "article_id": "44b03140de4a0c7b4a97d3147f5634e4900f18b52edd6d9bb78760289c42ea41",
+      "source_region": "US",
+      "source_tier": 1,
+      "source_role": "primary",
+      "channel": "technology",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.718866,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 14
+    },
+    {
+      "title_cn": "从扫描到治疗方案，AI 帮助弥合乳腺癌最致命的差距",
+      "title_en": "From Scan to Treatment Plan, AI Helps Close Breast Cancer’s Deadliest Gaps",
+      "title_original": "From Scan to Treatment Plan, AI Helps Close Breast Cancer’s Deadliest Gaps",
+      "source": "NVIDIA Blog",
+      "published_at": "2026-10-05T13:00:57+00:00",
+      "original_url": "https://blogs.nvidia.com/blog/ai-breast-cancer-startups/",
+      "category": "chips",
+      "original_language": "en",
+      "what_happened": "NVIDIA Inception 计划中的公司正在构建 AI 应用，以支持临床医生进行乳腺癌成像、风险评估和治疗规划。美国每年约进行 4000 万次乳腺 X 光检查，而预计未来十年将短缺数万名放射科医生，使系统容量承压。",
+      "what_happened_en": "Companies in the NVIDIA Inception program are building AI applications to support clinicians in breast cancer imaging, risk assessment, and treatment planning. About 40 million mammograms are performed in the U.S. each year, and a projected shortfall of tens of thousands of radiologists over the next decade is straining capacity.",
+      "why_it_matters": "AI 应用旨在解决乳腺癌护理中放射科医生短缺和基因组检测数周延迟的问题。",
+      "why_it_matters_en": "AI applications aim to address radiologist shortages and weeks-long genomic assay delays in breast cancer care.",
+      "importance_score": 70,
+      "supply_level": 1,
+      "section": "explore",
+      "ranking_score": 72.0,
+      "content_type": "news",
+      "catch_up": false,
+      "fingerprint": "065db18da560399213075264c73a9f962db2f74b11087227cc9cbdb667a46cd6",
+      "article_id": "56541a536ae3f25f9fd132a680cbcfdb6cefbce1328a500307e3c0cad4381c70",
+      "source_region": "US",
+      "source_tier": 1,
+      "source_role": "primary",
+      "channel": "technology",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.718207,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 13
+    },
+    {
+      "title_cn": "天文学家捕捉到 300 光年外一颗恒星缓慢吞噬褐矮星",
+      "title_en": "Astronomers catch a star slowly snacking on a brown dwarf, 300 light years away",
+      "title_original": "Astronomers catch a star slowly snacking on a brown dwarf, 300 light years away",
+      "source": "MIT News",
+      "published_at": "2026-10-05T15:00:00+00:00",
+      "original_url": "https://news.mit.edu/2026/astronomers-catch-star-slowly-snacking-on-brown-dwarf-1005",
+      "category": "science",
+      "original_language": "en",
+      "what_happened": "据 MIT News 报道，天文学家观测到 300 光年外一颗恒星正在缓慢吞噬一颗褐矮星。",
+      "what_happened_en": "Astronomers observed a star slowly consuming a brown dwarf 300 light years away, according to MIT News.",
+      "why_it_matters": "这一发现揭示了恒星与行星伴星相互作用的新方式。",
+      "why_it_matters_en": "The discovery reveals a new way that stars and planetary companions interact.",
+      "importance_score": 65,
+      "supply_level": 1,
+      "section": "explore",
+      "ranking_score": 69.0,
+      "content_type": "news",
+      "catch_up": false,
+      "fingerprint": "3391618861cedd7c87456490bcf1e4e259b971db18adbaca17c476a9eb855aaa",
+      "article_id": "53947a34c9f6cc61a9639905ef1641a9b59bb89c9cedbc91a092142be8c71f16",
+      "source_region": "US",
+      "source_tier": 1,
+      "source_role": "primary",
+      "channel": "technology",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.635533,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 12
+    }
+  ],
+  "supply": {
+    "today_candidates": 12,
+    "today_considered": 12,
+    "today_selected": 3,
+    "today_locked": 3,
+    "locked_today_ids": [
+      "44b03140de4a0c7b4a97d3147f5634e4900f18b52edd6d9bb78760289c42ea41",
+      "56541a536ae3f25f9fd132a680cbcfdb6cefbce1328a500307e3c0cad4381c70",
+      "53947a34c9f6cc61a9639905ef1641a9b59bb89c9cedbc91a092142be8c71f16"
+    ],
+    "remaining_slots": 11,
+    "catch_up_considered": 0,
+    "catch_up_selected": 0,
+    "deep_read_considered": 0,
+    "deep_read_selected": 0,
+    "evergreen_considered": 0,
+    "evergreen_selected": 0,
+    "final_ids": [
+      "44b03140de4a0c7b4a97d3147f5634e4900f18b52edd6d9bb78760289c42ea41",
+      "56541a536ae3f25f9fd132a680cbcfdb6cefbce1328a500307e3c0cad4381c70",
+      "53947a34c9f6cc61a9639905ef1641a9b59bb89c9cedbc91a092142be8c71f16"
+    ],
+    "today_lock_preserved": true,
+    "selected": 3,
+    "shortfall": 7,
+    "minimum_not_met_reason": "token_budget_exhausted",
+    "sources": 3,
+    "categories": {
+      "internet": 1,
+      "chips": 1,
+      "science": 1
+    },
+    "channels": {
+      "technology": 3
+    },
+    "explore_count": 3,
+    "source_counts": {
+      "Cloudflare Blog": 1,
+      "NVIDIA Blog": 1,
+      "MIT News": 1
+    },
+    "diversity_exception": false,
+    "levels": [
+      {
+        "supply_layer": "today",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 3,
+            "selected_total": 3
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 3
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 3
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 3
+          }
+        ],
+        "selected": 3,
+        "shortfall": 7,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 3,
+        "sources": 3,
+        "categories": {
+          "internet": 1,
+          "chips": 1,
+          "science": 1
+        },
+        "channels": {
+          "technology": 3
+        },
+        "source_counts": {
+          "Cloudflare Blog": 1,
+          "NVIDIA Blog": 1,
+          "MIT News": 1
+        },
+        "source_share_limit": 3,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "catch_up",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 2,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "deep_read",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 2,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "evergreen",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 2,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      }
+    ],
+    "initial_candidates": 10,
+    "fact_schema_generated": 16,
+    "model_accepted": 12,
+    "hard_fact_rejected": 4,
+    "semantic_rejected": 0,
+    "repaired": 0,
+    "fallback_added": 5,
+    "final_count": 3,
+    "minimum_met": false,
+    "token_budget_status": "graceful_stop",
+    "token_budget": 40000,
+    "token_used": 30283,
+    "token_remaining": 9717,
+    "batches_completed": 3,
+    "accepted_count": 3,
+    "target_count": 14,
+    "stopped_reason": "token_budget_insufficient_for_next_batch",
+    "next_batch_estimated_input_tokens": 6771,
+    "next_batch_estimated_output_tokens": 7200,
+    "next_batch_required_tokens": 14649,
+    "daily_mode": "minimal_daily",
+    "daily_status": "minimal_daily",
+    "publishable_count": 3,
+    "degraded_reason": "token_budget_insufficient_for_next_batch",
+    "token_guard_triggered": true,
+    "source_shortage": false,
+    "validation_shortage": true,
+    "fill_stopped": false
+  }
+}
