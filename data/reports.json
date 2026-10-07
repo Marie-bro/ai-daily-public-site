@@ -4,6 +4,20 @@
     {
       "category": "radar",
       "schema_version": 3,
+      "report_date": "2026-10-07",
+      "published_at": "2026-10-07T08:02:21.319415+08:00",
+      "article_count": 3,
+      "estimated_reading_minutes": 5,
+      "highlights": [
+        "消息称希捷与东芝竞购 TDK 硬盘磁头业务，争夺 AI 存储供应链关键环节",
+        "华为余承东谈内存压力：每部手机成本大增 200 美元，为保公司生存不得不涨价",
+        "为防范 AI 深度伪造，意大利总理梅洛尼申请将自己的声音注册为商标"
+      ],
+      "daily_mode": "minimal_daily"
+    },
+    {
+      "category": "radar",
+      "schema_version": 3,
       "report_date": "2026-10-06",
       "published_at": "2026-10-06T14:15:10.062090+08:00",
       "article_count": 3,
