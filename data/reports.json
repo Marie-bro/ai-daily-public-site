@@ -4,6 +4,20 @@
     {
       "category": "radar",
       "schema_version": 3,
+      "report_date": "2026-10-12",
+      "published_at": "2026-10-12T02:14:13.383090+08:00",
+      "article_count": 3,
+      "estimated_reading_minutes": 5,
+      "highlights": [
+        "人工智能赋能教师发展现场会举行",
+        "GPU集群的高影响力调度",
+        "粤芯半导体 10 月 13 日在创业板上市，发行价为 12.01 元 / 股"
+      ],
+      "daily_mode": "minimal_daily"
+    },
+    {
+      "category": "radar",
+      "schema_version": 3,
       "report_date": "2026-10-09",
       "published_at": "2026-10-09T22:49:40.261682+08:00",
       "article_count": 9,

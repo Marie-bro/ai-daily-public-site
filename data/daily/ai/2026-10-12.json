@@ -1,0 +1,366 @@
+{
+  "schema_version": 3,
+  "category": "radar",
+  "report_date": "2026-10-12",
+  "published_at": "2026-10-12T02:14:13.383090+08:00",
+  "article_count": 3,
+  "daily_mode": "minimal_daily",
+  "estimated_reading_minutes": 5,
+  "highlights": [
+    "人工智能赋能教师发展现场会举行",
+    "GPU集群的高影响力调度",
+    "粤芯半导体 10 月 13 日在创业板上市，发行价为 12.01 元 / 股"
+  ],
+  "items": [
+    {
+      "title_cn": "人工智能赋能教师发展现场会举行",
+      "title_en": "AI-Empowered Teacher Development Conference Held",
+      "title_original": "人工智能赋能教师发展现场会举行",
+      "source": "教育部",
+      "published_at": "2026-10-10T21:58:00+00:00",
+      "original_url": "https://hudong.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202610/t20261011_1453584.html",
+      "category": "education",
+      "original_language": "zh",
+      "what_happened": "10月10日，人工智能赋能教师发展现场会在京举行，主题为“争做数智时代好老师、服务基础教育高质量发展”。会上升级上线国家智慧教育平台教师发展中心，启动教师人工智能素养全覆盖培训。现场设置沉浸式、场景式示范培训，围绕高效备课、课堂教学、学业评价、教研反思、治理赋能五个环节开展展示，会议以线上线下相结合方式举行。",
+      "what_happened_en": "On October 10, an AI-empowered teacher development conference was held in Beijing under the theme of becoming good teachers in the digital-intelligence era. The National Smart Education Platform's teacher development center was upgraded and launched, and full-coverage AI literacy training for teachers was initiated. The event featured immersive demonstrations covering lesson preparation, classroom teaching, academic evaluation, teaching research reflection, and governance empowerment, held in a hybrid online-offline format.",
+      "why_it_matters": "此举标志着国家推动人工智能融入教学与教师专业发展，全覆盖培训与平台升级可能重塑教师AI技能获取方式及学生获得针对性学习支持的途径。",
+      "why_it_matters_en": "The initiative signals a national push to integrate AI into teaching and teacher professional development, with full-coverage training and a platform upgrade that could reshape how teachers acquire AI skills and how students receive targeted learning support.",
+      "importance_score": 78,
+      "supply_level": 1,
+      "section": "explore",
+      "ranking_score": 76.8,
+      "content_type": "news",
+      "catch_up": false,
+      "fingerprint": "5104be28fda499e1532a205ea85fb2f639b06f5e43ef58687456de2e3b5e25e1",
+      "article_id": "292467945ff7ac5198a24207a9d2575f0a471d36bbe5b6faf45bdadb8742ddb4",
+      "source_region": "CN",
+      "source_tier": 1,
+      "source_role": "primary",
+      "channel": "future_opportunities",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.844599,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 14
+    },
+    {
+      "title_cn": "GPU集群的高影响力调度",
+      "title_en": "Impactful scheduling for GPU clusters",
+      "title_original": "Impactful scheduling for GPU clusters",
+      "source": "Hugging Face Blog",
+      "published_at": "2026-10-10T18:43:27+00:00",
+      "original_url": "https://huggingface.co/blog/allenai/impactful-scheduling",
+      "category": "ai",
+      "original_language": "en",
+      "what_happened": "Ai2的AI基础设施团队用包含GPU时间预算、分层公平分配和时间切片契约的系统替换了基于优先级的调度器。团队围绕四指标金字塔构建调度：可用性、占用率、影响力和利用率。",
+      "what_happened_en": "Ai2's AI Infrastructure team replaced a priority-based scheduler with a system including GPU time budgets, hierarchical fair-share allocation, and a time-slicing contract. The team frames scheduling around a four-metric pyramid: availability, occupancy, impact, and utilization.",
+      "why_it_matters": "该方法旨在优先高影响力研究同时保持满占用率，为管理稀缺GPU算力的AI基础设施团队提供了实用模型。",
+      "why_it_matters_en": "The approach aims to prioritize high-impact research while maintaining full occupancy, offering a practical model for AI infrastructure teams managing scarce GPU compute.",
+      "importance_score": 62,
+      "supply_level": 1,
+      "section": "for_you",
+      "ranking_score": 77.2,
+      "content_type": "news",
+      "catch_up": false,
+      "fingerprint": "0c33f26285683ab585d45f6c663a05904aa1660eddcb9b3f724ef3dae10b64ca",
+      "article_id": "e05551817b225bef5e8ca8d6225aa3fed9bb03ffd013a0306b4527b10407beb2",
+      "source_region": "EU",
+      "source_tier": 1,
+      "source_role": "primary",
+      "channel": "technology",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.979704,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 13
+    },
+    {
+      "title_cn": "粤芯半导体 10 月 13 日在创业板上市，发行价为 12.01 元 / 股",
+      "title_en": "CanSemi to list on ChiNext on October 13, issue price 12.01 yuan per share",
+      "title_original": "粤芯半导体 10 月 13 日在创业板上市，发行价为 12.01 元 / 股",
+      "source": "IT之家",
+      "published_at": "2026-10-11T14:27:14+00:00",
+      "original_url": "https://www.ithome.com/1/011/708.htm",
+      "category": "chips",
+      "original_language": "zh",
+      "what_happened": "粤芯半导体技术股份有限公司宣布将于 2026 年 10 月 13 日在深圳证券交易所创业板上市。本次发行价格为 12.01 元/股，发行后总股本为 28.78 亿股（超额配售选择权行使前）。9 月 28 日公开网上摇号中签结果，中签号码共 358848 个，每个中签号码可认购 500 股。最终战略配售 25632.30 万股，网上最终发行 17942.40 万股，网下最终发行 15379.50 万股。网上投资者放弃认购 468976 股，由广发证券包销，包销金额 563.24 万元。粤芯半导体成立于 2017 年，总部位于广州市黄埔区，是粤港澳大湾区首家实现量产的 12 英寸晶圆制造企业，主营微处理器、电源管理 IC、模拟芯片及功率分立器件制造。",
+      "what_happened_en": "CanSemi Technology announced it will list on the Shenzhen Stock Exchange ChiNext on October 13, 2026. The issue price is 12.01 yuan per share, with total share capital of 2.878 billion shares after issuance (before exercise of over-allotment option). Online lottery results were published on September 28, with 358,848 winning numbers, each allowing subscription of 500 shares. Final strategic placement was 256.323 million shares, online final issuance 179.424 million shares, offline final issuance 153.795 million shares. Online investors abandoned 468,976 shares, underwritten by GF Securities for 5.6324 million yuan. CanSemi was founded in 2017, headquartered in Huangpu District, Guangzhou, and is the first 12-inch wafer fab in the Greater Bay Area to achieve mass production, mainly producing microprocessors, power management ICs, analog chips, and power discrete devices.",
+      "why_it_matters": "这是粤港澳大湾区重要的半导体上市事件，凸显该地区在芯片制造和资本市场中日益增长的角色。",
+      "why_it_matters_en": "A significant semiconductor listing in China's Greater Bay Area, highlighting the region's growing role in chip manufacturing and capital markets.",
+      "importance_score": 60,
+      "supply_level": 2,
+      "section": "explore",
+      "ranking_score": 59.0,
+      "content_type": "news",
+      "catch_up": false,
+      "fingerprint": "04f4802f1b4023f7a2917d926b81eacb95b096bc35e318949322e28c63ca9f41",
+      "article_id": "820c86138429600f5e4062b4751c55b0bc9898d240f296e3f853bfb770f742bf",
+      "source_region": "CN",
+      "source_tier": 3,
+      "source_role": "media",
+      "channel": "technology",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.157632,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 12
+    }
+  ],
+  "supply": {
+    "today_candidates": 8,
+    "today_considered": 8,
+    "today_selected": 3,
+    "today_locked": 3,
+    "locked_today_ids": [
+      "292467945ff7ac5198a24207a9d2575f0a471d36bbe5b6faf45bdadb8742ddb4",
+      "e05551817b225bef5e8ca8d6225aa3fed9bb03ffd013a0306b4527b10407beb2",
+      "820c86138429600f5e4062b4751c55b0bc9898d240f296e3f853bfb770f742bf"
+    ],
+    "remaining_slots": 11,
+    "catch_up_considered": 0,
+    "catch_up_selected": 0,
+    "deep_read_considered": 0,
+    "deep_read_selected": 0,
+    "evergreen_considered": 0,
+    "evergreen_selected": 0,
+    "final_ids": [
+      "292467945ff7ac5198a24207a9d2575f0a471d36bbe5b6faf45bdadb8742ddb4",
+      "e05551817b225bef5e8ca8d6225aa3fed9bb03ffd013a0306b4527b10407beb2",
+      "820c86138429600f5e4062b4751c55b0bc9898d240f296e3f853bfb770f742bf"
+    ],
+    "today_lock_preserved": true,
+    "selected": 3,
+    "shortfall": 7,
+    "minimum_not_met_reason": "token_budget_exhausted",
+    "sources": 3,
+    "categories": {
+      "education": 1,
+      "ai": 1,
+      "chips": 1
+    },
+    "channels": {
+      "future_opportunities": 1,
+      "technology": 2
+    },
+    "explore_count": 2,
+    "source_counts": {
+      "教育部": 1,
+      "Hugging Face Blog": 1,
+      "IT之家": 1
+    },
+    "diversity_exception": false,
+    "levels": [
+      {
+        "supply_layer": "today",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 2,
+            "selected_total": 2
+          },
+          {
+            "level": 2,
+            "eligible": 1,
+            "selected_total": 3
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 3
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 3
+          }
+        ],
+        "selected": 3,
+        "shortfall": 7,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 2,
+        "sources": 3,
+        "categories": {
+          "education": 1,
+          "ai": 1,
+          "chips": 1
+        },
+        "channels": {
+          "future_opportunities": 1,
+          "technology": 2
+        },
+        "source_counts": {
+          "教育部": 1,
+          "Hugging Face Blog": 1,
+          "IT之家": 1
+        },
+        "source_share_limit": 3,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "catch_up",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 2,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "deep_read",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 2,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "evergreen",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 2,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      }
+    ],
+    "initial_candidates": 10,
+    "fact_schema_generated": 16,
+    "model_accepted": 8,
+    "hard_fact_rejected": 8,
+    "semantic_rejected": 0,
+    "repaired": 0,
+    "fallback_added": 0,
+    "final_count": 3,
+    "minimum_met": false,
+    "token_budget_status": "graceful_stop",
+    "token_budget": 40000,
+    "token_used": 37470,
+    "token_remaining": 2530,
+    "batches_completed": 3,
+    "accepted_count": 3,
+    "target_count": 14,
+    "stopped_reason": "token_budget_insufficient_for_next_batch",
+    "next_batch_estimated_input_tokens": 6753,
+    "next_batch_estimated_output_tokens": 7200,
+    "next_batch_required_tokens": 14629,
+    "daily_mode": "minimal_daily",
+    "daily_status": "minimal_daily",
+    "publishable_count": 3,
+    "degraded_reason": "token_budget_insufficient_for_next_batch",
+    "token_guard_triggered": true,
+    "source_shortage": false,
+    "validation_shortage": true,
+    "fill_stopped": false
+  }
+}
