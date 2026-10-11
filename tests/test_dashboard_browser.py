@@ -4,6 +4,7 @@ import subprocess
 import tempfile
 import threading
 import unittest
+from unittest.mock import patch
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -25,6 +26,7 @@ const probe = window.setInterval(() => {
   const all = document.querySelectorAll('.dashboard-section:not(:first-of-type) .story-card').length;
   document.body.dataset.cardCount = String(cards.length);
   document.body.dataset.topCount = String(top);
+  document.body.dataset.topTitles = [...document.querySelectorAll('.dashboard-section:first-of-type .story-title')].map(node => node.textContent).join('|');
   document.body.dataset.allCount = String(all);
   document.body.dataset.overflow = String(document.documentElement.scrollWidth > document.documentElement.clientWidth);
   document.body.dataset.englishCard = String([...document.querySelectorAll('.story-title')].some(node => node.textContent.includes('English title')));
@@ -156,3 +158,42 @@ class DashboardBrowserTests(unittest.TestCase):
                 self.assertEqual(self.attribute(html, "favorite"), "true")
                 self.assertEqual(self.attribute(html, "detail-order"), "true")
                 self.assertEqual(self.attribute(html, "overflow"), "false")
+
+    def test_today_top_picks_precede_higher_importance_history(self):
+        saved_report = report
+        def mixed(count):
+            payload = saved_report(count)
+            for index, item in enumerate(payload['items']):
+                item['supply_layer'] = 'today' if index < 3 else 'evergreen'
+                item['importance_score'] = 75 if index < 3 else 95
+            return payload
+        with patch(__name__ + '.report', side_effect=mixed):
+            for width in (390, 800, 1280):
+                html = self.dump('/', width, 14)
+                titles = self.attribute(html, 'top-titles').split('|')
+                for title in ('中文科技标题 1', '中文科技标题 2', '中文科技标题 3'):
+                    self.assertIn(title, titles)
+                self.assertEqual(len(titles), 5)
+                self.assertEqual(self.attribute(html, 'overflow'), 'false')
+
+    def test_five_today_items_exclude_all_higher_scored_history(self):
+        saved_report = report
+        def mixed(count):
+            payload = saved_report(count)
+            for index, item in enumerate(payload['items']):
+                item['supply_layer'] = 'today' if index < 5 else 'evergreen'
+                item['importance_score'] = 75 if index < 5 else 95
+            return payload
+        with patch(__name__ + '.report', side_effect=mixed):
+            for width in (390, 800, 1280):
+                html = self.dump('/', width, 14)
+                self.assertEqual(set(self.attribute(html, 'top-titles').split('|')),
+                                 {f'中文科技标题 {i}' for i in range(1, 6)})
+                self.assertEqual(self.attribute(html, 'overflow'), 'false')
+
+    def test_old_archive_without_supply_metadata_keeps_ranking(self):
+        for width in (390, 800, 1280):
+            html = self.dump('/', width, 14)
+            self.assertEqual(self.attribute(html, 'top-titles').split('|'),
+                             [f'中文科技标题 {i}' for i in range(1, 6)])
+            self.assertEqual(self.attribute(html, 'overflow'), 'false')

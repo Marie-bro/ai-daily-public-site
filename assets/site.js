@@ -163,6 +163,10 @@
     if (topPick) tags.push("Top Pick");
     if (sectionLabels[item.section]) tags.push(sectionLabels[item.section]);
     if (item.catch_up) tags.push("Worth Catching Up · 值得补看");
+    if (item.supply_layer && item.supply_layer !== "today") {
+      const labels = {catch_up: "Worth Catching Up · 值得补看", deep_read: "Deep Read · 深度阅读", evergreen: "Evergreen · 长期价值"};
+      tags.push(labels[item.supply_layer] || item.supply_layer);
+    }
     return [...new Set(tags)];
   };
   const storyCard = (entry, report, topPick) => {
@@ -189,7 +193,10 @@
   };
   const renderDashboard = (target, report) => {
     const entries = report.items.map((item, index) => ({ item, key: articleKey(item, index) }));
-    const ranked = [...entries].sort(storyRank);
+    const supplyPriority = {today: 0, catch_up: 1, deep_read: 2, evergreen: 3};
+    // Old archives without supply metadata preserve their existing ordering.
+    const ranked = [...entries].sort((left, right) =>
+      ((supplyPriority[left.item.supply_layer] ?? 0) - (supplyPriority[right.item.supply_layer] ?? 0)) || storyRank(left, right));
     const top = ranked.slice(0, Math.min(5, ranked.length));
     const topKeys = new Set(top.map((entry) => entry.key));
     const more = ranked.filter((entry) => !topKeys.has(entry.key));
