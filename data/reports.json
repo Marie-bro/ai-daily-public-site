@@ -4,6 +4,20 @@
     {
       "category": "radar",
       "schema_version": 3,
+      "report_date": "2026-10-13",
+      "published_at": "2026-10-13T08:01:59.208298+08:00",
+      "article_count": 8,
+      "estimated_reading_minutes": 5,
+      "highlights": [
+        "经济学家Robert Hall博士（67届）和Michael Woodford博士（83届）分享诺贝尔奖",
+        "OCP全球峰会：在生态系统采用中，NVIDIA开放Vera Rubin架构以帮助全球扩展AI工厂",
+        "NASA的SpaceX CRS-35任务将发射健康研究"
+      ],
+      "daily_mode": "graceful_degraded"
+    },
+    {
+      "category": "radar",
+      "schema_version": 3,
       "report_date": "2026-10-12",
       "published_at": "2026-10-12T02:14:13.383090+08:00",
       "article_count": 3,
