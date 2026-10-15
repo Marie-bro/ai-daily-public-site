@@ -4,6 +4,20 @@
     {
       "category": "radar",
       "schema_version": 3,
+      "report_date": "2026-10-15",
+      "published_at": "2026-10-15T08:01:46.183060+08:00",
+      "article_count": 9,
+      "estimated_reading_minutes": 5,
+      "highlights": [
+        "为2026年美国中期选举做准备",
+        "Yandex中断：数据显示恶意机器人并未消失，而是转移了",
+        "新加坡办公室与政府谅解备忘录 | Anthropic"
+      ],
+      "daily_mode": "graceful_degraded"
+    },
+    {
+      "category": "radar",
+      "schema_version": 3,
       "report_date": "2026-10-13",
       "published_at": "2026-10-13T08:01:59.208298+08:00",
       "article_count": 8,
