@@ -4,6 +4,20 @@
     {
       "category": "radar",
       "schema_version": 3,
+      "report_date": "2026-10-16",
+      "published_at": "2026-10-16T08:01:51.152109+08:00",
+      "article_count": 6,
+      "estimated_reading_minutes": 5,
+      "highlights": [
+        "NASA 将在即将进行的任务中帮助解开火星卫星之谜",
+        "NASA 卫星观测到历史性的 2026 年厄尔尼诺现象",
+        "AI 模型解码细胞交流的语言"
+      ],
+      "daily_mode": "graceful_degraded"
+    },
+    {
+      "category": "radar",
+      "schema_version": 3,
       "report_date": "2026-10-15",
       "published_at": "2026-10-15T08:01:46.183060+08:00",
       "article_count": 9,
