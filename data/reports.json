@@ -4,6 +4,20 @@
     {
       "category": "radar",
       "schema_version": 3,
+      "report_date": "2026-10-17",
+      "published_at": "2026-10-17T08:01:46.249037+08:00",
+      "article_count": 5,
+      "estimated_reading_minutes": 5,
+      "highlights": [
+        "国家发展改革委新闻发言人就《关于进一步完善价格形成机制 推动普惠养老服务提质扩面的指导意见》答记者问",
+        "关于进一步完善价格形成机制 推动普惠养老服务提质扩面的指导意见(发改价格〔2026〕1476号)",
+        "新型芯片级“光尺”有望革新移动计时并增强国家安全"
+      ],
+      "daily_mode": "graceful_degraded"
+    },
+    {
+      "category": "radar",
+      "schema_version": 3,
       "report_date": "2026-10-16",
       "published_at": "2026-10-16T08:01:51.152109+08:00",
       "article_count": 6,
