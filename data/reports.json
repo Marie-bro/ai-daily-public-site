@@ -4,6 +4,18 @@
     {
       "category": "radar",
       "schema_version": 3,
+      "report_date": "2026-10-19",
+      "published_at": "2026-10-19T08:00:54.688584+08:00",
+      "article_count": 1,
+      "estimated_reading_minutes": 5,
+      "highlights": [
+        "让AI“清晰”看懂材料世界"
+      ],
+      "daily_mode": "minimal_daily"
+    },
+    {
+      "category": "radar",
+      "schema_version": 3,
       "report_date": "2026-10-17",
       "published_at": "2026-10-17T08:01:46.249037+08:00",
       "article_count": 5,
