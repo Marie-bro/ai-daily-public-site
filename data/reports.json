@@ -4,6 +4,20 @@
     {
       "category": "radar",
       "schema_version": 3,
+      "report_date": "2026-10-20",
+      "published_at": "2026-10-20T08:01:20.277252+08:00",
+      "article_count": 5,
+      "estimated_reading_minutes": 5,
+      "highlights": [
+        "Cloudflare：打补丁前先守住 NetScaler 入口",
+        "欧几里得望远镜发现新彗星",
+        "德国欲引领工业AI，NVIDIA将提供助力"
+      ],
+      "daily_mode": "graceful_degraded"
+    },
+    {
+      "category": "radar",
+      "schema_version": 3,
       "report_date": "2026-10-19",
       "published_at": "2026-10-19T08:00:54.688584+08:00",
       "article_count": 1,
