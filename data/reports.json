@@ -4,6 +4,20 @@
     {
       "category": "radar",
       "schema_version": 3,
+      "report_date": "2026-10-21",
+      "published_at": "2026-10-21T08:01:05.197176+08:00",
+      "article_count": 6,
+      "estimated_reading_minutes": 5,
+      "highlights": [
+        "8 张 eMudhra 证书遭泄露，Cloudflare 发布更新",
+        "麻省理工学院学生团队 CERBERUZ 赢得 NASA LunaRecycle 百年挑战赛",
+        "推出tsrs：TypeScript的Rust移植版"
+      ],
+      "daily_mode": "graceful_degraded"
+    },
+    {
+      "category": "radar",
+      "schema_version": 3,
       "report_date": "2026-10-20",
       "published_at": "2026-10-20T08:01:20.277252+08:00",
       "article_count": 5,
