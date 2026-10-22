@@ -4,6 +4,20 @@
     {
       "category": "radar",
       "schema_version": 3,
+      "report_date": "2026-10-22",
+      "published_at": "2026-10-22T08:01:24.053476+08:00",
+      "article_count": 6,
+      "estimated_reading_minutes": 5,
+      "highlights": [
+        "NVIDIA Kumo Relational在关系数据上无需训练即优于监督式机器学习",
+        "专门化小语言模型词表在实际应用中将推理成本降低77%",
+        "NASA进行RS-25发动机测试以支持未来Artemis任务"
+      ],
+      "daily_mode": "graceful_degraded"
+    },
+    {
+      "category": "radar",
+      "schema_version": 3,
       "report_date": "2026-10-21",
       "published_at": "2026-10-21T08:01:05.197176+08:00",
       "article_count": 6,
