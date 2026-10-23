@@ -4,6 +4,20 @@
     {
       "category": "radar",
       "schema_version": 3,
+      "report_date": "2026-10-23",
+      "published_at": "2026-10-23T08:01:16.975683+08:00",
+      "article_count": 6,
+      "estimated_reading_minutes": 5,
+      "highlights": [
+        "国家发展改革委就《对外投资管理办法》答记者问",
+        "英伟达将开放模型与机器人技术引入欧洲零售业",
+        "欧洲银行基于开放模型构建专有智能"
+      ],
+      "daily_mode": "graceful_degraded"
+    },
+    {
+      "category": "radar",
+      "schema_version": 3,
       "report_date": "2026-10-22",
       "published_at": "2026-10-22T08:01:24.053476+08:00",
       "article_count": 6,
