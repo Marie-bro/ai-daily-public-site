@@ -4,6 +4,20 @@
     {
       "category": "radar",
       "schema_version": 3,
+      "report_date": "2026-10-24",
+      "published_at": "2026-10-24T08:02:02.742865+08:00",
+      "article_count": 3,
+      "estimated_reading_minutes": 5,
+      "highlights": [
+        "NASA与合作伙伴加快着陆器研发以服务2028年月球任务",
+        "LitPivot帮助研究者在文献图景中发展研究想法",
+        "工信部成立工业软件标准化技术委员会"
+      ],
+      "daily_mode": "minimal_daily"
+    },
+    {
+      "category": "radar",
+      "schema_version": 3,
       "report_date": "2026-10-23",
       "published_at": "2026-10-23T08:01:16.975683+08:00",
       "article_count": 6,

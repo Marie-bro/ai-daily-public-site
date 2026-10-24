@@ -1,0 +1,368 @@
+{
+  "schema_version": 3,
+  "category": "radar",
+  "report_date": "2026-10-24",
+  "published_at": "2026-10-24T08:02:02.742865+08:00",
+  "article_count": 3,
+  "daily_mode": "minimal_daily",
+  "estimated_reading_minutes": 5,
+  "highlights": [
+    "NASA与合作伙伴加快着陆器研发以服务2028年月球任务",
+    "LitPivot帮助研究者在文献图景中发展研究想法",
+    "工信部成立工业软件标准化技术委员会"
+  ],
+  "items": [
+    {
+      "title_cn": "NASA与合作伙伴加快着陆器研发以服务2028年月球任务",
+      "title_en": "NASA and Partners Accelerate Lander Development for 2028 Moon Missions",
+      "title_original": "NASA, Partners Accelerate Lander Development for 2028 Moon Missions - NASA",
+      "source": "NASA",
+      "published_at": "2026-10-23T22:39:39+00:00",
+      "original_url": "https://www.nasa.gov/missions/artemis/nasa-partners-accelerate-lander-development-for-2028-moon-missions/",
+      "category": "space",
+      "original_language": "en",
+      "what_happened": "NASA及其合作伙伴正加快着陆器研发，以服务2028年的月球任务。",
+      "what_happened_en": "NASA and its partners are accelerating lander development for 2028 Moon missions.",
+      "why_it_matters": "加快着陆器工作有助于支撑定于2028年的月球任务进度。",
+      "why_it_matters_en": "Faster lander work supports the schedule for lunar missions targeted at 2028.",
+      "importance_score": 70,
+      "supply_level": 1,
+      "section": "explore",
+      "ranking_score": 72.0,
+      "content_type": "news",
+      "catch_up": false,
+      "fingerprint": "cfbdbc517d71a123d83130fb7f33ee69088445af01084f8c44ac0705054c4373",
+      "article_id": "57c0a5f2d9657bbd32fd2ee5e6ddf2bb2144982640af9a29ad88dd31527fcab3",
+      "source_region": "US",
+      "source_tier": 1,
+      "source_role": "primary",
+      "channel": "technology",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.057219,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 14
+    },
+    {
+      "title_cn": "LitPivot帮助研究者在文献图景中发展研究想法",
+      "title_en": "LitPivot Helps Researchers Develop Ideas Within the Literature Landscape",
+      "title_original": "LitPivot: Developing research ideas through dynamic contextualization within the literature landscape",
+      "source": "Hugging Face Blog",
+      "published_at": "2026-10-23T19:25:16+00:00",
+      "original_url": "https://huggingface.co/blog/allenai/litpivot",
+      "category": "ai",
+      "original_language": "en",
+      "what_happened": "Ai2与宾夕法尼亚大学合作者开发了LitPivot，利用通过Asta Paper Finder检索的论文，围绕正在编辑的研究提案组织文献、提供有摘录支撑的批评并建议修改。",
+      "what_happened_en": "Ai2, with University of Pennsylvania collaborators, developed LitPivot, which uses papers retrieved through Asta Paper Finder to organize literature around a proposal being edited, offer excerpt-backed critiques, and suggest revisions.",
+      "why_it_matters": "该系统针对“文献引发的转向”，帮助研究者对照已有工作检验自己的想法。",
+      "why_it_matters_en": "The system targets literature-initiated pivots, helping researchers check ideas against prior work.",
+      "importance_score": 65,
+      "supply_level": 1,
+      "section": "deep_read",
+      "ranking_score": 79.0,
+      "content_type": "deep_read",
+      "catch_up": false,
+      "fingerprint": "1590db26d4c9600735d1b2a0a78b3dc40054d3109b5b2ccaa0e84a332ba50ee8",
+      "article_id": "5d794c3788a3a4be0d4215599516884eae43a82888c86723f4c4d433d59805d7",
+      "source_region": "EU",
+      "source_tier": 1,
+      "source_role": "primary",
+      "channel": "deep_read",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.192208,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 12
+    },
+    {
+      "title_cn": "工信部成立工业软件标准化技术委员会",
+      "title_en": "China Establishes Industrial Software Standards Committee",
+      "title_original": "中华人民共和国工业和信息化部公告2026年第27号",
+      "source": "工业和信息化部",
+      "published_at": "2026-10-23T09:25:00+00:00",
+      "original_url": "https://wap.miit.gov.cn/zwgk/zcwj/wjfb/gg/art/2026/art_42fbe460eb604430a910db12e784ed89.html",
+      "category": "policy",
+      "original_language": "zh",
+      "what_happened": "工信部公告成立工业软件标准化技术委员会，编号MIIT/TC11，负责关键技术、互操作、产品服务、融合应用及生态建设等行业标准制修订；第一届由127名委员组成，秘书处由电子第五研究所承担。",
+      "what_happened_en": "MIIT announced the establishment of the Industrial Software Standardization Technical Committee, numbered MIIT/TC11, responsible for industry standards on key technologies, interoperability, products and services, integrated applications and ecosystem building; its first term has 127 members and its secretariat is hosted by the Fifth Electronics Research Institute.",
+      "why_it_matters": "该委员会将塑造工业软件标准，影响行业实践与生态建设。",
+      "why_it_matters_en": "The committee will shape industrial software standards, affecting industry practice and ecosystem building.",
+      "importance_score": 60,
+      "supply_level": 1,
+      "section": "explore",
+      "ranking_score": 66.0,
+      "content_type": "news",
+      "catch_up": false,
+      "fingerprint": "0ae4ad24de05f898b82bec607911e308f7c62efc4910ae5e6bf505e680e3c4b8",
+      "article_id": "2a2de931fc6d847db8e3ee0b64d95169d9e24b38e59abb177c2ec5446712be22",
+      "source_region": "CN",
+      "source_tier": 1,
+      "source_role": "primary",
+      "channel": "policy_economy",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.60906,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 13
+    }
+  ],
+  "supply": {
+    "today_candidates": 11,
+    "today_considered": 11,
+    "today_selected": 3,
+    "today_locked": 3,
+    "locked_today_ids": [
+      "57c0a5f2d9657bbd32fd2ee5e6ddf2bb2144982640af9a29ad88dd31527fcab3",
+      "2a2de931fc6d847db8e3ee0b64d95169d9e24b38e59abb177c2ec5446712be22",
+      "5d794c3788a3a4be0d4215599516884eae43a82888c86723f4c4d433d59805d7"
+    ],
+    "remaining_slots": 11,
+    "catch_up_considered": 0,
+    "catch_up_selected": 0,
+    "deep_read_considered": 0,
+    "deep_read_selected": 0,
+    "evergreen_considered": 0,
+    "evergreen_selected": 0,
+    "final_ids": [
+      "57c0a5f2d9657bbd32fd2ee5e6ddf2bb2144982640af9a29ad88dd31527fcab3",
+      "2a2de931fc6d847db8e3ee0b64d95169d9e24b38e59abb177c2ec5446712be22",
+      "5d794c3788a3a4be0d4215599516884eae43a82888c86723f4c4d433d59805d7"
+    ],
+    "today_lock_preserved": true,
+    "selected": 3,
+    "shortfall": 7,
+    "minimum_not_met_reason": "token_budget_exhausted",
+    "sources": 3,
+    "categories": {
+      "space": 1,
+      "policy": 1,
+      "ai": 1
+    },
+    "channels": {
+      "technology": 1,
+      "policy_economy": 1,
+      "deep_read": 1
+    },
+    "explore_count": 2,
+    "source_counts": {
+      "NASA": 1,
+      "工业和信息化部": 1,
+      "Hugging Face Blog": 1
+    },
+    "diversity_exception": false,
+    "levels": [
+      {
+        "supply_layer": "today",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 3,
+            "selected_total": 3
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 3
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 3
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 3
+          }
+        ],
+        "selected": 3,
+        "shortfall": 7,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 2,
+        "sources": 3,
+        "categories": {
+          "space": 1,
+          "policy": 1,
+          "ai": 1
+        },
+        "channels": {
+          "technology": 1,
+          "policy_economy": 1,
+          "deep_read": 1
+        },
+        "source_counts": {
+          "NASA": 1,
+          "工业和信息化部": 1,
+          "Hugging Face Blog": 1
+        },
+        "source_share_limit": 3,
+        "deep_read_candidates": 1,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "catch_up",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 2,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "deep_read",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 2,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "evergreen",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 2,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      }
+    ],
+    "initial_candidates": 14,
+    "fact_schema_generated": 20,
+    "model_accepted": 11,
+    "hard_fact_rejected": 3,
+    "semantic_rejected": 0,
+    "repaired": 0,
+    "fallback_added": 5,
+    "final_count": 3,
+    "minimum_met": false,
+    "token_budget_status": "graceful_stop",
+    "token_budget": 40000,
+    "token_used": 30481,
+    "token_remaining": 9519,
+    "batches_completed": 4,
+    "accepted_count": 3,
+    "target_count": 14,
+    "stopped_reason": "token_budget_insufficient_for_next_batch",
+    "next_batch_estimated_input_tokens": 6969,
+    "next_batch_estimated_output_tokens": 7200,
+    "next_batch_required_tokens": 14866,
+    "daily_mode": "minimal_daily",
+    "daily_status": "minimal_daily",
+    "publishable_count": 3,
+    "degraded_reason": "token_budget_insufficient_for_next_batch",
+    "token_guard_triggered": true,
+    "source_shortage": false,
+    "validation_shortage": true,
+    "fill_stopped": false
+  }
+}
