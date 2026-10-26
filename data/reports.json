@@ -4,6 +4,18 @@
     {
       "category": "radar",
       "schema_version": 3,
+      "report_date": "2026-10-26",
+      "published_at": "2026-10-26T08:01:26.730274+08:00",
+      "article_count": 1,
+      "estimated_reading_minutes": 5,
+      "highlights": [
+        "古尔曼：苹果首款触屏MacBook Pro北京时间10月29日发布"
+      ],
+      "daily_mode": "minimal_daily"
+    },
+    {
+      "category": "radar",
+      "schema_version": 3,
       "report_date": "2026-10-24",
       "published_at": "2026-10-24T08:02:02.742865+08:00",
       "article_count": 3,

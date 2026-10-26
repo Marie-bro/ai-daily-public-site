@@ -1,0 +1,272 @@
+{
+  "schema_version": 3,
+  "category": "radar",
+  "report_date": "2026-10-26",
+  "published_at": "2026-10-26T08:01:26.730274+08:00",
+  "article_count": 1,
+  "daily_mode": "minimal_daily",
+  "estimated_reading_minutes": 5,
+  "highlights": [
+    "古尔曼：苹果首款触屏MacBook Pro北京时间10月29日发布"
+  ],
+  "items": [
+    {
+      "title_cn": "古尔曼：苹果首款触屏MacBook Pro北京时间10月29日发布",
+      "title_en": "Gurman: Apple's first touchscreen MacBook Pro to launch October 29 Beijing time",
+      "title_original": "古尔曼：苹果首款触屏 MacBook Pro 北京时间 10 月 29 日发布，标志公司产品策略迎来重大转变",
+      "source": "IT之家",
+      "published_at": "2026-10-25T14:37:55+00:00",
+      "original_url": "https://www.ithome.com/1/017/711.htm",
+      "category": "consumer_tech",
+      "original_language": "zh",
+      "what_happened": "彭博社记者马克·古尔曼称，苹果首款触屏MacBook Pro将于北京时间10月29日凌晨1点亮相，引入触控、OLED屏幕和新交互界面。产品有14英寸和16英寸两种尺寸，机身更轻，加入灵动岛，售价预计高于起售价2499美元的高端MacBook Pro。",
+      "what_happened_en": "Bloomberg's Mark Gurman reported that Apple's first touchscreen MacBook Pro will debut at 1 a.m. Beijing time on October 29, adding touch, an OLED screen and a new interface. It comes in 14-inch and 16-inch sizes, is lighter, adds Dynamic Island, and is expected to cost more than the $2,499 high-end MacBook Pro.",
+      "why_it_matters": "此举将逆转苹果长期对触屏笔记本的抵触，并重塑Mac与iPad的产品区隔。",
+      "why_it_matters_en": "The launch would reverse Apple's long resistance to touchscreen laptops and reshape its Mac-iPad product split.",
+      "importance_score": 70,
+      "supply_level": 2,
+      "section": "explore",
+      "ranking_score": 65.0,
+      "content_type": "news",
+      "catch_up": false,
+      "fingerprint": "611cf0dab939bb994473bd485a92d063400ff842c585448f5d6dfcb92eeedcbd",
+      "article_id": "94011c0eb585190232992986e88a48859ff564cb71c82d4624d5b369e7524eee",
+      "source_region": "CN",
+      "source_tier": 3,
+      "source_role": "media",
+      "channel": "technology",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.391339,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 14
+    }
+  ],
+  "supply": {
+    "today_candidates": 3,
+    "today_considered": 3,
+    "today_selected": 1,
+    "today_locked": 1,
+    "locked_today_ids": [
+      "94011c0eb585190232992986e88a48859ff564cb71c82d4624d5b369e7524eee"
+    ],
+    "remaining_slots": 13,
+    "catch_up_considered": 0,
+    "catch_up_selected": 0,
+    "deep_read_considered": 0,
+    "deep_read_selected": 0,
+    "evergreen_considered": 0,
+    "evergreen_selected": 0,
+    "final_ids": [
+      "94011c0eb585190232992986e88a48859ff564cb71c82d4624d5b369e7524eee"
+    ],
+    "today_lock_preserved": true,
+    "selected": 1,
+    "shortfall": 9,
+    "minimum_not_met_reason": "token_budget_exhausted",
+    "sources": 1,
+    "categories": {
+      "consumer_tech": 1
+    },
+    "channels": {
+      "technology": 1
+    },
+    "explore_count": 1,
+    "source_counts": {
+      "IT之家": 1
+    },
+    "diversity_exception": false,
+    "levels": [
+      {
+        "supply_layer": "today",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 1,
+            "selected_total": 1
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 1
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 1
+          }
+        ],
+        "selected": 1,
+        "shortfall": 9,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 1,
+        "sources": 1,
+        "categories": {
+          "consumer_tech": 1
+        },
+        "channels": {
+          "technology": 1
+        },
+        "source_counts": {
+          "IT之家": 1
+        },
+        "source_share_limit": 3,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "catch_up",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 3,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "deep_read",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 3,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "evergreen",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 3,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      }
+    ],
+    "initial_candidates": 10,
+    "fact_schema_generated": 10,
+    "model_accepted": 3,
+    "hard_fact_rejected": 7,
+    "semantic_rejected": 0,
+    "repaired": 0,
+    "fallback_added": 0,
+    "final_count": 1,
+    "minimum_met": false,
+    "token_budget_status": "graceful_stop",
+    "token_budget": 40000,
+    "token_used": 33513,
+    "token_remaining": 6487,
+    "batches_completed": 2,
+    "accepted_count": 1,
+    "target_count": 14,
+    "stopped_reason": "token_budget_insufficient_for_next_batch",
+    "next_batch_estimated_input_tokens": 6638,
+    "next_batch_estimated_output_tokens": 7200,
+    "next_batch_required_tokens": 14502,
+    "daily_mode": "minimal_daily",
+    "daily_status": "minimal_daily",
+    "publishable_count": 1,
+    "degraded_reason": "token_budget_insufficient_for_next_batch",
+    "token_guard_triggered": true,
+    "source_shortage": false,
+    "validation_shortage": true,
+    "fill_stopped": false
+  }
+}
