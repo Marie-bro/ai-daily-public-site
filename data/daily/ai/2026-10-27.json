@@ -1,0 +1,272 @@
+{
+  "schema_version": 3,
+  "category": "radar",
+  "report_date": "2026-10-27",
+  "published_at": "2026-10-27T08:02:25.593265+08:00",
+  "article_count": 1,
+  "daily_mode": "minimal_daily",
+  "estimated_reading_minutes": 5,
+  "highlights": [
+    "植入式设备利用超声改善大脑药物递送"
+  ],
+  "items": [
+    {
+      "title_cn": "植入式设备利用超声改善大脑药物递送",
+      "title_en": "Implantable Device Uses Ultrasound to Improve Brain Drug Delivery",
+      "title_original": "Implantable device uses ultrasound to improve drug delivery to the brain",
+      "source": "MIT News",
+      "published_at": "2026-10-26T15:00:00+00:00",
+      "original_url": "https://news.mit.edu/2026/implantable-device-uses-ultrasound-improve-drug-delivery-brain-1026",
+      "category": "science",
+      "original_language": "en",
+      "what_happened": "麻省理工学院报道了一种利用超声改善向大脑药物递送的植入式设备。",
+      "what_happened_en": "MIT reported an implantable device that uses ultrasound to improve drug delivery to the brain.",
+      "why_it_matters": "这种靶向方法可能为防止侵袭性肿瘤复发提供途径。",
+      "why_it_matters_en": "This targeted approach could offer a way to prevent the recurrence of aggressive tumors.",
+      "importance_score": 70,
+      "supply_level": 1,
+      "section": "explore",
+      "ranking_score": 72.0,
+      "content_type": "news",
+      "catch_up": false,
+      "fingerprint": "656e27e04bfa9b77f2d51f0c77a2278171109acc4be91d5812e7404ee9ba84d5",
+      "article_id": "8397dba4e9a191396a610c55e72d16e4a00a442e5bb14684c145eb06830ad599",
+      "source_region": "US",
+      "source_tier": 1,
+      "source_role": "primary",
+      "channel": "technology",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.376685,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 14
+    }
+  ],
+  "supply": {
+    "today_candidates": 16,
+    "today_considered": 16,
+    "today_selected": 1,
+    "today_locked": 1,
+    "locked_today_ids": [
+      "8397dba4e9a191396a610c55e72d16e4a00a442e5bb14684c145eb06830ad599"
+    ],
+    "remaining_slots": 13,
+    "catch_up_considered": 0,
+    "catch_up_selected": 0,
+    "deep_read_considered": 0,
+    "deep_read_selected": 0,
+    "evergreen_considered": 0,
+    "evergreen_selected": 0,
+    "final_ids": [
+      "8397dba4e9a191396a610c55e72d16e4a00a442e5bb14684c145eb06830ad599"
+    ],
+    "today_lock_preserved": true,
+    "selected": 1,
+    "shortfall": 9,
+    "minimum_not_met_reason": "token_budget_exhausted",
+    "sources": 1,
+    "categories": {
+      "science": 1
+    },
+    "channels": {
+      "technology": 1
+    },
+    "explore_count": 1,
+    "source_counts": {
+      "MIT News": 1
+    },
+    "diversity_exception": false,
+    "levels": [
+      {
+        "supply_layer": "today",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 1,
+            "selected_total": 1
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 1
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 1
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 1
+          }
+        ],
+        "selected": 1,
+        "shortfall": 9,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 1,
+        "sources": 1,
+        "categories": {
+          "science": 1
+        },
+        "channels": {
+          "technology": 1
+        },
+        "source_counts": {
+          "MIT News": 1
+        },
+        "source_share_limit": 3,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "catch_up",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 3,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "deep_read",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 3,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "evergreen",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 3,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      }
+    ],
+    "initial_candidates": 13,
+    "fact_schema_generated": 19,
+    "model_accepted": 16,
+    "hard_fact_rejected": 4,
+    "semantic_rejected": 0,
+    "repaired": 1,
+    "fallback_added": 6,
+    "final_count": 1,
+    "minimum_met": false,
+    "token_budget_status": "graceful_stop",
+    "token_budget": 40000,
+    "token_used": 32200,
+    "token_remaining": 7800,
+    "batches_completed": 4,
+    "accepted_count": 1,
+    "target_count": 14,
+    "stopped_reason": "token_budget_insufficient_for_next_batch",
+    "next_batch_estimated_input_tokens": 7007,
+    "next_batch_estimated_output_tokens": 7200,
+    "next_batch_required_tokens": 14908,
+    "daily_mode": "minimal_daily",
+    "daily_status": "minimal_daily",
+    "publishable_count": 1,
+    "degraded_reason": "token_budget_insufficient_for_next_batch",
+    "token_guard_triggered": true,
+    "source_shortage": false,
+    "validation_shortage": true,
+    "fill_stopped": false
+  }
+}

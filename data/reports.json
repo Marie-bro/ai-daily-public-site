@@ -4,6 +4,18 @@
     {
       "category": "radar",
       "schema_version": 3,
+      "report_date": "2026-10-27",
+      "published_at": "2026-10-27T08:02:25.593265+08:00",
+      "article_count": 1,
+      "estimated_reading_minutes": 5,
+      "highlights": [
+        "植入式设备利用超声改善大脑药物递送"
+      ],
+      "daily_mode": "minimal_daily"
+    },
+    {
+      "category": "radar",
+      "schema_version": 3,
       "report_date": "2026-10-26",
       "published_at": "2026-10-26T08:01:26.730274+08:00",
       "article_count": 1,
