@@ -4,6 +4,20 @@
     {
       "category": "radar",
       "schema_version": 3,
+      "report_date": "2026-10-29",
+      "published_at": "2026-10-29T08:01:10.222700+08:00",
+      "article_count": 5,
+      "estimated_reading_minutes": 5,
+      "highlights": [
+        "NVIDIA RTX Spark Windows笔记本新增机型、智能体工具与游戏",
+        "完整记录胚胎发育全过程",
+        "软体机器人有望帮助医生诊断和治疗小肠疾病"
+      ],
+      "daily_mode": "graceful_degraded"
+    },
+    {
+      "category": "radar",
+      "schema_version": 3,
       "report_date": "2026-10-27",
       "published_at": "2026-10-27T08:02:25.593265+08:00",
       "article_count": 1,
