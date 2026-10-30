@@ -4,6 +4,19 @@
     {
       "category": "radar",
       "schema_version": 3,
+      "report_date": "2026-10-30",
+      "published_at": "2026-10-30T08:02:10.183701+08:00",
+      "article_count": 2,
+      "estimated_reading_minutes": 5,
+      "highlights": [
+        "三星电子公布2026年第三季度业绩",
+        "Cloudflare 2026年第三季度DDoS威胁报告：小规模攻击增多，超大攻击减少"
+      ],
+      "daily_mode": "minimal_daily"
+    },
+    {
+      "category": "radar",
+      "schema_version": 3,
       "report_date": "2026-10-29",
       "published_at": "2026-10-29T08:01:10.222700+08:00",
       "article_count": 5,

@@ -1,0 +1,320 @@
+{
+  "schema_version": 3,
+  "category": "radar",
+  "report_date": "2026-10-30",
+  "published_at": "2026-10-30T08:02:10.183701+08:00",
+  "article_count": 2,
+  "daily_mode": "minimal_daily",
+  "estimated_reading_minutes": 5,
+  "highlights": [
+    "三星电子公布2026年第三季度业绩",
+    "Cloudflare 2026年第三季度DDoS威胁报告：小规模攻击增多，超大攻击减少"
+  ],
+  "items": [
+    {
+      "title_cn": "三星电子公布2026年第三季度业绩",
+      "title_en": "Samsung Electronics Announces Third Quarter 2026 Results",
+      "title_original": "Samsung Electronics Announces Third Quarter 2026 Results - Samsung Global Newsroom",
+      "source": "Samsung Global Newsroom",
+      "published_at": "2026-10-29T01:10:00+00:00",
+      "original_url": "https://news.samsung.com/global/samsung-electronics-announces-third-quarter-2026-results",
+      "category": "consumer_tech",
+      "original_language": "en",
+      "what_happened": "三星电子公布截至2026年9月30日的2026年第三季度业绩：合并营收195.3万亿韩元，环比增长14%；营业利润107.4万亿韩元。其设备解决方案（DS）部门销售额环比增长15%，存储业务季度营收和营业利润均创历史新高。",
+      "what_happened_en": "Samsung Electronics reported third-quarter 2026 results for the quarter ended Sept. 30, 2026: consolidated revenue of KRW 195.3 trillion, up 14% quarter-on-quarter, and operating profit of KRW 107.4 trillion. Its Device Solutions Division posted a 15% QoQ sales increase, and the Memory Business set all-time quarterly highs for revenue and operating profit.",
+      "why_it_matters": "三星称其成为全球首家季度营业利润突破100万亿韩元的科技公司，显示半导体需求对行业盈利的强大拉动。",
+      "why_it_matters_en": "Samsung says it is the world's first tech company to exceed KRW 100 trillion in quarterly operating profit, a signal of how strongly semiconductor demand is shaping industry earnings.",
+      "importance_score": 82,
+      "supply_level": 1,
+      "section": "explore",
+      "ranking_score": 79.2,
+      "content_type": "news",
+      "catch_up": false,
+      "fingerprint": "cc92e07fe9c07bdc087cc9ed71c1583e49712091c0e9e54e942234f89e0f74a6",
+      "article_id": "ded49fc539329ab96e873e9cfd14b0bf93f7e98e508ce9f1459e796a7da90b5b",
+      "source_region": "KR",
+      "source_tier": 1,
+      "source_role": "primary",
+      "channel": "technology",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.952896,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 14
+    },
+    {
+      "title_cn": "Cloudflare 2026年第三季度DDoS威胁报告：小规模攻击增多，超大攻击减少",
+      "title_en": "Cloudflare DDoS Threat Report 2026 Q3: More Swarms, Fewer Giants",
+      "title_original": "Cloudflare DDoS Threat Report 2026 Q3: More swarms, fewer giants",
+      "source": "Cloudflare Blog",
+      "published_at": "2026-10-29T12:55:00+00:00",
+      "original_url": "https://blog.cloudflare.com/ddos-threat-report-2026-q3/",
+      "category": "internet",
+      "original_language": "en",
+      "what_happened": "Cloudflare第26期DDoS威胁报告覆盖2026年第三季度，发现持续不足10分钟、带宽低于1 Gbps的短时攻击激增208%，超过1 Tbps的攻击较第二季度下降近69%，CLDAP洪水攻击环比骤降99.5%。",
+      "what_happened_en": "Cloudflare's 26th DDoS Threat Report, covering Q3 2026, found short-burst attacks under 10 minutes and 1 Gbps surged 208%, while attacks above 1 Tbps fell nearly 69% from Q2 and CLDAP floods collapsed 99.5% quarter-over-quarter.",
+      "why_it_matters": "攻击转向更小规模、更高频次，显示网络防御者面临的威胁模式正在变化。",
+      "why_it_matters_en": "The shift toward smaller, more numerous attacks signals changing threat patterns for network defenders.",
+      "importance_score": 62,
+      "supply_level": 1,
+      "section": "deep_read",
+      "ranking_score": 67.2,
+      "content_type": "deep_read",
+      "catch_up": false,
+      "fingerprint": "e763afe3688e29498455793f78bd9586fd231ff1c62142233ae4f593efd8a888",
+      "article_id": "93dde8cc7b16e73253cc02b0c36d5bb80c45dac5aacfb06bc2e8bdadf6fb0087",
+      "source_region": "US",
+      "source_tier": 1,
+      "source_role": "primary",
+      "channel": "deep_read",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.463312,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 13
+    }
+  ],
+  "supply": {
+    "today_candidates": 17,
+    "today_considered": 17,
+    "today_selected": 2,
+    "today_locked": 2,
+    "locked_today_ids": [
+      "ded49fc539329ab96e873e9cfd14b0bf93f7e98e508ce9f1459e796a7da90b5b",
+      "93dde8cc7b16e73253cc02b0c36d5bb80c45dac5aacfb06bc2e8bdadf6fb0087"
+    ],
+    "remaining_slots": 12,
+    "catch_up_considered": 0,
+    "catch_up_selected": 0,
+    "deep_read_considered": 0,
+    "deep_read_selected": 0,
+    "evergreen_considered": 0,
+    "evergreen_selected": 0,
+    "final_ids": [
+      "ded49fc539329ab96e873e9cfd14b0bf93f7e98e508ce9f1459e796a7da90b5b",
+      "93dde8cc7b16e73253cc02b0c36d5bb80c45dac5aacfb06bc2e8bdadf6fb0087"
+    ],
+    "today_lock_preserved": true,
+    "selected": 2,
+    "shortfall": 8,
+    "minimum_not_met_reason": "token_budget_exhausted",
+    "sources": 2,
+    "categories": {
+      "consumer_tech": 1,
+      "internet": 1
+    },
+    "channels": {
+      "technology": 1,
+      "deep_read": 1
+    },
+    "explore_count": 2,
+    "source_counts": {
+      "Samsung Global Newsroom": 1,
+      "Cloudflare Blog": 1
+    },
+    "diversity_exception": false,
+    "levels": [
+      {
+        "supply_layer": "today",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 2,
+            "selected_total": 2
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 2
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 2
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 2
+          }
+        ],
+        "selected": 2,
+        "shortfall": 8,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 2,
+        "sources": 2,
+        "categories": {
+          "consumer_tech": 1,
+          "internet": 1
+        },
+        "channels": {
+          "technology": 1,
+          "deep_read": 1
+        },
+        "source_counts": {
+          "Samsung Global Newsroom": 1,
+          "Cloudflare Blog": 1
+        },
+        "source_share_limit": 3,
+        "deep_read_candidates": 1,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "catch_up",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 3,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "deep_read",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 3,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "evergreen",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 3,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      }
+    ],
+    "initial_candidates": 14,
+    "fact_schema_generated": 20,
+    "model_accepted": 17,
+    "hard_fact_rejected": 4,
+    "semantic_rejected": 0,
+    "repaired": 1,
+    "fallback_added": 6,
+    "final_count": 2,
+    "minimum_met": false,
+    "token_budget_status": "graceful_stop",
+    "token_budget": 40000,
+    "token_used": 32161,
+    "token_remaining": 7839,
+    "batches_completed": 4,
+    "accepted_count": 2,
+    "target_count": 14,
+    "stopped_reason": "token_budget_insufficient_for_next_batch",
+    "next_batch_estimated_input_tokens": 7054,
+    "next_batch_estimated_output_tokens": 7200,
+    "next_batch_required_tokens": 14960,
+    "daily_mode": "minimal_daily",
+    "daily_status": "minimal_daily",
+    "publishable_count": 2,
+    "degraded_reason": "token_budget_insufficient_for_next_batch",
+    "token_guard_triggered": true,
+    "source_shortage": false,
+    "validation_shortage": true,
+    "fill_stopped": false
+  }
+}
