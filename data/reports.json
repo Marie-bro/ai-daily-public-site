@@ -4,6 +4,20 @@
     {
       "category": "radar",
       "schema_version": 3,
+      "report_date": "2026-11-03",
+      "published_at": "2026-11-03T08:02:53.862838+08:00",
+      "article_count": 3,
+      "estimated_reading_minutes": 5,
+      "highlights": [
+        "Anthropic 高付费客户超 1.19 万家，净收入留存率达 900%",
+        "苹果警告德国政府人员 iPhone 遭间谍软件攻击风险",
+        "我国超深地下工程装备获突破，国内首套超深竖井智能焊接成套装备投用"
+      ],
+      "daily_mode": "minimal_daily"
+    },
+    {
+      "category": "radar",
+      "schema_version": 3,
       "report_date": "2026-10-30",
       "published_at": "2026-10-30T08:02:10.183701+08:00",
       "article_count": 2,

@@ -1,0 +1,358 @@
+{
+  "schema_version": 3,
+  "category": "radar",
+  "report_date": "2026-11-03",
+  "published_at": "2026-11-03T08:02:53.862838+08:00",
+  "article_count": 3,
+  "daily_mode": "minimal_daily",
+  "estimated_reading_minutes": 5,
+  "highlights": [
+    "Anthropic 高付费客户超 1.19 万家，净收入留存率达 900%",
+    "苹果警告德国政府人员 iPhone 遭间谍软件攻击风险",
+    "我国超深地下工程装备获突破，国内首套超深竖井智能焊接成套装备投用"
+  ],
+  "items": [
+    {
+      "title_cn": "Anthropic 高付费客户超 1.19 万家，净收入留存率达 900%",
+      "title_en": "Anthropic tops 11,900 high-paying customers, net revenue retention about 900%",
+      "title_original": "Anthropic 高付费客户超 1.19 万家，净收入留存率达 900%",
+      "source": "IT之家",
+      "published_at": "2026-11-02T22:43:01+00:00",
+      "original_url": "https://www.ithome.com/1/021/285.htm",
+      "category": "ai",
+      "original_language": "zh",
+      "what_happened": "Anthropic 披露，截至 2026 年 9 月 30 日净收入留存率约 900%；年消费不低于 10 万美元的客户超 11,900 家（一年前约 950 家），超 1,900 家达 100 万美元，约 250 家达 1,000 万美元及以上。",
+      "what_happened_en": "Anthropic said that as of September 30, 2026 its net revenue retention was about 900%, with over 11,900 customers spending at least $100,000 annually (about 950 a year earlier), over 1,900 at $1 million and about 250 at $10 million or more.",
+      "why_it_matters": "Claude Code 是关键驱动：使用该工具的头部 5% 企业客户月均支出约为未使用者的 20 倍，显示编程智能体正拉动企业 AI 支出。",
+      "why_it_matters_en": "Claude Code is a key driver: top 5% Claude Code enterprise users spend about 20x monthly versus non-users, showing coding agents pull enterprise AI spending.",
+      "importance_score": 72,
+      "supply_level": 2,
+      "section": "for_you",
+      "ranking_score": 76.2,
+      "content_type": "news",
+      "catch_up": false,
+      "fingerprint": "f2b2c3aa4f63a3e4bdb0d0d1b53d16bdb3603bd3c4d8dda420243a6691a2f094",
+      "article_id": "d727ebc651c3bf98996025f1142d7f481d740b7eb24bcc1e66ef3f1ba4a636c4",
+      "source_region": "CN",
+      "source_tier": 3,
+      "source_role": "media",
+      "channel": "technology",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.055473,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 14
+    },
+    {
+      "title_cn": "苹果警告德国政府人员 iPhone 遭间谍软件攻击风险",
+      "title_en": "Apple warns German government staff of iPhone spyware risk",
+      "title_original": "苹果警告德国政府人员的 iPhone 遭间谍软件攻击，受影响人数及幕后黑手尚不明确",
+      "source": "IT之家",
+      "published_at": "2026-11-02T23:12:40+00:00",
+      "original_url": "https://www.ithome.com/1/021/290.htm",
+      "category": "other_tech",
+      "original_language": "zh",
+      "what_happened": "苹果自 2026 年 10 月 29 日起通知部分德国政府工作人员和议员，其 iPhone 可能成为商业间谍软件攻击目标；德国联邦信息安全局建议收到警告者假定设备已被入侵。",
+      "what_happened_en": "Apple began notifying some German government staff and lawmakers from October 29, 2026 that their iPhones may be targeted by mercenary spyware; Germany's BSI advised recipients to assume compromise.",
+      "why_it_matters": "这表明商业间谍软件仍威胁政府设备，但受影响人数及幕后黑手尚未披露。",
+      "why_it_matters_en": "It shows commercial spyware remains a threat to government devices, though the number affected and the attacker are undisclosed.",
+      "importance_score": 62,
+      "supply_level": 2,
+      "section": "explore",
+      "ranking_score": 60.2,
+      "content_type": "news",
+      "catch_up": false,
+      "fingerprint": "9fb50830b88db3c7d67070ad06721e026437aaa68374291c0c5bed1e5b274897",
+      "article_id": "d8a3a0d672633451a7c4e39c48db6163ce00671da033888929ef9385cec8f580",
+      "source_region": "CN",
+      "source_tier": 3,
+      "source_role": "media",
+      "channel": "technology",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.034883,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 13
+    },
+    {
+      "title_cn": "我国超深地下工程装备获突破，国内首套超深竖井智能焊接成套装备投用",
+      "title_en": "China's First Intelligent Welding Equipment Set for Ultra-Deep Shafts Enters Service",
+      "title_original": "我国超深地下工程装备获突破，国内首套超深竖井智能焊接成套装备投用",
+      "source": "IT之家",
+      "published_at": "2026-11-02T23:16:36+00:00",
+      "original_url": "https://www.ithome.com/1/021/292.htm",
+      "category": "other_tech",
+      "original_language": "zh",
+      "what_happened": "据央视报道，三峡集团确认我国首套专用于超深竖井的压力钢管智能焊接成套装备在浙江松阳抽水蓄能电站正式投用。该竖井总深637米，焊接效率较传统手工焊提升65%以上，焊缝一次性合格率达99%。",
+      "what_happened_en": "According to CCTV, China Three Gorges Corporation confirmed that China's first intelligent welding equipment set dedicated to ultra-deep shaft pressure steel pipes entered service at the Songyang pumped-storage power station in Zhejiang. The shaft is 637 meters deep; welding efficiency is over 65% higher than manual welding and the first-pass weld qualification rate reaches 99%.",
+      "why_it_matters": "该装备补齐超深竖井高强钢钢管自动化焊接短板，标志我国超深地下工程装备自主化取得新进展。",
+      "why_it_matters_en": "The equipment fills a gap in automated welding of high-strength steel pipes in ultra-deep shafts, advancing self-reliance in ultra-deep underground engineering equipment.",
+      "importance_score": 60,
+      "supply_level": 2,
+      "section": "explore",
+      "ranking_score": 59.0,
+      "content_type": "news",
+      "catch_up": false,
+      "fingerprint": "bbf7ef568c9b16acc839576ad7e4d0c8b28b71986ea976ab3bd9b7c92b9fd29e",
+      "article_id": "424931f90389b6f94de24984fcc496e7e8b3fbe19f8d2979d773226b1f200490",
+      "source_region": "CN",
+      "source_tier": 3,
+      "source_role": "media",
+      "channel": "technology",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.032151,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 12
+    }
+  ],
+  "supply": {
+    "today_candidates": 10,
+    "today_considered": 10,
+    "today_selected": 3,
+    "today_locked": 3,
+    "locked_today_ids": [
+      "d727ebc651c3bf98996025f1142d7f481d740b7eb24bcc1e66ef3f1ba4a636c4",
+      "d8a3a0d672633451a7c4e39c48db6163ce00671da033888929ef9385cec8f580",
+      "424931f90389b6f94de24984fcc496e7e8b3fbe19f8d2979d773226b1f200490"
+    ],
+    "remaining_slots": 11,
+    "catch_up_considered": 0,
+    "catch_up_selected": 0,
+    "deep_read_considered": 0,
+    "deep_read_selected": 0,
+    "evergreen_considered": 0,
+    "evergreen_selected": 0,
+    "final_ids": [
+      "d727ebc651c3bf98996025f1142d7f481d740b7eb24bcc1e66ef3f1ba4a636c4",
+      "d8a3a0d672633451a7c4e39c48db6163ce00671da033888929ef9385cec8f580",
+      "424931f90389b6f94de24984fcc496e7e8b3fbe19f8d2979d773226b1f200490"
+    ],
+    "today_lock_preserved": true,
+    "selected": 3,
+    "shortfall": 7,
+    "minimum_not_met_reason": "token_budget_exhausted",
+    "sources": 1,
+    "categories": {
+      "ai": 1,
+      "other_tech": 2
+    },
+    "channels": {
+      "technology": 3
+    },
+    "explore_count": 2,
+    "source_counts": {
+      "IT之家": 3
+    },
+    "diversity_exception": true,
+    "levels": [
+      {
+        "supply_layer": "today",
+        "diversity_exception": true,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 3,
+            "selected_total": 2
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 2
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 2
+          }
+        ],
+        "selected": 3,
+        "shortfall": 7,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 2,
+        "sources": 1,
+        "categories": {
+          "ai": 1,
+          "other_tech": 2
+        },
+        "channels": {
+          "technology": 3
+        },
+        "source_counts": {
+          "IT之家": 3
+        },
+        "source_share_limit": 3,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "catch_up",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 2,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "deep_read",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 2,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "evergreen",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 2,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      }
+    ],
+    "initial_candidates": 10,
+    "fact_schema_generated": 16,
+    "model_accepted": 10,
+    "hard_fact_rejected": 6,
+    "semantic_rejected": 0,
+    "repaired": 0,
+    "fallback_added": 3,
+    "final_count": 3,
+    "minimum_met": false,
+    "token_budget_status": "graceful_stop",
+    "token_budget": 40000,
+    "token_used": 38325,
+    "token_remaining": 1675,
+    "batches_completed": 3,
+    "accepted_count": 3,
+    "target_count": 14,
+    "stopped_reason": "token_budget_insufficient_for_next_batch",
+    "next_batch_estimated_input_tokens": 6077,
+    "next_batch_estimated_output_tokens": 6000,
+    "next_batch_required_tokens": 12685,
+    "daily_mode": "minimal_daily",
+    "daily_status": "minimal_daily",
+    "publishable_count": 3,
+    "degraded_reason": "token_budget_insufficient_for_next_batch",
+    "token_guard_triggered": true,
+    "source_shortage": false,
+    "validation_shortage": true,
+    "fill_stopped": false
+  }
+}
