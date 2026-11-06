@@ -1,0 +1,401 @@
+{
+  "schema_version": 3,
+  "category": "radar",
+  "report_date": "2026-11-06",
+  "published_at": "2026-11-06T08:01:38.391329+08:00",
+  "article_count": 4,
+  "daily_mode": "minimal_daily",
+  "estimated_reading_minutes": 5,
+  "highlights": [
+    "NVIDIA Vera CPU 瞄准高速高吞吐 AI 智能体",
+    "麻省理工学院新系统纠正机器人模糊的物体记忆",
+    "NVIDIA 以全栈协同设计应对 AI 内存压力"
+  ],
+  "items": [
+    {
+      "title_cn": "NVIDIA Vera CPU 瞄准高速高吞吐 AI 智能体",
+      "title_en": "NVIDIA Vera CPU Targets Fast, High-Throughput AI Agents",
+      "title_original": "Vera Delivers the Best of Both Worlds: Highest Throughput and Fastest Agents",
+      "source": "NVIDIA Blog",
+      "published_at": "2026-11-05T20:00:41+00:00",
+      "original_url": "https://blogs.nvidia.com/blog/vera-cpu-highest-throughput-fastest-agents/",
+      "category": "chips",
+      "original_language": "en",
+      "what_happened": "NVIDIA 表示，其 Vera CPU 实现了最高吞吐量和最快的智能体，并引用了 100 兆瓦数据中心对比。",
+      "what_happened_en": "NVIDIA says its Vera CPU delivers the highest throughput and fastest agents, citing a 100-megawatt data center comparison.",
+      "why_it_matters": "AI 工厂受功耗限制，因此服务商需要每瓦完成更多智能体工作。",
+      "why_it_matters_en": "AI factories are power limited, so providers need more agent work per watt.",
+      "importance_score": 70,
+      "supply_level": 1,
+      "section": "explore",
+      "ranking_score": 72.0,
+      "content_type": "news",
+      "catch_up": false,
+      "fingerprint": "057f0dfb2c8792b2a9e136cfe22ccfdf366c091c8560fa988b03eeae3c5fed76",
+      "article_id": "b1feafc8620ed538b62a3022f9da84a3ead4c4482c1e636ed633b769ccf84d6b",
+      "source_region": "US",
+      "source_tier": 1,
+      "source_role": "primary",
+      "channel": "technology",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.167331,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 14
+    },
+    {
+      "title_cn": "麻省理工学院新系统纠正机器人模糊的物体记忆",
+      "title_en": "MIT System Clears Up Robots' Fuzzy Object Memory",
+      "title_original": "Clearing up a robot’s fuzzy memory",
+      "source": "MIT News",
+      "published_at": "2026-11-05T05:00:00+00:00",
+      "original_url": "https://news.mit.edu/2026/clearing-up-robot-fuzzy-memory-1105",
+      "category": "science",
+      "original_language": "en",
+      "what_happened": "麻省理工学院研究人员开发出一种系统，可识别并纠正机器人记忆中不可靠的物体描述，从而提升机器人与环境交互的能力。",
+      "what_happened_en": "MIT researchers developed a system that identifies and corrects unreliable object descriptions stored in a robot's memory, improving the robot's ability to interact with its environment.",
+      "why_it_matters": "更可靠的机器人记忆有望让机器人在真实环境中更安全、更高效。",
+      "why_it_matters_en": "More reliable robot memory could make robots safer and more effective in real-world settings.",
+      "importance_score": 70,
+      "supply_level": 1,
+      "section": "explore",
+      "ranking_score": 72.0,
+      "content_type": "news",
+      "catch_up": false,
+      "fingerprint": "cc6599e5c18749ba0a7b82e9e6b60c376c4f51bc31a4ee48415565e0e85cce01",
+      "article_id": "87631feae5b67cf18cdcb5b113339245a0a7246f6b1497bc7d5582713b1425ab",
+      "source_region": "US",
+      "source_tier": 1,
+      "source_role": "primary",
+      "channel": "technology",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.792805,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 13
+    },
+    {
+      "title_cn": "NVIDIA 以全栈协同设计应对 AI 内存压力",
+      "title_en": "NVIDIA Touts Full-Stack Codesign for AI Memory Pressure",
+      "title_original": "More Performance From Every Byte: How Full-Stack Codesign Solves AI’s Memory Challenge",
+      "source": "NVIDIA Blog",
+      "published_at": "2026-11-05T16:00:00+00:00",
+      "original_url": "https://blogs.nvidia.com/blog/memory-full-stack-codesign/",
+      "category": "chips",
+      "original_language": "en",
+      "what_happened": "NVIDIA 表示，更大模型、更长上下文和智能体应用正加大 GPU 内存压力，同时供应趋紧、价格上涨；NVIDIA 称其率先在加速计算栈中采用 HBM3e 和 HBM4。",
+      "what_happened_en": "NVIDIA says larger models, longer contexts and agentic applications are raising GPU memory pressure as supply tightens and prices rise, and it was first to adopt HBM3e and HBM4 in an accelerated computing stack.",
+      "why_it_matters": "全栈协同设计旨在让内存层级中的每一字节完成更多有效工作。",
+      "why_it_matters_en": "Full-stack codesign aims to get more useful work from each byte across the memory hierarchy.",
+      "importance_score": 66,
+      "supply_level": 1,
+      "section": "explore",
+      "ranking_score": 69.6,
+      "content_type": "news",
+      "catch_up": false,
+      "fingerprint": "f4efa4f6f1b795f05abc15aa19096a60a45745cc2d3d4a8499bbcc3ce2077ed0",
+      "article_id": "86e4d87385b407899816f001f27e717f9eebe1e823d2d2d6c313c43c526da40d",
+      "source_region": "US",
+      "source_tier": 1,
+      "source_role": "primary",
+      "channel": "technology",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.334472,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 12
+    },
+    {
+      "title_cn": "麻省理工学院新方法揭示夸克-胶子等离子体结构",
+      "title_en": "MIT Method Pins Down Quark-Gluon Plasma Structure",
+      "title_original": "Pinning down the structure of quark-gluon plasma, the universe’s first fluid",
+      "source": "MIT News",
+      "published_at": "2026-11-05T16:20:00+00:00",
+      "original_url": "https://news.mit.edu/2026/pinning-down-quark-gluon-plasma-structure-1105",
+      "category": "science",
+      "original_language": "en",
+      "what_happened": "麻省理工学院新闻报道了一种新方法，用于预测被称为宇宙第一种流体的夸克-胶子等离子体的结构。",
+      "what_happened_en": "MIT News reports a new method to predict the structure of quark-gluon plasma, described as the universe's first fluid.",
+      "why_it_matters": "该方法推进了对夸克-胶子等离子体结构的物理建模。",
+      "why_it_matters_en": "The method extends physics modeling of quark-gluon plasma structure.",
+      "importance_score": 62,
+      "supply_level": 1,
+      "section": "explore",
+      "ranking_score": 67.2,
+      "content_type": "news",
+      "catch_up": false,
+      "fingerprint": "b203121432a40bd252d7e7110bb7d740080bbd889e5001e03ea18081f9431960",
+      "article_id": "d4d36af74f2a2095a54a50c074364e4dfedb67b0869cbfa7a816b216232808cc",
+      "source_region": "US",
+      "source_tier": 1,
+      "source_role": "primary",
+      "channel": "technology",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.320583,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 11
+    }
+  ],
+  "supply": {
+    "today_candidates": 16,
+    "today_considered": 16,
+    "today_selected": 4,
+    "today_locked": 4,
+    "locked_today_ids": [
+      "b1feafc8620ed538b62a3022f9da84a3ead4c4482c1e636ed633b769ccf84d6b",
+      "87631feae5b67cf18cdcb5b113339245a0a7246f6b1497bc7d5582713b1425ab",
+      "86e4d87385b407899816f001f27e717f9eebe1e823d2d2d6c313c43c526da40d",
+      "d4d36af74f2a2095a54a50c074364e4dfedb67b0869cbfa7a816b216232808cc"
+    ],
+    "remaining_slots": 10,
+    "catch_up_considered": 0,
+    "catch_up_selected": 0,
+    "deep_read_considered": 0,
+    "deep_read_selected": 0,
+    "evergreen_considered": 0,
+    "evergreen_selected": 0,
+    "final_ids": [
+      "b1feafc8620ed538b62a3022f9da84a3ead4c4482c1e636ed633b769ccf84d6b",
+      "87631feae5b67cf18cdcb5b113339245a0a7246f6b1497bc7d5582713b1425ab",
+      "86e4d87385b407899816f001f27e717f9eebe1e823d2d2d6c313c43c526da40d",
+      "d4d36af74f2a2095a54a50c074364e4dfedb67b0869cbfa7a816b216232808cc"
+    ],
+    "today_lock_preserved": true,
+    "selected": 4,
+    "shortfall": 6,
+    "minimum_not_met_reason": "token_budget_exhausted",
+    "sources": 2,
+    "categories": {
+      "chips": 2,
+      "science": 2
+    },
+    "channels": {
+      "technology": 4
+    },
+    "explore_count": 4,
+    "source_counts": {
+      "NVIDIA Blog": 2,
+      "MIT News": 2
+    },
+    "diversity_exception": false,
+    "levels": [
+      {
+        "supply_layer": "today",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 4,
+            "selected_total": 4
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 4
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 4
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 4
+          }
+        ],
+        "selected": 4,
+        "shortfall": 6,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 4,
+        "sources": 2,
+        "categories": {
+          "chips": 2,
+          "science": 2
+        },
+        "channels": {
+          "technology": 4
+        },
+        "source_counts": {
+          "NVIDIA Blog": 2,
+          "MIT News": 2
+        },
+        "source_share_limit": 3,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "catch_up",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 2,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "deep_read",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 2,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "evergreen",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 2,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      }
+    ],
+    "initial_candidates": 14,
+    "fact_schema_generated": 20,
+    "model_accepted": 16,
+    "hard_fact_rejected": 4,
+    "semantic_rejected": 0,
+    "repaired": 0,
+    "fallback_added": 5,
+    "final_count": 4,
+    "minimum_met": false,
+    "token_budget_status": "graceful_stop",
+    "token_budget": 40000,
+    "token_used": 30311,
+    "token_remaining": 9689,
+    "batches_completed": 4,
+    "accepted_count": 4,
+    "target_count": 14,
+    "stopped_reason": "token_budget_insufficient_for_next_batch",
+    "next_batch_estimated_input_tokens": 6934,
+    "next_batch_estimated_output_tokens": 7200,
+    "next_batch_required_tokens": 14828,
+    "daily_mode": "minimal_daily",
+    "daily_status": "minimal_daily",
+    "publishable_count": 4,
+    "degraded_reason": "token_budget_insufficient_for_next_batch",
+    "token_guard_triggered": true,
+    "source_shortage": false,
+    "validation_shortage": true,
+    "fill_stopped": false
+  }
+}

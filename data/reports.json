@@ -4,6 +4,20 @@
     {
       "category": "radar",
       "schema_version": 3,
+      "report_date": "2026-11-06",
+      "published_at": "2026-11-06T08:01:38.391329+08:00",
+      "article_count": 4,
+      "estimated_reading_minutes": 5,
+      "highlights": [
+        "NVIDIA Vera CPU 瞄准高速高吞吐 AI 智能体",
+        "麻省理工学院新系统纠正机器人模糊的物体记忆",
+        "NVIDIA 以全栈协同设计应对 AI 内存压力"
+      ],
+      "daily_mode": "minimal_daily"
+    },
+    {
+      "category": "radar",
+      "schema_version": 3,
       "report_date": "2026-11-03",
       "published_at": "2026-11-03T08:02:53.862838+08:00",
       "article_count": 3,
