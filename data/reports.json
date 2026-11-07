@@ -4,6 +4,20 @@
     {
       "category": "radar",
       "schema_version": 3,
+      "report_date": "2026-11-07",
+      "published_at": "2026-11-07T08:01:54.762211+08:00",
+      "article_count": 6,
+      "estimated_reading_minutes": 5,
+      "highlights": [
+        "工信部政策解读：加强智能体终端设备进网管理",
+        "工业和信息化部办公厅关于加强智能体终端设备进网管理的通知",
+        "用少量数据预测分子行为"
+      ],
+      "daily_mode": "graceful_degraded"
+    },
+    {
+      "category": "radar",
+      "schema_version": 3,
       "report_date": "2026-11-06",
       "published_at": "2026-11-06T08:01:38.391329+08:00",
       "article_count": 4,
