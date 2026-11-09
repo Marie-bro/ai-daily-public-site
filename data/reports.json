@@ -4,6 +4,20 @@
     {
       "category": "radar",
       "schema_version": 3,
+      "report_date": "2026-11-09",
+      "published_at": "2026-11-09T08:01:54.348605+08:00",
+      "article_count": 4,
+      "estimated_reading_minutes": 5,
+      "highlights": [
+        "蚂蚁集团 AI 助手灵光用户突破 2000 万",
+        "NASA 宣布向学生月球基地挑战赛提供 100 万美元",
+        "亚马逊成立新团队专攻家用机器人，剑指“前所未有”的新产品"
+      ],
+      "daily_mode": "minimal_daily"
+    },
+    {
+      "category": "radar",
+      "schema_version": 3,
       "report_date": "2026-11-07",
       "published_at": "2026-11-07T08:01:54.762211+08:00",
       "article_count": 6,

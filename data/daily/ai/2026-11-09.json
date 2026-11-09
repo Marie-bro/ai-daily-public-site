@@ -1,0 +1,405 @@
+{
+  "schema_version": 3,
+  "category": "radar",
+  "report_date": "2026-11-09",
+  "published_at": "2026-11-09T08:01:54.348605+08:00",
+  "article_count": 4,
+  "daily_mode": "minimal_daily",
+  "estimated_reading_minutes": 5,
+  "highlights": [
+    "蚂蚁集团 AI 助手灵光用户突破 2000 万",
+    "NASA 宣布向学生月球基地挑战赛提供 100 万美元",
+    "亚马逊成立新团队专攻家用机器人，剑指“前所未有”的新产品"
+  ],
+  "items": [
+    {
+      "title_cn": "蚂蚁集团 AI 助手灵光用户突破 2000 万",
+      "title_en": "Ant Group's Lingguang AI Assistant Tops 20 Million Users",
+      "title_original": "蚂蚁集团：旗下 AI 助手灵光用户数量已突破 2000 万，2.0 版本上线一周已帮助用户管理超 116 万项事务",
+      "source": "IT之家",
+      "published_at": "2026-11-08T14:47:23+00:00",
+      "original_url": "https://www.ithome.com/1/024/010.htm",
+      "category": "ai",
+      "original_language": "zh",
+      "what_happened": "蚂蚁集团称灵光用户突破 2000 万；灵光 2.0 于 10 月 27 日上线后一周内管理超 116 万项事务。",
+      "what_happened_en": "Ant Group said Lingguang passed 20 million users; since Lingguang 2.0 launched October 27, it managed over 1.16 million tasks in one week.",
+      "why_it_matters": "这表明能主动管理事务、而非等待指令的 AI 智能体正被更多使用。",
+      "why_it_matters_en": "It indicates growing use of proactive AI agents that manage tasks rather than wait for commands.",
+      "importance_score": 68,
+      "supply_level": 2,
+      "section": "for_you",
+      "ranking_score": 73.8,
+      "content_type": "news",
+      "catch_up": false,
+      "fingerprint": "6aa88a35cabb4b0035b60c4e706717b3c27bd25944d63d08ee5ea0522eaccdae",
+      "article_id": "1f7afa80699536847256a4801ce633fca9c382a57436016a9fedbc117d958490",
+      "source_region": "CN",
+      "source_tier": 3,
+      "source_role": "media",
+      "channel": "technology",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.385085,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 12
+    },
+    {
+      "title_cn": "NASA 宣布向学生月球基地挑战赛提供 100 万美元",
+      "title_en": "NASA Announces $1 Million for Students in Moon Base Challenge",
+      "title_original": "NASA Announces $1 Million to Students for Moon Base Challenge - NASA",
+      "source": "NASA",
+      "published_at": "2026-11-08T15:26:38+00:00",
+      "original_url": "https://www.nasa.gov/news-release/nasa-announces-1-million-to-students-for-moon-base-challenge/",
+      "category": "space",
+      "original_language": "en",
+      "what_happened": "NASA 宣布通过月球基地挑战赛向学生提供 100 万美元。",
+      "what_happened_en": "NASA announced $1 million for students through its Moon Base Challenge.",
+      "why_it_matters": "这笔资金让学生直接参与月球基地概念工作。",
+      "why_it_matters_en": "The funding gives students a direct role in lunar base concept work.",
+      "importance_score": 62,
+      "supply_level": 1,
+      "section": "explore",
+      "ranking_score": 67.2,
+      "content_type": "news",
+      "catch_up": false,
+      "fingerprint": "726ebd83342da0bda81b146d470772ab05446b779578a4bf75c08bd971e1fd70",
+      "article_id": "e12ad5f5bdc739ac1d8f772c1f06453878e3ed247455ea3cdb9dcd2b6b0d537c",
+      "source_region": "US",
+      "source_tier": 1,
+      "source_role": "primary",
+      "channel": "technology",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.357828,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 14
+    },
+    {
+      "title_cn": "亚马逊成立新团队专攻家用机器人，剑指“前所未有”的新产品",
+      "title_en": "Amazon forms new team focused on home robots, targeting an 'unprecedented' product",
+      "title_original": "亚马逊成立新团队专攻家用机器人，剑指“前所未有”的新产品",
+      "source": "IT之家",
+      "published_at": "2026-11-08T15:24:09+00:00",
+      "original_url": "https://www.ithome.com/1/024/012.htm",
+      "category": "robotics",
+      "original_language": "zh",
+      "what_happened": "美国 CNBC 从招聘信息发现，亚马逊组建了一支新团队，开发一款前所未有的机器人产品，可适应不断变化的家庭环境并在人类家庭成员身边自主活动；亚马逊还聘请了一名麻省理工学院的机器人专家。",
+      "what_happened_en": "CNBC found from job postings that Amazon formed a new team to develop an unprecedented robot product that can adapt to changing home environments and move autonomously near family members; Amazon also hired an MIT robotics expert.",
+      "why_it_matters": "亚马逊此前的 Astro 售价 1,450 美元，仅受邀购买，最终仅交付数千名客户；新团队显示亚马逊仍在押注家用机器人。",
+      "why_it_matters_en": "Amazon's earlier Astro, priced at $1,450, was invite-only and reached only thousands of customers, so the new team shows Amazon is still betting on home robotics.",
+      "importance_score": 62,
+      "supply_level": 2,
+      "section": "for_you",
+      "ranking_score": 70.2,
+      "content_type": "news",
+      "catch_up": false,
+      "fingerprint": "a2e35f1d5d6fcf2261c242ef39f61b74ae73c94f448dc5877f6c69e6ef25cd8a",
+      "article_id": "c11a8bc82c3f52a4ea3e8d9d19e908a5a39b33d1431165034f462a7455a5f894",
+      "source_region": "CN",
+      "source_tier": 3,
+      "source_role": "media",
+      "channel": "technology",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.359553,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 11
+    },
+    {
+      "title_cn": "马斯克：特斯拉将进一步改进 Cybercab，提升能效、新增配色",
+      "title_en": "Musk: Tesla will further improve Cybercab with higher efficiency and new color",
+      "title_original": "马斯克：特斯拉将进一步改进 Cybercab，提升能效、新增配色",
+      "source": "IT之家",
+      "published_at": "2026-11-08T15:00:24+00:00",
+      "original_url": "https://www.ithome.com/1/024/011.htm",
+      "category": "mobility",
+      "original_language": "zh",
+      "what_happened": "马斯克在 X 上表示，特斯拉将进一步提高 Cybercab 能效，用上 40kWh 电池组，并推出液态银色；特斯拉将取消得州超级工厂的 Cybertruck 生产线，把产能腾出来生产更多 Cybercab，目前在奥斯汀投入 Robotaxi 运营的 Cybercab 配备 48kWh 电池组。",
+      "what_happened_en": "Musk said on X that Tesla will further improve Cybercab efficiency with a 40kWh battery pack and add a Liquid Silver color; Tesla will cancel the Cybertruck line at Giga Texas to free capacity for more Cybercab production, while Austin Robotaxi Cybercab currently uses a 48kWh pack.",
+      "why_it_matters": "这一调整显示特斯拉把制造和工程资源集中到自动驾驶 Cybercab，而非 Cybertruck。",
+      "why_it_matters_en": "The shift shows Tesla concentrating manufacturing and engineering resources on autonomous Cybercab rather than Cybertruck.",
+      "importance_score": 60,
+      "supply_level": 2,
+      "section": "explore",
+      "ranking_score": 59.0,
+      "content_type": "news",
+      "catch_up": false,
+      "fingerprint": "f55b10529f9eea973c84c72e7247f8fca03bf55bb560c490fc78c2133bd687db",
+      "article_id": "a9bc27c5c091423c0cfd50b536aebe6ae15aa1ce5288a2c8ca1d5bfd1733d1d5",
+      "source_region": "CN",
+      "source_tier": 3,
+      "source_role": "media",
+      "channel": "technology",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.376046,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 13
+    }
+  ],
+  "supply": {
+    "today_candidates": 11,
+    "today_considered": 11,
+    "today_selected": 4,
+    "today_locked": 4,
+    "locked_today_ids": [
+      "e12ad5f5bdc739ac1d8f772c1f06453878e3ed247455ea3cdb9dcd2b6b0d537c",
+      "a9bc27c5c091423c0cfd50b536aebe6ae15aa1ce5288a2c8ca1d5bfd1733d1d5",
+      "1f7afa80699536847256a4801ce633fca9c382a57436016a9fedbc117d958490",
+      "c11a8bc82c3f52a4ea3e8d9d19e908a5a39b33d1431165034f462a7455a5f894"
+    ],
+    "remaining_slots": 10,
+    "catch_up_considered": 0,
+    "catch_up_selected": 0,
+    "deep_read_considered": 0,
+    "deep_read_selected": 0,
+    "evergreen_considered": 0,
+    "evergreen_selected": 0,
+    "final_ids": [
+      "e12ad5f5bdc739ac1d8f772c1f06453878e3ed247455ea3cdb9dcd2b6b0d537c",
+      "a9bc27c5c091423c0cfd50b536aebe6ae15aa1ce5288a2c8ca1d5bfd1733d1d5",
+      "1f7afa80699536847256a4801ce633fca9c382a57436016a9fedbc117d958490",
+      "c11a8bc82c3f52a4ea3e8d9d19e908a5a39b33d1431165034f462a7455a5f894"
+    ],
+    "today_lock_preserved": true,
+    "selected": 4,
+    "shortfall": 6,
+    "minimum_not_met_reason": "token_budget_exhausted",
+    "sources": 2,
+    "categories": {
+      "space": 1,
+      "mobility": 1,
+      "ai": 1,
+      "robotics": 1
+    },
+    "channels": {
+      "technology": 4
+    },
+    "explore_count": 2,
+    "source_counts": {
+      "NASA": 1,
+      "IT之家": 3
+    },
+    "diversity_exception": true,
+    "levels": [
+      {
+        "supply_layer": "today",
+        "diversity_exception": true,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 1,
+            "selected_total": 1
+          },
+          {
+            "level": 2,
+            "eligible": 3,
+            "selected_total": 3
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 3
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 3
+          }
+        ],
+        "selected": 4,
+        "shortfall": 6,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 2,
+        "sources": 2,
+        "categories": {
+          "space": 1,
+          "mobility": 1,
+          "ai": 1,
+          "robotics": 1
+        },
+        "channels": {
+          "technology": 4
+        },
+        "source_counts": {
+          "NASA": 1,
+          "IT之家": 3
+        },
+        "source_share_limit": 3,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "catch_up",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 2,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "deep_read",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 2,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "evergreen",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 2,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      }
+    ],
+    "initial_candidates": 10,
+    "fact_schema_generated": 16,
+    "model_accepted": 11,
+    "hard_fact_rejected": 6,
+    "semantic_rejected": 0,
+    "repaired": 1,
+    "fallback_added": 4,
+    "final_count": 4,
+    "minimum_met": false,
+    "token_budget_status": "graceful_stop",
+    "token_budget": 40000,
+    "token_used": 37705,
+    "token_remaining": 2295,
+    "batches_completed": 3,
+    "accepted_count": 4,
+    "target_count": 14,
+    "stopped_reason": "token_budget_insufficient_for_next_batch",
+    "next_batch_estimated_input_tokens": 2763,
+    "next_batch_estimated_output_tokens": 1800,
+    "next_batch_required_tokens": 4840,
+    "daily_mode": "minimal_daily",
+    "daily_status": "minimal_daily",
+    "publishable_count": 4,
+    "degraded_reason": "token_budget_insufficient_for_next_batch",
+    "token_guard_triggered": true,
+    "source_shortage": false,
+    "validation_shortage": true,
+    "fill_stopped": false
+  }
+}
