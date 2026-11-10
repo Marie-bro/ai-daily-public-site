@@ -4,6 +4,20 @@
     {
       "category": "radar",
       "schema_version": 3,
+      "report_date": "2026-11-10",
+      "published_at": "2026-11-10T08:02:17.934053+08:00",
+      "article_count": 4,
+      "estimated_reading_minutes": 5,
+      "highlights": [
+        "从芯片到技能：英伟达与韩国扩大主权AI合作",
+        "英伟达在CoRL发布开放机器人仿真工具",
+        "Cloudflare启动Vite生态基金，首轮发放301,300美元"
+      ],
+      "daily_mode": "minimal_daily"
+    },
+    {
+      "category": "radar",
+      "schema_version": 3,
       "report_date": "2026-11-09",
       "published_at": "2026-11-09T08:01:54.348605+08:00",
       "article_count": 4,

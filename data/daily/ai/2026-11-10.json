@@ -1,0 +1,407 @@
+{
+  "schema_version": 3,
+  "category": "radar",
+  "report_date": "2026-11-10",
+  "published_at": "2026-11-10T08:02:17.934053+08:00",
+  "article_count": 4,
+  "daily_mode": "minimal_daily",
+  "estimated_reading_minutes": 5,
+  "highlights": [
+    "从芯片到技能：英伟达与韩国扩大主权AI合作",
+    "英伟达在CoRL发布开放机器人仿真工具",
+    "Cloudflare启动Vite生态基金，首轮发放301,300美元"
+  ],
+  "items": [
+    {
+      "title_cn": "从芯片到技能：英伟达与韩国扩大主权AI合作",
+      "title_en": "From Chips to Skills, NVIDIA and Korea Expand Sovereign AI Collaboration",
+      "title_original": "From Chips to Skills, NVIDIA and Korea Expand Sovereign AI Collaboration",
+      "source": "NVIDIA Blog",
+      "published_at": "2026-11-09T05:00:04+00:00",
+      "original_url": "https://blogs.nvidia.com/blog/korea-sovereign-ai-collaboration/",
+      "category": "chips",
+      "original_language": "en",
+      "what_happened": "英伟达与韩国科学技术信息通信部扩大主权AI生态合作，涵盖AI半导体、数据中心基础设施、人才、初创企业、模型、智能体与安全；为韩国NPU与XPU企业探索参与NVLink Fusion生态奠定基础，并提供培训认证、黑客松和技术研讨；英伟达将与三个入选联合体及四家韩国基础模型开发商使用NVIDIA Dynamo合作，并宣布在MSIT支持下与SK电讯、Rebellions合作。",
+      "what_happened_en": "NVIDIA and Korea's MSIT are expanding collaboration across AI semiconductors, data center infrastructure, talent, startups, models, agents and security, laying groundwork for Korean NPU and XPU companies to explore the NVLink Fusion ecosystem, with training, certification, hackathons and seminars; NVIDIA will work with three selected consortia and four Korean foundation model builders using NVIDIA Dynamo, and announced work with SK Telecom and Rebellions supported by MSIT.",
+      "why_it_matters": "该合作把芯片生态参与、技能培训与面向韩国模型和负载的推理优化结合起来。",
+      "why_it_matters_en": "The collaboration links chip-level ecosystem access with skills training and inference optimization for Korean models and workloads.",
+      "importance_score": 78,
+      "supply_level": 1,
+      "section": "explore",
+      "ranking_score": 76.8,
+      "content_type": "news",
+      "catch_up": false,
+      "fingerprint": "7afaa026b651af95438f38782de0744c89429450cf8368625befdcb46e3e4377",
+      "article_id": "51e504680490a66d88e49def9fc5fb90775b3edebc28951917dac8747c087a66",
+      "source_region": "US",
+      "source_tier": 1,
+      "source_role": "primary",
+      "channel": "technology",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.793217,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 14
+    },
+    {
+      "title_cn": "英伟达在CoRL发布开放机器人仿真工具",
+      "title_en": "NVIDIA Unveils Open Robotics Simulation Tools at CoRL",
+      "title_original": "Practice Makes Precise: At CoRL, NVIDIA and Partners Reveal How Robots Rehearse Delicate Work in Simulation",
+      "source": "NVIDIA Blog",
+      "published_at": "2026-11-09T14:00:01+00:00",
+      "original_url": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/",
+      "category": "robotics",
+      "original_language": "en",
+      "what_happened": "在得克萨斯州奥斯汀举行的CoRL上，英伟达发布了世界动作模型、仿真工具、基准和智能体工作流等开放机器人技术；其GRAIL和RoboTTT两篇论文入围六个最佳论文候选。",
+      "what_happened_en": "At CoRL in Austin, Texas, NVIDIA introduced open robotics technologies including world action models, simulation tools, benchmarks and agentic workflows; two NVIDIA papers, GRAIL and RoboTTT, are among six Best Paper finalists.",
+      "why_it_matters": "英伟达称，仿真正从机器人行走转向对齐齿轮、连接线缆等精细操作任务。",
+      "why_it_matters_en": "NVIDIA says simulation is moving from robot locomotion to delicate manipulation tasks such as aligning gears and connecting cables.",
+      "importance_score": 70,
+      "supply_level": 1,
+      "section": "for_you",
+      "ranking_score": 82.0,
+      "content_type": "news",
+      "catch_up": false,
+      "fingerprint": "396ccf1adef5056e9f3a4a6983b5f78ef03e3512b2463f00221e1b030182faa7",
+      "article_id": "61e7ac7c7e624eb36dec26da6568c691b9f012a47f279f9da05848b8abff68a8",
+      "source_region": "US",
+      "source_tier": 1,
+      "source_role": "primary",
+      "channel": "technology",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.418252,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 13
+    },
+    {
+      "title_cn": "Cloudflare启动Vite生态基金，首轮发放301,300美元",
+      "title_en": "Cloudflare Launches Vite Ecosystem Fund With First $301,300",
+      "title_original": "Launching the Vite Ecosystem Fund",
+      "source": "Cloudflare Blog",
+      "published_at": "2026-11-09T13:00:00+00:00",
+      "original_url": "https://blog.cloudflare.com/launching-vite-ecosystem-fund/",
+      "category": "internet",
+      "original_language": "en",
+      "what_happened": "Cloudflare正向44个项目与维护者发放Vite生态基金首笔301,300美元，这是VoidZero加入Cloudflare时承诺的100万美元的一部分。",
+      "what_happened_en": "Cloudflare is distributing the first $301,300 of the Vite Ecosystem Fund to 44 projects and maintainers, part of a $1 million commitment made when VoidZero joined Cloudflare.",
+      "why_it_matters": "Cloudflare称，AI生成的拉取请求增多而评审者数量不变，加重了Vite生态维护者的负担。",
+      "why_it_matters_en": "Cloudflare says AI-authored pull requests are rising while reviewer numbers stay flat, increasing maintainer workload in the Vite ecosystem.",
+      "importance_score": 62,
+      "supply_level": 1,
+      "section": "explore",
+      "ranking_score": 67.2,
+      "content_type": "news",
+      "catch_up": false,
+      "fingerprint": "df745371bcc1b28101191b9f0a5353fdf31d6108b647d241b96111992f023a44",
+      "article_id": "f27ad28b0c4db975ac36ad67a95706cf4883b8374418989f96e09d43c632f3a9",
+      "source_region": "US",
+      "source_tier": 1,
+      "source_role": "primary",
+      "channel": "technology",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.45993,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 12
+    },
+    {
+      "title_cn": "AI辅助学习平台帮助机器人超越字面指令推理",
+      "title_en": "AI-Assisted Learning Platform Helps Robots Reason Beyond Literal Commands",
+      "title_original": "AI-assisted learning platform helps robots reason beyond literal commands",
+      "source": "MIT News",
+      "published_at": "2026-11-09T05:00:00+00:00",
+      "original_url": "https://news.mit.edu/2026/ai-assisted-learning-platform-helps-robots-reason-beyond-literal-commands-1109",
+      "category": "science",
+      "original_language": "en",
+      "what_happened": "据麻省理工学院新闻，新方法名为FLEX，是一种帮助机器人超越字面指令进行推理的AI辅助学习平台。",
+      "what_happened_en": "MIT News reports a new approach known as FLEX, an AI-assisted learning platform that helps robots reason beyond literal commands.",
+      "why_it_matters": "该方法有望带来更直观、更具交互性的人机互动。",
+      "why_it_matters_en": "The approach could lead to more intuitive, interactive human-robot interaction.",
+      "importance_score": 62,
+      "supply_level": 1,
+      "section": "explore",
+      "ranking_score": 67.2,
+      "content_type": "news",
+      "catch_up": false,
+      "fingerprint": "17db336017afd9a506d36a1c21c4a6f0587a0611a14d960f3d1d1f601bdec31b",
+      "article_id": "f2b130fea883df692eb4729986e799d57b6fc93e94a4c9319bfcf5ef5fcc7a67",
+      "source_region": "US",
+      "source_tier": 1,
+      "source_role": "primary",
+      "channel": "technology",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.793263,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 11
+    }
+  ],
+  "supply": {
+    "today_candidates": 17,
+    "today_considered": 17,
+    "today_selected": 4,
+    "today_locked": 4,
+    "locked_today_ids": [
+      "51e504680490a66d88e49def9fc5fb90775b3edebc28951917dac8747c087a66",
+      "61e7ac7c7e624eb36dec26da6568c691b9f012a47f279f9da05848b8abff68a8",
+      "f27ad28b0c4db975ac36ad67a95706cf4883b8374418989f96e09d43c632f3a9",
+      "f2b130fea883df692eb4729986e799d57b6fc93e94a4c9319bfcf5ef5fcc7a67"
+    ],
+    "remaining_slots": 10,
+    "catch_up_considered": 0,
+    "catch_up_selected": 0,
+    "deep_read_considered": 0,
+    "deep_read_selected": 0,
+    "evergreen_considered": 0,
+    "evergreen_selected": 0,
+    "final_ids": [
+      "51e504680490a66d88e49def9fc5fb90775b3edebc28951917dac8747c087a66",
+      "61e7ac7c7e624eb36dec26da6568c691b9f012a47f279f9da05848b8abff68a8",
+      "f27ad28b0c4db975ac36ad67a95706cf4883b8374418989f96e09d43c632f3a9",
+      "f2b130fea883df692eb4729986e799d57b6fc93e94a4c9319bfcf5ef5fcc7a67"
+    ],
+    "today_lock_preserved": true,
+    "selected": 4,
+    "shortfall": 6,
+    "minimum_not_met_reason": "token_budget_exhausted",
+    "sources": 3,
+    "categories": {
+      "chips": 1,
+      "robotics": 1,
+      "internet": 1,
+      "science": 1
+    },
+    "channels": {
+      "technology": 4
+    },
+    "explore_count": 3,
+    "source_counts": {
+      "NVIDIA Blog": 2,
+      "Cloudflare Blog": 1,
+      "MIT News": 1
+    },
+    "diversity_exception": false,
+    "levels": [
+      {
+        "supply_layer": "today",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 4,
+            "selected_total": 4
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 4
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 4
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 4
+          }
+        ],
+        "selected": 4,
+        "shortfall": 6,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 3,
+        "sources": 3,
+        "categories": {
+          "chips": 1,
+          "robotics": 1,
+          "internet": 1,
+          "science": 1
+        },
+        "channels": {
+          "technology": 4
+        },
+        "source_counts": {
+          "NVIDIA Blog": 2,
+          "Cloudflare Blog": 1,
+          "MIT News": 1
+        },
+        "source_share_limit": 3,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "catch_up",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 2,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "deep_read",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 2,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "evergreen",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 2,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      }
+    ],
+    "initial_candidates": 13,
+    "fact_schema_generated": 19,
+    "model_accepted": 17,
+    "hard_fact_rejected": 2,
+    "semantic_rejected": 0,
+    "repaired": 0,
+    "fallback_added": 5,
+    "final_count": 4,
+    "minimum_met": false,
+    "token_budget_status": "graceful_stop",
+    "token_budget": 40000,
+    "token_used": 28948,
+    "token_remaining": 11052,
+    "batches_completed": 4,
+    "accepted_count": 4,
+    "target_count": 14,
+    "stopped_reason": "token_budget_insufficient_for_next_batch",
+    "next_batch_estimated_input_tokens": 7079,
+    "next_batch_estimated_output_tokens": 7200,
+    "next_batch_required_tokens": 14987,
+    "daily_mode": "minimal_daily",
+    "daily_status": "minimal_daily",
+    "publishable_count": 4,
+    "degraded_reason": "token_budget_insufficient_for_next_batch",
+    "token_guard_triggered": true,
+    "source_shortage": false,
+    "validation_shortage": true,
+    "fill_stopped": false
+  }
+}
