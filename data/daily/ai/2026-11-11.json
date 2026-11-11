@@ -1,0 +1,318 @@
+{
+  "schema_version": 3,
+  "category": "radar",
+  "report_date": "2026-11-11",
+  "published_at": "2026-11-11T08:01:05.440124+08:00",
+  "article_count": 2,
+  "daily_mode": "minimal_daily",
+  "estimated_reading_minutes": 5,
+  "highlights": [
+    "Anthropic 发布 IPO 路演视频，启动最高 643.5 亿美元募资，估值约 1~1.4 万亿美元",
+    "英伟达向 CNCF 捐赠 OpenShell 并新增 AI 工厂平台组件"
+  ],
+  "items": [
+    {
+      "title_cn": "Anthropic 发布 IPO 路演视频，启动最高 643.5 亿美元募资，估值约 1~1.4 万亿美元",
+      "title_en": "Anthropic Launches IPO Roadshow for Up to $64.35 Billion Raise, Valuation About $1–1.4 Trillion",
+      "title_original": "Anthropic 发布 IPO 路演视频正式启动最高 643.5 亿美元募资计划，估值约在 1~1.4 万亿美元",
+      "source": "IT之家",
+      "published_at": "2026-11-10T23:08:45+00:00",
+      "original_url": "https://www.ithome.com/1/025/209.htm",
+      "category": "economy",
+      "original_language": "zh",
+      "what_happened": "2026 年 11 月 10 日，Anthropic 宣布启动 IPO 路演，拟发行 8.25 亿股 A 类普通股，每股 70 至 78 美元，基础发行规模最高约 643.5 亿美元。公司已申请以代码 ANT 在纳斯达克全球精选市场挂牌，向 SEC 提交的注册声明尚未生效。",
+      "what_happened_en": "On November 10, 2026, Anthropic announced the start of its IPO roadshow, planning to offer 825 million Class A shares at $70–78 each, for up to about $64.35 billion. It applied to list under ticker ANT on the Nasdaq Global Select Market; its SEC registration statement has been filed but is not yet effective.",
+      "why_it_matters": "按发行价上限计算，Anthropic 完全稀释后估值约 1.4 万亿美元，这将成为 AI 领域的标志性上市事件，对公开市场影响重大。",
+      "why_it_matters_en": "At the top of the price range, Anthropic's fully diluted valuation would be about $1.4 trillion, making this a landmark AI listing with major implications for public markets.",
+      "importance_score": 88,
+      "supply_level": 2,
+      "section": "major_tech",
+      "ranking_score": 75.8,
+      "content_type": "news",
+      "catch_up": false,
+      "fingerprint": "f701f6cce69b87952d2872eeaeeb6bd73150e2f6ffe172658cd28a69a442b973",
+      "article_id": "a59fb3975ce5353f60b1e03cd6b0ab352ff97858e01e1785be22a8064218a65e",
+      "source_region": "CN",
+      "source_tier": 3,
+      "source_role": "media",
+      "channel": "technology",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.036348,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 13
+    },
+    {
+      "title_cn": "英伟达向 CNCF 捐赠 OpenShell 并新增 AI 工厂平台组件",
+      "title_en": "NVIDIA Donates OpenShell to CNCF and Adds AI Factory Platform Components",
+      "title_original": "NVIDIA Expands Open Source Commitment With OpenShell Donation and New AI Infrastructure",
+      "source": "NVIDIA Blog",
+      "published_at": "2026-11-10T16:00:03+00:00",
+      "original_url": "https://blogs.nvidia.com/blog/open-source-openshell-infrastructure/",
+      "category": "chips",
+      "original_language": "en",
+      "what_happened": "在 KubeCon + CloudNativeCon 上，英伟达将用于保障和治理自主智能体的开源运行时 OpenShell 捐赠给 CNCF，并以沙箱项目身份加入。英伟达还公布了 NVIDIA DSX AI 工厂平台的新组件，包括 NVIDIA Kubernetes Engine。",
+      "what_happened_en": "At KubeCon + CloudNativeCon, NVIDIA contributed OpenShell, an open source runtime for securing and governing autonomous agents, to the CNCF, where it enters as a Sandbox project. NVIDIA also announced new components of the NVIDIA DSX AI Factory Platform, including NVIDIA Kubernetes Engine.",
+      "why_it_matters": "将智能体安全工具交由 CNCF 治理，使将其集成到产品中的组织能够参与塑造，这对在 Kubernetes 上部署自主智能体的团队具有意义。",
+      "why_it_matters_en": "Placing agent security tooling under CNCF governance lets the organizations building it into products shape it, which matters for teams deploying autonomous agents on Kubernetes.",
+      "importance_score": 72,
+      "supply_level": 1,
+      "section": "explore",
+      "ranking_score": 73.2,
+      "content_type": "news",
+      "catch_up": false,
+      "fingerprint": "05d569ee425933fa6d94a4d9e8599a9938dc5ccb1c9eacd37bc18e62a4bfe524",
+      "article_id": "9ccf20ad200fc0ba5e4f513104de1bd9f2c8e9f81a885a40ccb6f9f8bb0d84c8",
+      "source_region": "US",
+      "source_tier": 1,
+      "source_role": "primary",
+      "channel": "technology",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.334056,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 14
+    }
+  ],
+  "supply": {
+    "today_candidates": 18,
+    "today_considered": 18,
+    "today_selected": 2,
+    "today_locked": 2,
+    "locked_today_ids": [
+      "9ccf20ad200fc0ba5e4f513104de1bd9f2c8e9f81a885a40ccb6f9f8bb0d84c8",
+      "a59fb3975ce5353f60b1e03cd6b0ab352ff97858e01e1785be22a8064218a65e"
+    ],
+    "remaining_slots": 12,
+    "catch_up_considered": 0,
+    "catch_up_selected": 0,
+    "deep_read_considered": 0,
+    "deep_read_selected": 0,
+    "evergreen_considered": 0,
+    "evergreen_selected": 0,
+    "final_ids": [
+      "9ccf20ad200fc0ba5e4f513104de1bd9f2c8e9f81a885a40ccb6f9f8bb0d84c8",
+      "a59fb3975ce5353f60b1e03cd6b0ab352ff97858e01e1785be22a8064218a65e"
+    ],
+    "today_lock_preserved": true,
+    "selected": 2,
+    "shortfall": 8,
+    "minimum_not_met_reason": "token_budget_exhausted",
+    "sources": 2,
+    "categories": {
+      "chips": 1,
+      "economy": 1
+    },
+    "channels": {
+      "technology": 2
+    },
+    "explore_count": 2,
+    "source_counts": {
+      "NVIDIA Blog": 1,
+      "IT之家": 1
+    },
+    "diversity_exception": false,
+    "levels": [
+      {
+        "supply_layer": "today",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 1,
+            "selected_total": 1
+          },
+          {
+            "level": 2,
+            "eligible": 1,
+            "selected_total": 2
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 2
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 2
+          }
+        ],
+        "selected": 2,
+        "shortfall": 8,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 2,
+        "sources": 2,
+        "categories": {
+          "chips": 1,
+          "economy": 1
+        },
+        "channels": {
+          "technology": 2
+        },
+        "source_counts": {
+          "NVIDIA Blog": 1,
+          "IT之家": 1
+        },
+        "source_share_limit": 3,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "catch_up",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 3,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "deep_read",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 3,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "evergreen",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 3,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      }
+    ],
+    "initial_candidates": 13,
+    "fact_schema_generated": 19,
+    "model_accepted": 18,
+    "hard_fact_rejected": 2,
+    "semantic_rejected": 0,
+    "repaired": 1,
+    "fallback_added": 6,
+    "final_count": 2,
+    "minimum_met": false,
+    "token_budget_status": "graceful_stop",
+    "token_budget": 40000,
+    "token_used": 28470,
+    "token_remaining": 11530,
+    "batches_completed": 4,
+    "accepted_count": 2,
+    "target_count": 14,
+    "stopped_reason": "token_budget_insufficient_for_next_batch",
+    "next_batch_estimated_input_tokens": 7061,
+    "next_batch_estimated_output_tokens": 7200,
+    "next_batch_required_tokens": 14968,
+    "daily_mode": "minimal_daily",
+    "daily_status": "minimal_daily",
+    "publishable_count": 2,
+    "degraded_reason": "token_budget_insufficient_for_next_batch",
+    "token_guard_triggered": true,
+    "source_shortage": false,
+    "validation_shortage": true,
+    "fill_stopped": false
+  }
+}

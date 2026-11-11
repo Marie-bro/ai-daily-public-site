@@ -4,6 +4,19 @@
     {
       "category": "radar",
       "schema_version": 3,
+      "report_date": "2026-11-11",
+      "published_at": "2026-11-11T08:01:05.440124+08:00",
+      "article_count": 2,
+      "estimated_reading_minutes": 5,
+      "highlights": [
+        "Anthropic 发布 IPO 路演视频，启动最高 643.5 亿美元募资，估值约 1~1.4 万亿美元",
+        "英伟达向 CNCF 捐赠 OpenShell 并新增 AI 工厂平台组件"
+      ],
+      "daily_mode": "minimal_daily"
+    },
+    {
+      "category": "radar",
+      "schema_version": 3,
       "report_date": "2026-11-10",
       "published_at": "2026-11-10T08:02:17.934053+08:00",
       "article_count": 4,
