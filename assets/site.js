@@ -7,6 +7,32 @@
     if (className) node.className = className;
     return node;
   };
+  const motionReduced = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const motionEase = "cubic-bezier(.2,0,.2,1)";
+  const revealChange = (node) => {
+    if (!node || motionReduced() || !node.animate) return;
+    node.animate([{ opacity: .72, transform: "translateY(6px)" }, { opacity: 1, transform: "translateY(0)" }], { duration: 260, easing: motionEase });
+  };
+  const removeWithMotion = (node, finish) => {
+    if (motionReduced() || !node?.animate) { finish(); return; }
+    node.animate([{ opacity: 1, transform: "translateY(0)" }, { opacity: 0, transform: "translateY(-6px)" }], { duration: 160, easing: motionEase })
+      .finished.catch(() => {}).then(finish);
+  };
+  const closeDisclosure = (details) => {
+    if (!details.open || details.dataset.motionClosing === "true") return;
+    const panel = details.children[1];
+    if (motionReduced() || !panel?.animate) { details.open = false; return; }
+    details.dataset.motionClosing = "true";
+    panel.animate([{ opacity: 1, transform: "translateY(0)" }, { opacity: 0, transform: "translateY(-6px)" }], { duration: 160, easing: motionEase })
+      .finished.catch(() => {}).then(() => { details.open = false; delete details.dataset.motionClosing; });
+  };
+  const enhanceDisclosure = (details) => {
+    details.querySelector("summary")?.addEventListener("click", (event) => {
+      if (!details.open || motionReduced()) return;
+      event.preventDefault();
+      closeDisclosure(details);
+    });
+  };
   const categoryLabels = {
     ai: "AI", chips: "芯片", consumer_tech: "消费科技", software: "软件",
     robotics: "机器人", mobility: "智能出行", space: "航天", science: "科学",
@@ -180,8 +206,10 @@
         const result = saveLocalFavorite(favoriteArticle(item), reference);
         status.textContent = result === "already_saved" ? "已在阅读清单里。" : "已保存到当前浏览器。";
         refresh();
+        revealChange(status);
       } catch {
         status.textContent = "保存失败，请检查浏览器存储权限。";
+        revealChange(status);
       }
     });
     controls.append(button, link, status);
@@ -192,7 +220,7 @@
         existing.disabled = true;
         try { status.textContent = favoriteMessage(await saveFavorite(item, reference)); }
         catch { status.textContent = "收藏失败，请稍后重试。"; }
-        finally { existing.disabled = false; refresh(); }
+        finally { existing.disabled = false; refresh(); revealChange(status); }
       });
       controls.insertBefore(existing, status);
     }
@@ -320,7 +348,7 @@
       button.addEventListener("click", () => {
         control.select.value = option.value;
         control.select.dispatchEvent(new Event("change", { bubbles: true }));
-        picker.open = false;
+        closeDisclosure(picker);
       });
       options.append(button);
       return { button, option };
@@ -333,9 +361,10 @@
     };
     control.select.addEventListener("change", sync);
     picker.addEventListener("toggle", () => {
-      if (picker.open) document.querySelectorAll(".inline-picker[open]").forEach((other) => { if (other !== picker) other.open = false; });
+      if (picker.open) document.querySelectorAll(".inline-picker[open]").forEach((other) => { if (other !== picker) closeDisclosure(other); });
     });
     picker.append(summary, options);
+    enhanceDisclosure(picker);
     wrapper.append(control.field, picker);
     sync();
     return wrapper;
@@ -387,7 +416,7 @@
     count.setAttribute("role", "status");
     target.replaceChildren(filters, fields, count, topSection, ...sections);
     let theme = "all";
-    const apply = () => {
+    const apply = (animate = false) => {
       let visible = 0;
       target.querySelectorAll(".story-card").forEach((card) => {
         card.hidden = (theme !== "all" && !card.dataset.filters.split(" ").includes(theme))
@@ -398,14 +427,18 @@
       });
       target.querySelectorAll(".dashboard-section").forEach((section) => { section.hidden = !section.querySelector(".story-card:not([hidden])"); });
       count.textContent = visible ? "显示 " + visible + " 条资讯" : "没有符合筛选条件的资讯。";
+      if (animate) {
+        revealChange(count);
+        target.querySelectorAll(".dashboard-section:not([hidden])").forEach(revealChange);
+      }
     };
-    fields.addEventListener("change", apply);
+    fields.addEventListener("change", () => apply(true));
     filters.addEventListener("click", (event) => {
       const button = event.target.closest("button[data-filter]");
       if (!button) return;
       theme = button.dataset.filter;
       filters.querySelectorAll("button").forEach((item) => { const active = item === button; item.classList.toggle("is-active", active); item.setAttribute("aria-pressed", active ? "true" : "false"); });
-      apply();
+      apply(true);
     });
     apply();
   };
@@ -465,6 +498,7 @@
       language.select.addEventListener("change", () => {
         zh.forEach((node) => { node.hidden = language.select.value === "en"; });
         en.forEach((node) => { node.hidden = language.select.value === "zh"; });
+        article.querySelectorAll(".article-header,.article-section").forEach(revealChange);
       });
     }
     if (allowSave) article.append(favoriteControls(item, reference));
@@ -525,6 +559,7 @@
     const advancedFields = element("div", undefined, "archive-advanced-fields");
     advancedFields.append(topics.field, sources.field, levels.field);
     advanced.append(advancedSummary, advancedFields);
+    enhanceDisclosure(advanced);
     const mobileLayout = window.matchMedia("(max-width: 640px)");
     advanced.open = !mobileLayout.matches;
     mobileLayout.addEventListener("change", ({ matches }) => { advanced.open = !matches; });
@@ -542,7 +577,7 @@
       select.replaceChildren(...choices.map(([key, label]) => optionOf(key, label)));
       if (choices.some(([key]) => key === value)) select.value = value;
     };
-    const draw = () => {
+    const draw = (animate = false) => {
       const activeFilters = [topics, sources, levels].filter(({ select }) => select.value).length;
       advancedSummary.textContent = activeFilters ? `更多筛选 · 已选 ${activeFilters} 项` : "更多筛选";
       const matching = entries.filter(({ item }) =>
@@ -574,8 +609,9 @@
         });
         results.append(load);
       }
+      if (animate) revealChange(status);
     };
-    const refresh = async () => {
+    const refresh = async (animate = false) => {
       const request = ++version;
       const mode = view.select.value;
       const chosen = reports.filter(({ report_date }) => !dates.select.value || report_date === dates.select.value);
@@ -585,6 +621,7 @@
       if (isEdition) {
         status.textContent = chosen.length + " 期日报";
         results.replaceChildren(...chosen.map(summaryCard));
+        if (animate) revealChange(status);
         return;
       }
       results.replaceChildren();
@@ -598,11 +635,11 @@
       setChoices(sources.select, [["", "全部来源"], ...sourceOptions(entries)]);
       [topics, sources, levels].forEach(({ select }) => { select.disabled = false; });
       shown = 24;
-      draw();
+      draw(animate);
     };
     if (new URLSearchParams(window.location.search).get("view") === "research") view.select.value = "research";
-    for (const field of [view, dates]) field.select.addEventListener("change", refresh);
-    for (const field of [topics, sources, levels]) field.select.addEventListener("change", () => { shown = 24; draw(); });
+    for (const field of [view, dates]) field.select.addEventListener("change", () => refresh(true));
+    for (const field of [topics, sources, levels]) field.select.addEventListener("change", () => { shown = 24; draw(true); });
     await refresh();
   };
   const readingControls = (entry, onChange) => {
@@ -632,9 +669,11 @@
           reading_status: status.select.value, reading_note: note.value.trim()
         })) throw new Error("unknown_entry");
         feedback.textContent = "阅读记录已保存。";
+        revealChange(feedback);
         onChange(status.select.value, feedback.textContent);
       } catch {
         feedback.textContent = "保存失败，请确认条目仍在清单中，并检查浏览器存储权限。";
+        revealChange(feedback);
       }
     });
     form.addEventListener("keydown", (event) => {
@@ -650,6 +689,7 @@
         onChange(null, "已移出我的阅读。");
       } catch {
         feedback.textContent = "无法移出条目，请检查浏览器存储权限。";
+        revealChange(feedback);
       }
     });
     return form;
@@ -670,7 +710,7 @@
       list.querySelector(".notice")?.remove();
       if (!shown && !list.children.length) list.append(element("p", entries.length ? "该阅读状态下暂无条目。" : "从雷达资讯详情点「加入我的阅读」，文章就会出现在这里。", "notice"));
     }
-    function draw() {
+    function draw(animate = false) {
       list.replaceChildren();
       const entries = localFavorites().filter((entry) => !status.select.value || readingStatus(entry) === status.select.value);
       for (const entry of entries) {
@@ -682,18 +722,26 @@
         const meta = element("p", [entry.source, entry.report_date, entry.saved_at?.slice(0, 10) && "收藏于 " + entry.saved_at.slice(0, 10)].filter(Boolean).join(" · "), "article-meta");
         const body = element("div", undefined, "reading-entry-body");
         details.append(summary, body);
+        enhanceDisclosure(details);
         list.append(details);
         function onChange(value, text) {
           if (value === null || (status.select.value && status.select.value !== value)) {
             const next = details.nextElementSibling || details.previousElementSibling;
-            details.remove();
             const nextSummary = next?.querySelector("summary");
-            (nextSummary || status.select).focus();
-            feedback.textContent = text;
+            removeWithMotion(details, () => {
+              details.remove();
+              (nextSummary || status.select).focus();
+              feedback.textContent = text;
+              revealChange(feedback);
+              countItems();
+              revealChange(count);
+            });
           } else {
             badge.textContent = readingLabels[value];
+            revealChange(badge);
+            countItems();
+            revealChange(count);
           }
-          countItems();
         }
         details.addEventListener("toggle", () => {
           if (!details.open || body.children.length) return;
@@ -705,6 +753,7 @@
               article.prepend(element("p", "原日报暂时无法读取。仍可打开原始链接和编辑阅读记录。", "notice"));
             }
             preview.replaceChildren(article);
+            revealChange(preview);
           };
           if (!entry.report_date || !entry.article_key) {
             showFallback();
@@ -721,12 +770,14 @@
             if (!found) { showFallback(); return; }
             link.href = reportHref(found.date, found.key);
             preview.replaceChildren(link, renderArticle(found.item, found, false));
+            revealChange(preview);
           }).catch(showFallback);
         });
       }
       countItems();
+      if (animate) revealChange(count);
     }
-    status.select.addEventListener("change", draw);
+    status.select.addEventListener("change", () => draw(true));
     draw();
   };
 
