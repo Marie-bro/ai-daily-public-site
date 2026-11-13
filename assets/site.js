@@ -308,6 +308,38 @@
     select.append(...choices.map(([value, title]) => optionOf(value, title)));
     return { field, select };
   };
+  const inlinePicker = (control) => {
+    const label = control.field.querySelector("span").textContent;
+    const wrapper = element("div", undefined, "dashboard-picker");
+    const picker = element("details", undefined, "inline-picker");
+    const summary = element("summary");
+    const options = element("div", undefined, "inline-picker-options");
+    const buttons = [...control.select.options].map((option) => {
+      const button = element("button", option.textContent, "inline-picker-option");
+      button.type = "button";
+      button.addEventListener("click", () => {
+        control.select.value = option.value;
+        control.select.dispatchEvent(new Event("change", { bubbles: true }));
+        picker.open = false;
+      });
+      options.append(button);
+      return { button, option };
+    });
+    const sync = () => {
+      const selected = control.select.selectedOptions[0];
+      summary.textContent = selected?.textContent || "请选择";
+      summary.setAttribute("aria-label", `${label}：${summary.textContent}`);
+      buttons.forEach(({ button, option }) => button.setAttribute("aria-pressed", String(option.value === control.select.value)));
+    };
+    control.select.addEventListener("change", sync);
+    picker.addEventListener("toggle", () => {
+      if (picker.open) document.querySelectorAll(".inline-picker[open]").forEach((other) => { if (other !== picker) other.open = false; });
+    });
+    picker.append(summary, options);
+    wrapper.append(control.field, picker);
+    sync();
+    return wrapper;
+  };
   const byLabel = (left, right) => left[1].localeCompare(right[1], "zh-CN");
   const sourceOptions = (entries) => [...new Set(entries.map(({ item }) => item.source).filter(Boolean))].map((source) => [source, source]).sort(byLabel);
   const levelOptions = [["", "全部分级"], ["deep", "建议精读"], ["brief", "只需知道"]];
@@ -349,8 +381,8 @@
     const source = selectField("来源", [["", "全部来源"], ...sourceOptions(entries)]);
     const level = selectField("阅读分级", levelOptions);
     const kind = selectField("内容", [["", "全部内容"], ["research", "研究更新"]]);
-    const fields = element("div", undefined, "reading-toolbar");
-    fields.append(source.field, level.field, kind.field);
+    const fields = element("div", undefined, "reading-toolbar dashboard-toolbar");
+    fields.append(inlinePicker(source), inlinePicker(level), inlinePicker(kind));
     const count = element("p", "", "reading-count");
     count.setAttribute("role", "status");
     target.replaceChildren(filters, fields, count, topSection, ...sections);
