@@ -79,7 +79,7 @@ class PublicSiteTests(unittest.TestCase):
         self.assertIn('future_opportunities: ["FUTURE OPPORTUNITIES", "未来机会"]', script)
         self.assertIn('title_zh || entry.item.title_cn', script)
         self.assertIn('params.get("article")', script)
-        self.assertIn('favoriteControls(item)', script)
+        self.assertIn('favoriteControls(item, reference)', script)
         card_renderer = script[script.index("const storyCard"):script.index("const dashboardSection")]
         self.assertNotIn("what_happened", card_renderer)
         self.assertNotIn("why_it_matters", card_renderer)
@@ -87,7 +87,7 @@ class PublicSiteTests(unittest.TestCase):
         self.assertIn("item.category", script)
         self.assertIn("item.channel", script)
         self.assertIn('item.section === "explore"', script)
-        self.assertIn('item.content_type === "deep_read"', script)
+        self.assertIn('[item.content_type, item.section, item.channel, item.supply_layer].includes("deep_read")', script)
 
     def test_pages_do_not_use_root_absolute_links(self):
         for page in PAGES:
@@ -96,7 +96,7 @@ class PublicSiteTests(unittest.TestCase):
     def test_favorites_remain_local_for_visitors_and_use_only_protected_queue_routes(self):
         script = (ROOT / "assets" / "site.js").read_text(encoding="utf-8-sig")
         self.assertIn("localStorage", script)
-        self.assertIn("Save for Later", script)
+        self.assertIn("加入我的阅读", script)
         self.assertIn("api/favorites/queue", script)
         self.assertIn("requestAuthCode", script)
         self.assertNotIn("OBSIDIAN_VAULT_PATH", script)
