@@ -487,11 +487,19 @@
     const topics = selectField("主题", [["", "全部主题"]]);
     const sources = selectField("来源", [["", "全部来源"]]);
     const levels = selectField("阅读分级", levelOptions);
-    const toolbar = element("div", undefined, "reading-toolbar");
+    const toolbar = element("div", undefined, "reading-toolbar archive-toolbar");
+    const advanced = element("details", undefined, "archive-advanced");
+    const advancedSummary = element("summary", "更多筛选");
+    const advancedFields = element("div", undefined, "archive-advanced-fields");
+    advancedFields.append(topics.field, sources.field, levels.field);
+    advanced.append(advancedSummary, advancedFields);
+    const mobileLayout = window.matchMedia("(max-width: 640px)");
+    advanced.open = !mobileLayout.matches;
+    mobileLayout.addEventListener("change", ({ matches }) => { advanced.open = !matches; });
     const results = element("div", undefined, "report-list archive-results");
     const status = element("p", "", "reading-count");
     status.setAttribute("role", "status");
-    toolbar.append(view.field, dates.field, topics.field, sources.field, levels.field);
+    toolbar.append(view.field, dates.field, advanced);
     target.replaceChildren(toolbar, status, results);
     let version = 0;
     let entries = [];
@@ -503,6 +511,8 @@
       if (choices.some(([key]) => key === value)) select.value = value;
     };
     const draw = () => {
+      const activeFilters = [topics, sources, levels].filter(({ select }) => select.value).length;
+      advancedSummary.textContent = activeFilters ? `更多筛选 · 已选 ${activeFilters} 项` : "更多筛选";
       const matching = entries.filter(({ item }) =>
         (!topics.select.value || storyFilters(item).includes(topics.select.value)) &&
         (!sources.select.value || item.source === sources.select.value) &&
@@ -538,6 +548,7 @@
       const mode = view.select.value;
       const chosen = reports.filter(({ report_date }) => !dates.select.value || report_date === dates.select.value);
       const isEdition = mode === "editions";
+      advanced.hidden = isEdition;
       [topics, sources, levels].forEach(({ field, select }) => { field.hidden = isEdition; select.disabled = !isEdition; });
       if (isEdition) {
         status.textContent = chosen.length + " 期日报";

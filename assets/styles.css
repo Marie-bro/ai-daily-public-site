@@ -87,3 +87,39 @@ nav { display:flex; gap:22px; font-size:14px; } nav a { color:var(--muted); text
   .reading-toolbar { gap:8px; }
   .reading-entry-body { padding-inline:12px; }
 }
+
+.archive-toolbar { grid-template-columns:repeat(5,minmax(0,1fr)); }
+.archive-advanced { grid-column:span 3; min-width:0; }
+.archive-advanced[hidden] { display:none; }
+.archive-advanced > summary { display:none; }
+.archive-advanced-fields { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+
+@media (max-width:640px) {
+  .site-header { gap:8px; padding-block:9px; }
+  .site-header nav { width:100%; max-width:none; justify-content:space-between; gap:4px; font-size:12px; }
+  .site-header nav a { padding-inline:2px; }
+  .channel-page,.report-page { padding:26px 0 54px; }
+  .channel-page h1,.report-page h1 { font-size:clamp(32px,8.5vw,40px); line-height:1.17; }
+  .channel-page .lede,.report-page .lede { margin:12px 0 0; font-size:15px; line-height:1.55; }
+  .archive-browser { margin-top:24px; }
+  .archive-toolbar { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin-bottom:8px; }
+  .archive-toolbar .reading-field { font-size:13px; }
+  .archive-toolbar select { width:100%; min-width:0; }
+  .archive-advanced { grid-column:1 / -1; }
+  .archive-advanced > summary { display:block; min-height:44px; padding:9px 13px; border:1px solid var(--line); border-radius:6px; background:var(--card); color:var(--accent); font-weight:700; cursor:pointer; }
+  .archive-advanced > summary::-webkit-details-marker { display:none; }
+  .archive-advanced > summary::after { content:"＋"; float:right; }
+  .archive-advanced[open] > summary::after { content:"－"; }
+  .archive-advanced-fields { grid-template-columns:1fr; gap:10px; padding-top:12px; }
+  .archive-results { margin-top:8px; }
+  .archive-date { margin-top:8px; font-size:20px; }
+  .archive-results .story-card { min-height:0; gap:10px; padding:15px; }
+  .archive-results .story-badges { gap:5px; }
+  .archive-results .story-title { font-size:17px; }
+  .report-header { margin-bottom:28px; }
+  footer { padding:24px 0 36px; }
+}
+
+@media (max-width:360px) {
+  .archive-toolbar { grid-template-columns:1fr; }
+}
