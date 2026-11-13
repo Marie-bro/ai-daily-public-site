@@ -4,6 +4,20 @@
     {
       "category": "radar",
       "schema_version": 3,
+      "report_date": "2026-11-13",
+      "published_at": "2026-11-13T08:01:12.637587+08:00",
+      "article_count": 4,
+      "estimated_reading_minutes": 5,
+      "highlights": [
+        "三星将于12月10日发布搭载Gemini的智能眼镜",
+        "林肯实验室三项技术获2026年R&D 100大奖",
+        "新研究有望带来更快、更可信的气候预测AI模型"
+      ],
+      "daily_mode": "minimal_daily"
+    },
+    {
+      "category": "radar",
+      "schema_version": 3,
       "report_date": "2026-11-11",
       "published_at": "2026-11-11T08:01:05.440124+08:00",
       "article_count": 2,

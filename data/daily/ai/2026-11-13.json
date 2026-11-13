@@ -1,0 +1,405 @@
+{
+  "schema_version": 3,
+  "category": "radar",
+  "report_date": "2026-11-13",
+  "published_at": "2026-11-13T08:01:12.637587+08:00",
+  "article_count": 4,
+  "daily_mode": "minimal_daily",
+  "estimated_reading_minutes": 5,
+  "highlights": [
+    "三星将于12月10日发布搭载Gemini的智能眼镜",
+    "林肯实验室三项技术获2026年R&D 100大奖",
+    "新研究有望带来更快、更可信的气候预测AI模型"
+  ],
+  "items": [
+    {
+      "title_cn": "三星将于12月10日发布搭载Gemini的智能眼镜",
+      "title_en": "Samsung Sets December 10 Release for Gemini-Powered Intelligent Eyewear",
+      "title_original": "Samsung Announces December Release for Intelligent Eyewear, Bringing a Smarter Way To See the World - Samsung Global Newsroom",
+      "source": "Samsung Global Newsroom",
+      "published_at": "2026-11-12T14:00:00+00:00",
+      "original_url": "https://news.samsung.com/global/samsung-announces-december-release-for-intelligent-eyewear-bringing-a-smarter-way-to-see-the-world",
+      "category": "consumer_tech",
+      "original_language": "en",
+      "what_happened": "三星电子宣布其智能眼镜全系列将于12月10日在美国和韩国上市，11月12日开启预售；该系列结合三星工程能力与Gentle Monster和Warby Parker的30款设计，提供由Gemini驱动的免手操作辅助。",
+      "what_happened_en": "Samsung Electronics announced a full intelligent eyewear lineup for release in the U.S. and South Korea on Dec. 10, with pre-orders starting Nov. 12; the collection combines Samsung engineering with 30 designs from Gentle Monster and Warby Parker and offers hands-free assistance powered by Gemini.",
+      "why_it_matters": "它将Gemini驱动的免手操作AI辅助带入主流消费级眼镜产品线。",
+      "why_it_matters_en": "It brings Gemini-powered hands-free AI assistance into a mainstream consumer eyewear lineup.",
+      "importance_score": 72,
+      "supply_level": 1,
+      "section": "explore",
+      "ranking_score": 73.2,
+      "content_type": "news",
+      "catch_up": false,
+      "fingerprint": "ec8aeca8f2475b80db1766d7afc452ed7d17036705ca0225407ec45962746763",
+      "article_id": "3f8e5d7449817e2a9dd5d8bbb1f9297e32f65d30e6933a1d2d00bd902a650b06",
+      "source_region": "KR",
+      "source_tier": 1,
+      "source_role": "primary",
+      "channel": "technology",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.417507,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 14
+    },
+    {
+      "title_cn": "林肯实验室三项技术获2026年R&D 100大奖",
+      "title_en": "Three Lincoln Laboratory Technologies Win 2026 R&D 100 Awards",
+      "title_original": "Three Lincoln Laboratory technologies receive 2026 R&amp;D 100 Awards",
+      "source": "MIT News",
+      "published_at": "2026-11-12T21:15:00+00:00",
+      "original_url": "https://news.mit.edu/2026/lincoln-laboratory-technologies-receive-rd-100-awards-1112",
+      "category": "science",
+      "original_language": "en",
+      "what_happened": "麻省理工学院林肯实验室的三项技术入选2026年R&D 100大奖：安全操作系统、量子微系统平台和5G干扰消除算法。",
+      "what_happened_en": "MIT Lincoln Laboratory had three technologies named as 2026 R&D 100 Award recipients: a secure operating system, a quantum microsystem platform, and a 5G interference-canceling algorithm.",
+      "why_it_matters": "这些奖项显示安全软件、量子硬件平台和5G信号处理是获得认可的技术方向。",
+      "why_it_matters_en": "The awards highlight security software, quantum hardware platforms and 5G signal handling as areas of recognized technical achievement.",
+      "importance_score": 62,
+      "supply_level": 1,
+      "section": "explore",
+      "ranking_score": 67.2,
+      "content_type": "news",
+      "catch_up": false,
+      "fingerprint": "3ccb62709c849fc1cd2888d4e7fd4206a4f0d7b6976cf37c2f2031fa8b72951c",
+      "article_id": "f661cd1e2d45b72e814b56e76f998f249e9f58e8020d8544d23cbd4278b2cf59",
+      "source_region": "US",
+      "source_tier": 1,
+      "source_role": "primary",
+      "channel": "technology",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.115424,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 13
+    },
+    {
+      "title_cn": "新研究有望带来更快、更可信的气候预测AI模型",
+      "title_en": "New Research Could Yield Faster, Trustworthy AI for Climate Prediction",
+      "title_original": "New research could lead to faster, trustworthy AI models for climate prediction",
+      "source": "MIT News",
+      "published_at": "2026-11-12T05:00:00+00:00",
+      "original_url": "https://news.mit.edu/2026/new-research-could-lead-faster-trustworthy-ai-models-climate-prediction-1112",
+      "category": "ai",
+      "original_language": "en",
+      "what_happened": "麻省理工学院科学家开发了一种训练方法，旨在生成更快、更可信的气候预测AI模型。",
+      "what_happened_en": "MIT scientists developed a training method aimed at generating AI models for climate prediction that are faster and more trustworthy.",
+      "why_it_matters": "更好的训练方法可能提升气候预测AI的速度与可信度。",
+      "why_it_matters_en": "Better training methods could improve the speed and trustworthiness of AI used in climate prediction.",
+      "importance_score": 60,
+      "supply_level": 1,
+      "section": "deep_read",
+      "ranking_score": 76.0,
+      "content_type": "deep_read",
+      "catch_up": false,
+      "fingerprint": "aea4c3d18cb5031dc5b2ad65e1b55062e4ae619ba7421ca881b7238657287c00",
+      "article_id": "d652bf4e1f2db5615f136d8f8675842657b484f5637968a7a13607497d412676",
+      "source_region": "US",
+      "source_tier": 1,
+      "source_role": "primary",
+      "channel": "deep_read",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.792507,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 12
+    },
+    {
+      "title_cn": "突破能源首席技术官评估全球脱碳进展",
+      "title_en": "Breakthrough Energy CTO Assesses Global Decarbonization Progress",
+      "title_original": "Energy, prosperity, emissions, and innovation: A decarbonization progress report",
+      "source": "MIT News",
+      "published_at": "2026-11-12T21:30:00+00:00",
+      "original_url": "https://news.mit.edu/2026/energy-prosperity-emissions-innovation-decarbonization-progress-report-1112",
+      "category": "science",
+      "original_language": "en",
+      "what_happened": "突破能源首席技术官埃里克·图恩在一份涵盖能源、繁荣、排放与创新的报告中评估了全球脱碳进展。",
+      "what_happened_en": "Eric Toone, CTO of Breakthrough Energy, assessed global decarbonization progress in a report covering energy, prosperity, emissions and innovation.",
+      "why_it_matters": "它将能源、排放与创新趋势同脱碳速度联系起来。",
+      "why_it_matters_en": "It links energy, emissions and innovation trends to the pace of decarbonization.",
+      "importance_score": 60,
+      "supply_level": 1,
+      "section": "deep_read",
+      "ranking_score": 66.0,
+      "content_type": "deep_read",
+      "catch_up": false,
+      "fingerprint": "8470c2ae1561b66b54aa2112c282339b71820edd117117407831965edeffcd59",
+      "article_id": "f976e2e1e059c04448de0f83e0367e1cfb8880c487e940474c80769724f90dbc",
+      "source_region": "US",
+      "source_tier": 1,
+      "source_role": "primary",
+      "channel": "deep_read",
+      "reserve_status": "not_applicable",
+      "reserve_type": null,
+      "reserve_reason": null,
+      "policy_validity": "unknown",
+      "supply_layer": "today",
+      "is_today": true,
+      "locked_today": true,
+      "selected_as_fallback": false,
+      "fallback_priority": 0,
+      "historical_age_days": 0.105007,
+      "cache_reused": false,
+      "deep_read": false,
+      "remaining_slots_before": 11
+    }
+  ],
+  "supply": {
+    "today_candidates": 18,
+    "today_considered": 18,
+    "today_selected": 4,
+    "today_locked": 4,
+    "locked_today_ids": [
+      "3f8e5d7449817e2a9dd5d8bbb1f9297e32f65d30e6933a1d2d00bd902a650b06",
+      "f661cd1e2d45b72e814b56e76f998f249e9f58e8020d8544d23cbd4278b2cf59",
+      "d652bf4e1f2db5615f136d8f8675842657b484f5637968a7a13607497d412676",
+      "f976e2e1e059c04448de0f83e0367e1cfb8880c487e940474c80769724f90dbc"
+    ],
+    "remaining_slots": 10,
+    "catch_up_considered": 0,
+    "catch_up_selected": 0,
+    "deep_read_considered": 0,
+    "deep_read_selected": 0,
+    "evergreen_considered": 0,
+    "evergreen_selected": 0,
+    "final_ids": [
+      "3f8e5d7449817e2a9dd5d8bbb1f9297e32f65d30e6933a1d2d00bd902a650b06",
+      "f661cd1e2d45b72e814b56e76f998f249e9f58e8020d8544d23cbd4278b2cf59",
+      "d652bf4e1f2db5615f136d8f8675842657b484f5637968a7a13607497d412676",
+      "f976e2e1e059c04448de0f83e0367e1cfb8880c487e940474c80769724f90dbc"
+    ],
+    "today_lock_preserved": true,
+    "selected": 4,
+    "shortfall": 6,
+    "minimum_not_met_reason": "token_budget_exhausted",
+    "sources": 2,
+    "categories": {
+      "consumer_tech": 1,
+      "science": 2,
+      "ai": 1
+    },
+    "channels": {
+      "technology": 2,
+      "deep_read": 2
+    },
+    "explore_count": 3,
+    "source_counts": {
+      "Samsung Global Newsroom": 1,
+      "MIT News": 3
+    },
+    "diversity_exception": false,
+    "levels": [
+      {
+        "supply_layer": "today",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 4,
+            "selected_total": 4
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 4
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 4
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 4
+          }
+        ],
+        "selected": 4,
+        "shortfall": 6,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 3,
+        "sources": 2,
+        "categories": {
+          "consumer_tech": 1,
+          "science": 2,
+          "ai": 1
+        },
+        "channels": {
+          "technology": 2,
+          "deep_read": 2
+        },
+        "source_counts": {
+          "Samsung Global Newsroom": 1,
+          "MIT News": 3
+        },
+        "source_share_limit": 3,
+        "deep_read_candidates": 2,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "catch_up",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 2,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "deep_read",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 2,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      },
+      {
+        "supply_layer": "evergreen",
+        "diversity_exception": false,
+        "levels": [
+          {
+            "level": 1,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 2,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 3,
+            "eligible": 0,
+            "selected_total": 0
+          },
+          {
+            "level": 4,
+            "eligible": 0,
+            "selected_total": 0
+          }
+        ],
+        "selected": 0,
+        "shortfall": 10,
+        "minimum_not_met_reason": "all real source-verified candidates were exhausted",
+        "explore_count": 0,
+        "sources": 0,
+        "categories": {},
+        "channels": {},
+        "source_counts": {},
+        "source_share_limit": 2,
+        "deep_read_candidates": 0,
+        "score_mode": "semantic importance when cached; heuristic preselection otherwise"
+      }
+    ],
+    "initial_candidates": 14,
+    "fact_schema_generated": 20,
+    "model_accepted": 18,
+    "hard_fact_rejected": 3,
+    "semantic_rejected": 0,
+    "repaired": 1,
+    "fallback_added": 5,
+    "final_count": 4,
+    "minimum_met": false,
+    "token_budget_status": "graceful_stop",
+    "token_budget": 40000,
+    "token_used": 32220,
+    "token_remaining": 7780,
+    "batches_completed": 4,
+    "accepted_count": 4,
+    "target_count": 14,
+    "stopped_reason": "token_budget_insufficient_for_next_batch",
+    "next_batch_estimated_input_tokens": 6885,
+    "next_batch_estimated_output_tokens": 7200,
+    "next_batch_required_tokens": 14774,
+    "daily_mode": "minimal_daily",
+    "daily_status": "minimal_daily",
+    "publishable_count": 4,
+    "degraded_reason": "token_budget_insufficient_for_next_batch",
+    "token_guard_triggered": true,
+    "source_shortage": false,
+    "validation_shortage": true,
+    "fill_stopped": false
+  }
+}
