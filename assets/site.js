@@ -730,6 +730,19 @@
     draw();
   };
 
+  document.addEventListener("click", (event) => {
+    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    const link = event.target.closest?.("a[href]");
+    if (!link || link.hasAttribute("download") || (link.target && link.target !== "_self")) return;
+    const destination = new URL(link.href);
+    if (destination.origin !== location.origin || destination.href === location.href || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    event.preventDefault();
+    if (document.documentElement.classList.contains("is-navigating")) return;
+    document.documentElement.classList.add("is-navigating");
+    window.setTimeout(() => location.assign(destination.href), 150);
+  });
+  window.addEventListener("pageshow", () => document.documentElement.classList.remove("is-navigating"));
+
   const run = async () => {
     try {
       if (page === "home") await renderHome();

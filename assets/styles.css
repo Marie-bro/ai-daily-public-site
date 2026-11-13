@@ -157,3 +157,20 @@ nav { display:flex; gap:22px; font-size:14px; } nav a { color:var(--muted); text
   .dashboard-hero,.dashboard-section:not([hidden]) .story-card:not([hidden]),.inline-picker[open] .inline-picker-options { animation:none; }
   .filter-button,.source-link,.favorite-button,.inline-picker-option,.story-card,.inline-picker > summary,.inline-picker > summary::after { transition:none; }
 }
+
+a,button,summary,select { -webkit-tap-highlight-color:transparent; }
+.filter-button { transition:background-color .22s var(--motion-ease),border-color .22s var(--motion-ease),color .22s var(--motion-ease),transform .22s var(--motion-ease),box-shadow .22s var(--motion-ease); }
+.filter-button:focus-visible { outline:none; box-shadow:0 0 0 3px var(--accent); }
+.filter-button:active { background:var(--soft); box-shadow:0 0 0 4px rgb(25 109 69 / 17%); transform:scale(.96); }
+@keyframes page-enter { from { opacity:.55; transform:translateY(8px); } to { opacity:1; transform:none; } }
+@keyframes list-enter { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
+@keyframes disclosure-enter { from { opacity:0; transform:translateY(-6px); } to { opacity:1; transform:none; } }
+main { animation:page-enter .3s var(--motion-ease); transition:opacity .15s var(--motion-ease),transform .15s var(--motion-ease); }
+html.is-navigating main { opacity:0; transform:translateY(-6px); }
+.report-list > .report-link,.archive-results .story-card,.reading-entry { animation:list-enter .3s var(--motion-ease) both; }
+.reading-entry[open] > .reading-entry-body,.archive-advanced[open] > .archive-advanced-fields,.reading-entry-body .daily-article { animation:disclosure-enter .28s var(--motion-ease) both; }
+
+@media (prefers-reduced-motion:reduce) {
+  main,.report-list > .report-link,.archive-results .story-card,.reading-entry,.reading-entry[open] > .reading-entry-body,.archive-advanced[open] > .archive-advanced-fields,.reading-entry-body .daily-article { animation:none; }
+  main,.filter-button { transition:none; }
+}
