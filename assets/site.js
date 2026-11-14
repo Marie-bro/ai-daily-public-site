@@ -9,28 +9,88 @@
   };
   const motionReduced = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const motionEase = "cubic-bezier(.2,0,.2,1)";
+  let activeResultsTransition;
+  let resultsVersion = 0;
+  const swapResults = (node, update, animate = false) => {
+    const version = ++resultsVersion;
+    if (!animate || motionReduced()) {
+      activeResultsTransition?.skipTransition?.();
+      document.documentElement.classList.remove("is-results-transitioning");
+      update();
+      return Promise.resolve();
+    }
+    if (document.startViewTransition && node.getBoundingClientRect().height < window.innerHeight * 3) {
+      activeResultsTransition?.skipTransition();
+      document.documentElement.classList.add("is-results-transitioning");
+      node.style.viewTransitionName = "radar-results";
+      const transition = document.startViewTransition(update);
+      activeResultsTransition = transition;
+      transition.finished.catch(() => {}).then(() => {
+        if (activeResultsTransition !== transition) return;
+        activeResultsTransition = undefined;
+        node.style.viewTransitionName = "";
+        document.documentElement.classList.remove("is-results-transitioning");
+      });
+      return transition.updateCallbackDone.catch(() => {});
+    }
+    activeResultsTransition?.skipTransition?.();
+    if (!node.animate) { update(); return Promise.resolve(); }
+    document.documentElement.classList.add("is-results-transitioning");
+    const leaving = node.animate([{ opacity: 1, transform: "translateY(0)" }, { opacity: 0, transform: "translateY(-6px)" }], { duration: 160, easing: motionEase });
+    return leaving.finished.catch(() => {}).then(() => {
+      if (version !== resultsVersion) return;
+      update();
+      node.animate([{ opacity: 0, transform: "translateY(8px)" }, { opacity: 1, transform: "translateY(0)" }], { duration: 260, easing: motionEase })
+        .finished.catch(() => {}).then(() => { if (version === resultsVersion) document.documentElement.classList.remove("is-results-transitioning"); });
+    });
+  };
+  const disclosureAnimations = new WeakMap();
+  const animateHeight = (node, from, to, finish) => {
+    disclosureAnimations.get(node)?.cancel();
+    if (motionReduced() || !node.animate || Math.abs(to - from) < 1) { finish?.(); return; }
+    node.style.overflow = "hidden";
+    const animation = node.animate([{ height: `${from}px` }, { height: `${to}px` }], { duration: 260, easing: motionEase });
+    disclosureAnimations.set(node, animation);
+    animation.finished.catch(() => {}).then(() => {
+      if (disclosureAnimations.get(node) !== animation) return;
+      disclosureAnimations.delete(node);
+      finish?.();
+      node.style.overflow = "";
+    });
+  };
+  const replaceWithHeight = (node, update) => {
+    if (motionReduced() || !node.animate) { update(); return; }
+    const from = node.getBoundingClientRect().height;
+    update();
+    animateHeight(node, from, node.getBoundingClientRect().height);
+  };
   const revealChange = (node) => {
     if (!node || motionReduced() || !node.animate) return;
     node.animate([{ opacity: .72, transform: "translateY(6px)" }, { opacity: 1, transform: "translateY(0)" }], { duration: 260, easing: motionEase });
   };
   const removeWithMotion = (node, finish) => {
     if (motionReduced() || !node?.animate) { finish(); return; }
-    node.animate([{ opacity: 1, transform: "translateY(0)" }, { opacity: 0, transform: "translateY(-6px)" }], { duration: 160, easing: motionEase })
+    node.style.overflow = "hidden";
+    node.animate([{ opacity: 1, height: `${node.getBoundingClientRect().height}px` }, { opacity: 0, height: "0px" }], { duration: 260, easing: motionEase })
       .finished.catch(() => {}).then(finish);
   };
   const closeDisclosure = (details) => {
     if (!details.open || details.dataset.motionClosing === "true") return;
-    const panel = details.children[1];
-    if (motionReduced() || !panel?.animate) { details.open = false; return; }
+    if (motionReduced() || !details.animate) { details.open = false; return; }
     details.dataset.motionClosing = "true";
-    panel.animate([{ opacity: 1, transform: "translateY(0)" }, { opacity: 0, transform: "translateY(-6px)" }], { duration: 160, easing: motionEase })
-      .finished.catch(() => {}).then(() => { details.open = false; delete details.dataset.motionClosing; });
+    animateHeight(details, details.getBoundingClientRect().height, details.querySelector("summary").getBoundingClientRect().height, () => {
+      details.open = false;
+      delete details.dataset.motionClosing;
+    });
   };
   const enhanceDisclosure = (details) => {
     details.querySelector("summary")?.addEventListener("click", (event) => {
-      if (!details.open || motionReduced()) return;
+      if (motionReduced()) return;
       event.preventDefault();
-      closeDisclosure(details);
+      if (details.open) { closeDisclosure(details); return; }
+      const from = details.getBoundingClientRect().height;
+      details.open = true;
+      requestAnimationFrame(() => animateHeight(details, from, details.getBoundingClientRect().height));
     });
   };
   const categoryLabels = {
@@ -342,23 +402,29 @@
     const picker = element("details", undefined, "inline-picker");
     const summary = element("summary");
     const options = element("div", undefined, "inline-picker-options");
-    const buttons = [...control.select.options].map((option) => {
-      const button = element("button", option.textContent, "inline-picker-option");
-      button.type = "button";
-      button.addEventListener("click", () => {
-        control.select.value = option.value;
-        control.select.dispatchEvent(new Event("change", { bubbles: true }));
-        closeDisclosure(picker);
+    let buttons = [];
+    const buildOptions = () => {
+      options.replaceChildren();
+      buttons = [...control.select.options].map((option) => {
+        const button = element("button", option.textContent, "inline-picker-option");
+        button.type = "button";
+        button.addEventListener("click", () => {
+          control.select.value = option.value;
+          control.select.dispatchEvent(new Event("change", { bubbles: true }));
+          closeDisclosure(picker);
+        });
+        options.append(button);
+        return { button, option };
       });
-      options.append(button);
-      return { button, option };
-    });
+    };
     const sync = () => {
+      if (buttons.length !== control.select.options.length || buttons.some(({ option }, index) => option !== control.select.options[index])) buildOptions();
       const selected = control.select.selectedOptions[0];
       summary.textContent = selected?.textContent || "请选择";
       summary.setAttribute("aria-label", `${label}：${summary.textContent}`);
       buttons.forEach(({ button, option }) => button.setAttribute("aria-pressed", String(option.value === control.select.value)));
     };
+    control.refreshPicker = sync;
     control.select.addEventListener("change", sync);
     picker.addEventListener("toggle", () => {
       if (picker.open) document.querySelectorAll(".inline-picker[open]").forEach((other) => { if (other !== picker) closeDisclosure(other); });
@@ -557,7 +623,7 @@
     const advanced = element("details", undefined, "archive-advanced");
     const advancedSummary = element("summary", "更多筛选");
     const advancedFields = element("div", undefined, "archive-advanced-fields");
-    advancedFields.append(topics.field, sources.field, levels.field);
+    advancedFields.append(inlinePicker(topics), inlinePicker(sources), inlinePicker(levels));
     advanced.append(advancedSummary, advancedFields);
     enhanceDisclosure(advanced);
     const mobileLayout = window.matchMedia("(max-width: 640px)");
@@ -566,16 +632,17 @@
     const results = element("div", undefined, "report-list archive-results");
     const status = element("p", "", "reading-count");
     status.setAttribute("role", "status");
-    toolbar.append(view.field, dates.field, advanced);
+    toolbar.append(inlinePicker(view), inlinePicker(dates), advanced);
     target.replaceChildren(toolbar, status, results);
     let version = 0;
     let entries = [];
     let failed = 0;
     let shown = 24;
-    const setChoices = (select, choices) => {
-      const value = select.value;
-      select.replaceChildren(...choices.map(([key, label]) => optionOf(key, label)));
-      if (choices.some(([key]) => key === value)) select.value = value;
+    const setChoices = (control, choices) => {
+      const value = control.select.value;
+      control.select.replaceChildren(...choices.map(([key, label]) => optionOf(key, label)));
+      if (choices.some(([key]) => key === value)) control.select.value = value;
+      control.refreshPicker();
     };
     const draw = (animate = false) => {
       const activeFilters = [topics, sources, levels].filter(({ select }) => select.value).length;
@@ -584,32 +651,32 @@
         (!topics.select.value || storyFilters(item).includes(topics.select.value)) &&
         (!sources.select.value || item.source === sources.select.value) &&
         (!levels.select.value || (isDeep(item) ? "deep" : "brief") === levels.select.value));
-      status.textContent = "找到 " + matching.length + " 条" + (failed ? " · " + failed + " 期暂时无法读取" : "");
-      results.replaceChildren();
-      let grid;
-      let previous;
-      for (const entry of matching.slice(0, shown)) {
-        if (entry.date !== previous) {
-          const heading = element("h2", formatDate(entry.date), "archive-date");
-          grid = element("div", undefined, "story-grid");
-          results.append(heading, grid);
-          previous = entry.date;
+      return swapResults(results, () => {
+        status.textContent = "找到 " + matching.length + " 条" + (failed ? " · " + failed + " 期暂时无法读取" : "");
+        results.replaceChildren();
+        let grid;
+        let previous;
+        for (const entry of matching.slice(0, shown)) {
+          if (entry.date !== previous) {
+            const heading = element("h2", formatDate(entry.date), "archive-date");
+            grid = element("div", undefined, "story-grid");
+            results.append(heading, grid);
+            previous = entry.date;
+          }
+          grid.append(storyCard(entry, { report_date: entry.date }, false));
         }
-        grid.append(storyCard(entry, { report_date: entry.date }, false));
-      }
-      if (!matching.length) results.append(element("p", "该范围内没有符合条件的条目。", "notice"));
-      if (shown < matching.length) {
-        const load = element("button", "再显示 24 条", "favorite-button");
-        load.type = "button";
-        load.addEventListener("click", () => {
-          const next = shown;
-          shown += 24;
-          draw();
-          results.querySelectorAll(".story-card")[next]?.focus();
-        });
-        results.append(load);
-      }
-      if (animate) revealChange(status);
+        if (!matching.length) results.append(element("p", "该范围内没有符合条件的条目。", "notice"));
+        if (shown < matching.length) {
+          const load = element("button", "再显示 24 条", "favorite-button");
+          load.type = "button";
+          load.addEventListener("click", () => {
+            const next = shown;
+            shown += 24;
+            draw(true).then(() => results.querySelectorAll(".story-card")[next]?.focus());
+          });
+          results.append(load);
+        }
+      }, animate);
     };
     const refresh = async (animate = false) => {
       const request = ++version;
@@ -619,25 +686,27 @@
       advanced.hidden = isEdition;
       [topics, sources, levels].forEach(({ field, select }) => { field.hidden = isEdition; select.disabled = !isEdition; });
       if (isEdition) {
-        status.textContent = chosen.length + " 期日报";
-        results.replaceChildren(...chosen.map(summaryCard));
-        if (animate) revealChange(status);
-        return;
+        results.removeAttribute("aria-busy");
+        return swapResults(results, () => {
+          status.textContent = chosen.length + " 期日报";
+          results.replaceChildren(...chosen.map(summaryCard));
+        }, animate);
       }
-      results.replaceChildren();
       status.textContent = "正在读取已发布的日报…";
+      results.setAttribute("aria-busy", "true");
       const data = await loadReports(chosen, () => request === version);
       if (request !== version) return;
+      results.removeAttribute("aria-busy");
       failed = data.unavailable;
       entries = data.loaded.flatMap(reportRows).filter(({ item }) => mode !== "research" || isResearch(item));
       const names = [...new Set(entries.flatMap(({ item }) => storyFilters(item)))];
-      setChoices(topics.select, [["", "全部主题"], ...names.map((value) => [value, categoryLabel(value)]).sort(byLabel)]);
-      setChoices(sources.select, [["", "全部来源"], ...sourceOptions(entries)]);
+      setChoices(topics, [["", "全部主题"], ...names.map((value) => [value, categoryLabel(value)]).sort(byLabel)]);
+      setChoices(sources, [["", "全部来源"], ...sourceOptions(entries)]);
       [topics, sources, levels].forEach(({ select }) => { select.disabled = false; });
       shown = 24;
-      draw(animate);
+      return draw(animate);
     };
-    if (new URLSearchParams(window.location.search).get("view") === "research") view.select.value = "research";
+    if (new URLSearchParams(window.location.search).get("view") === "research") { view.select.value = "research"; view.refreshPicker(); }
     for (const field of [view, dates]) field.select.addEventListener("change", () => refresh(true));
     for (const field of [topics, sources, levels]) field.select.addEventListener("change", () => { shown = 24; draw(true); });
     await refresh();
@@ -702,7 +771,9 @@
     const feedback = element("p", "", "favorite-status");
     feedback.setAttribute("role", "status");
     const list = element("div", undefined, "reading-list");
-    target.replaceChildren(status.field, count, feedback, list);
+    const statusPicker = inlinePicker(status);
+    statusPicker.classList.add("reading-status-picker");
+    target.replaceChildren(statusPicker, count, feedback, list);
     function countItems() {
       const entries = localFavorites();
       const shown = entries.filter((entry) => !status.select.value || readingStatus(entry) === status.select.value).length;
@@ -711,9 +782,10 @@
       if (!shown && !list.children.length) list.append(element("p", entries.length ? "该阅读状态下暂无条目。" : "从雷达资讯详情点「加入我的阅读」，文章就会出现在这里。", "notice"));
     }
     function draw(animate = false) {
-      list.replaceChildren();
       const entries = localFavorites().filter((entry) => !status.select.value || readingStatus(entry) === status.select.value);
-      for (const entry of entries) {
+      return swapResults(list, () => {
+        list.replaceChildren();
+        for (const entry of entries) {
         const details = element("details", undefined, "reading-entry");
         const summary = element("summary");
         const title = element("strong", titleOf(entry));
@@ -752,7 +824,7 @@
             if (entry.report_date) {
               article.prepend(element("p", "原日报暂时无法读取。仍可打开原始链接和编辑阅读记录。", "notice"));
             }
-            preview.replaceChildren(article);
+            replaceWithHeight(body, () => preview.replaceChildren(article));
             revealChange(preview);
           };
           if (!entry.report_date || !entry.article_key) {
@@ -769,13 +841,13 @@
               || rows.find(({ item }) => localKey(item) === localKey(entry));
             if (!found) { showFallback(); return; }
             link.href = reportHref(found.date, found.key);
-            preview.replaceChildren(link, renderArticle(found.item, found, false));
+            replaceWithHeight(body, () => preview.replaceChildren(link, renderArticle(found.item, found, false)));
             revealChange(preview);
           }).catch(showFallback);
         });
-      }
-      countItems();
-      if (animate) revealChange(count);
+        }
+        countItems();
+      }, animate);
     }
     status.select.addEventListener("change", () => draw(true));
     draw();
